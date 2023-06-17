@@ -1,0 +1,52 @@
+{
+  "check": "controllo i18n",
+  "validations": {
+    "required": "informazione obbligatoria",
+    "alpha": "solo caratteri alfabetici",
+    "extendedAlpha": "solo caratteri alfabetici"
+  },
+  "app": {
+    "ui": {
+      "button": {
+        "ok": "ok",
+        "enter": "entra",
+        "continue": "continua"
+      }
+    },
+    "views": {
+      "home": {
+        "title": "Checklist Benessere Psichico",
+        "selectLanguage": "Per favore, seleziona una lingua"
+      },
+      "start": {
+        "title": "Consenso al rilascio di informazioni",
+        "disclaimer": "Autorizzo il rilascio dei dati contenuti in questa form all’AME e, ove necessario, all’esaminatore medico dell’autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno e rimarranno di proprietà dell’autorità di rilascio delle licenze, a condizione che io o il mio medico possiamo accedervi secondo la legislazione nazionale. La riservatezza medica sarà comunque sempre rispettata. I dati saranno conservati in formato cartaceo e allegati alla mia pratica.",
+        "agree": "Sono d'accordo e intendo procedere alla compilazione della checklist"
+      },
+      "bio": {
+        "title": "Dati anagrafici",
+        "form": {
+          "info": "Compila i seguenti campi. Ti ricordiamo che queste informazioni rimangono memorizzate in modalità locale nel tuo dispositivo.",
+          "input": {
+            "name": { "label": "Name", "placeholder": "Mario" },
+            "surname": { "label": "Surname", "placeholder": "Rossi" },
+            "birthWhere": { "label": "Nato a", "placeholder": "Padova" },
+            "birthWhen": { "label": "Nato in data", "placeholder": "gg/mm/aaaaa" }
+          }
+        }
+      },
+      "checklist": {
+        "title": "Checklist"
+      },
+      "qrcode": {
+        "title": "QR Code"
+      }
+    },
+    "errors": {
+      "i18n": {
+        "unsupportedLocale": "la lingua richiesta non è supportata",
+        "unableToLoadLocaleFile": "si è verificato un errore nel caricare i messaggi {locale}"
+      }
+    }
+  }
+}
