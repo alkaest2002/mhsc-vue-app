@@ -5,48 +5,46 @@
     "alpha": "letters only",
     "extendedAlpha": "alphabetical characters only"
   },
-  "app": {
-    "ui": {
-      "button": {
-        "ok": "ok",
-        "enter": "enter",
-        "continue": "continue"
-      }
+  "errors": {
+    "i18n": {
+      "unsupportedLocale": "the requested locale is not supported",
+      "unableToLoadLocaleFile": "error while loading {locale} locale message"
+    }
+  },
+  "views": {
+    "home": {
+      "title": "Mental Health checklist",
+      "selectLanguage": "Please, select a language"
     },
-    "views": {
-      "home": {
-        "title": "Mental Health checklist",
-        "selectLanguage": "Please, select a language"
-      },
-      "start": {
-        "title": "Consent to the release of information",
-        "disclaimer": "I hereby authorize the release of all information contained in this form to the AME and, where necessary, to the medical assessor of the licensing authority. I am aware that such information will become and remain property of the licensing authority, provided that I or my physician will have access to them according to national laws. Medical confidentiality will be respected at all times.",
-        "agree": "I agree and I want to fill the checklist"
-      },
-      "bio": {
-        "title": "Biographical data",
-        "form": {
-          "info": "Fill in the following fields. We remind you that this information is stored locally on your device.",
-          "input": {
-            "name": { "label": "Name", "placeholder": "John" },
-            "surname": { "label": "Surname", "placeholder": "Doe" },
-            "birthWhere": { "label": "Place of birth", "placeholder": "New York" },
-            "birthWhen": { "label": "Date of birth", "placeholder": "dd/mm/yyyy" }
-          }
+    "start": {
+      "title": "Consent to the release of information",
+      "disclaimer": "I hereby authorize the release of all information contained in this form to the AME and, where necessary, to the medical assessor of the licensing authority. I am aware that such information will become and remain property of the licensing authority, provided that I or my physician will have access to them according to national laws. Medical confidentiality will be respected at all times.",
+      "agree": "I agree and I want to fill the checklist"
+    },
+    "bio": {
+      "title": "Biographical data",
+      "form": {
+        "info": "Fill in the following fields. We remind you that this information is stored locally on your device.",
+        "input": {
+          "name": { "label": "Name", "placeholder": "John" },
+          "surname": { "label": "Surname", "placeholder": "Doe" },
+          "birthWhere": { "label": "Place of birth", "placeholder": "New York" },
+          "birthWhen": { "label": "Date of birth", "placeholder": "dd/mm/yyyy" }
         }
-      },
-      "checklist": {
-        "title": "Checklist"
-      },
-      "qrcode": {
-        "title": "QR Code"
       }
     },
-    "errors": {
-      "i18n": {
-        "unsupportedLocale": "the requested locale is not supported",
-        "unableToLoadLocaleFile": "error while loading {locale} locale message"
-      }
+    "checklist": {
+      "title": "Checklist"
+    },
+    "qrcode": {
+      "title": "QR Code"
+    }
+  },
+  "ui": {
+    "button": {
+      "ok": "ok",
+      "enter": "enter",
+      "continue": "continue"
     }
   }
 }

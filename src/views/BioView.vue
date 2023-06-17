@@ -52,18 +52,18 @@ const submitFormData = async () => {
 <template>
   <AppPanel>
     <template #title>
-      {{ t('app.views.bio.title') }}
+      {{ t('views.bio.title') }}
     </template>
     <template #content>
       <p class="block mb-5">
-        {{ t('app.views.bio.form.info') }}
+        {{ t('views.bio.form.info') }}
       </p>
       <template v-for="({ field, type }, index) of fieldsToRender" :key="field">
         <FormInput
           v-model="formData[field]"
           :auto-focus="index == 0"
-          :label="t(`app.views.bio.form.input.${field}.label`)"
-          :placeholder="t(`app.views.bio.form.input.${field}.placeholder`)"
+          :label="t(`views.bio.form.input.${field}.label`)"
+          :placeholder="t(`views.bio.form.input.${field}.placeholder`)"
           :css="'mb-4'"
           :errors="v[field].$errors"
           :type="type"
@@ -72,7 +72,7 @@ const submitFormData = async () => {
     </template>
     <template #footer>
       <LoadingButton class="w-full" v-model="isLoading" @click="submitFormData">
-        {{ t('app.ui.button.continue') }}
+        {{ t('ui.button.continue') }}
       </LoadingButton>
     </template>
   </AppPanel>

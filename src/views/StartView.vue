@@ -13,10 +13,10 @@ const { disclaimer } = storeToRefs(useChecklistStore())
 <template>
   <AppPanel>
     <template #title>
-      {{ t('app.views.start.title') }}
+      {{ t('views.start.title') }}
     </template>
     <template #content>
-      <p class="mb-6">{{ t('app.views.start.disclaimer') }}</p>
+      <p class="mb-6">{{ t('views.start.disclaimer') }}</p>
       <input
         type="checkbox"
         id="disclaimer-checkbox"
@@ -24,11 +24,11 @@ const { disclaimer } = storeToRefs(useChecklistStore())
         v-model="disclaimer"
         @click="onSubmit"
       />
-      <label class="ml-2 text-sm" for="disclaimer-checkbox">{{ t('app.views.start.agree') }}</label>
+      <label class="ml-2 text-sm" for="disclaimer-checkbox">{{ t('views.start.agree') }}</label>
     </template>
     <template #footer>
       <RouterLinkButton :to="{ name: 'bio' }" :class="'w-full mt-2'" :disabled="!disclaimer">
-        {{ t('app.ui.button.ok') }}
+        {{ t('ui.button.ok') }}
       </RouterLinkButton>
     </template>
   </AppPanel>

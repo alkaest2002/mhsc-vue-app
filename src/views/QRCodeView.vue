@@ -6,7 +6,7 @@ const { t } = useI18n()
 <template>
   <AppPanel>
     <template #title>
-      {{ t('app.views.qrcode.title') }}
+      {{ t('views.qrcode.title') }}
     </template>
   </AppPanel>
 </template>

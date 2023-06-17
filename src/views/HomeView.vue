@@ -25,17 +25,17 @@ watch(locale, (newLocale) => {
 <template>
   <AppPanel>
     <template #title>
-      {{ t('app.views.home.title') }}
+      {{ t('views.home.title') }}
     </template>
     <template #content>
       <p class="mb-3">
-        {{ t('app.views.home.selectLanguage') }}
+        {{ t('views.home.selectLanguage') }}
       </p>
       <FormSelect :class="'mb-3 w-full'" :options="supportedLocales" v-model="locale" />
     </template>
     <template #footer>
       <RouterLinkButton :to="{ name: 'start' }" class="w-full">
-        {{ t('app.ui.button.enter') }}
+        {{ t('ui.button.enter') }}
       </RouterLinkButton>
     </template>
   </AppPanel>

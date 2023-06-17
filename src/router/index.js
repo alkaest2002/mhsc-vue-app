@@ -12,20 +12,19 @@ router.beforeEach(async (to, from, next) => {
   // get pinia store prop
   const { locale } = storeToRefs(useAppStore())
   // get current i18n locale
-  const currentLocale = i18n.global.locale.value
-  // set requested locale to be either query locale or appStore locale or i18n fallback locale
-  const requestedLocale = to.query.locale || locale.value || i18n.global.fallbackLocale.value
+  const currentLocale = locale.value || i18n.global.locale.value
   // if requested locale is diffent from current i18n locale
-  if (requestedLocale != currentLocale) {
+  if (to.query.locale && to.query.locale != i18n.global.locale.value) {
     try {
       // try to set requested locale
-      await setI18nLocale(requestedLocale)
+      await setI18nLocale(to.query.locale, currentLocale)
       // persist requested locale to pinia
-      locale.value = requestedLocale
+      locale.value = to.query.locale
       // in case locale was not found
     } catch (err) {
+      console.log(currentLocale, i18n.global.t(err))
       // notify user
-      console.log(err)
+      console.log(i18n.global.t(err))
     }
   }
   // go next

@@ -17,34 +17,33 @@ export function getSupportedLocales(asList = true) {
 
 const loadLocaleMessages = async (locale) => {
   try {
-    // load locale messages file
+    // try to load locale messages file
     const response = await import(/* @vite-ignore */ `./locales/app.${locale}.json`)
     // get locale messages from response
     const messages = response.default || response
     // set new locale and messages
     i18n.global.setLocaleMessage(locale, messages)
-    // next tick
+    // return next tick
     return nextTick()
-    // error while loading locale messages file
+    // on error while loading locale messages file
   } catch (err) {
     // reject request
-    return Promise.reject('unableToLoadLocaleFile')
+    return Promise.reject('errors.i18n.unableToLoadLocaleFile')
   }
 }
 
-export async function setI18nLocale(locale) {
+export async function setI18nLocale(newLocale, currentLocale) {
   // get supported locales
   const supportedLocales = getSupportedLocales(true)
   // if requested locale is unsupported
-  if (!supportedLocales.includes(locale)) {
-    // reject request
-    return Promise.reject('unsupportedLocale')
-  }
+  const localeToSet = supportedLocales.includes(newLocale) 
+    ? newLocale 
+    : currentLocale
   // if requested locale is not yet loaded
-  if (!i18n.global.availableLocales.includes(locale)) {
+  if (!i18n.global.availableLocales.includes(localeToSet)) {
     try {
       // try to load requested locale messages
-      await loadLocaleMessages(locale)
+      await loadLocaleMessages(localeToSet)
       // error while loading requested locale messages
     } catch (err) {
       // notify user
@@ -52,7 +51,7 @@ export async function setI18nLocale(locale) {
     }
   }
   // set requested locale
-  i18n.global.locale.value = locale
+  i18n.global.locale.value = localeToSet
   // resolve request
   return Promise.resolve()
 }
