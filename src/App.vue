@@ -1,8 +1,3 @@
-<script setup>
-import { onMounted } from 'vue'
-onMounted(() => window.addEventListener('popstate', () => history.go(1)))
-</script>
-
 <template>
   <div id="app-container" class="h-full w-full bg-zinc-50 font-nunito font-light p-6">
     <router-view v-slot="{ Component }">

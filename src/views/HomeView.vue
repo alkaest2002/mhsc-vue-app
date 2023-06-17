@@ -14,7 +14,7 @@ const router = useRouter()
 const { t } = useI18n()
 // get supported locales
 let supportedLocales = getSupportedLocales(false)
-// get piniaappStore local props
+// get pinia appStore prop
 const { locale } = storeToRefs(useAppStore())
 // watch locale
 watch(locale, (newLocale) => {

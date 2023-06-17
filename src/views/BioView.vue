@@ -12,11 +12,11 @@ import LoadingButton from '../components/ui/LoadingButton.vue'
 const router = useRouter()
 // get i18n
 const { t } = useI18n()
-// get pinia checklistStore
+// get pinia checklistStore prop and patch fn
 const { bio, $patch } = useChecklistStore()
 // set loading state
 const isLoading = ref(false)
-// set reactive formData (default from pinia checklistStore)
+// set reactive formData (default values from pinia checklistStore prop)
 const formData = reactive(bio)
 // set validations rules
 const rules = {

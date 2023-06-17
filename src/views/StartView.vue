@@ -3,7 +3,10 @@ import { useI18n } from 'vue-i18n'
 import { storeToRefs } from 'pinia'
 import { useChecklistStore } from '@/stores/checklist.store'
 import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
+
+// get i18n
 const { t } = useI18n()
+// get pinia checkList store prop
 const { disclaimer } = storeToRefs(useChecklistStore())
 </script>
 
