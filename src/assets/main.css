@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-size: 2vh;
+html, body, #app {
+  height: 100%;
+  font-size: 18px;
 }
