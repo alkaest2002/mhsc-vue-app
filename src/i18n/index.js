@@ -35,15 +35,15 @@ const loadLocaleMessages = async (locale) => {
 export async function setI18nLocale(newLocale, currentLocale) {
   // get supported locales
   const supportedLocales = getSupportedLocales(true)
-  // if requested locale is unsupported
-  const localeToSet = supportedLocales.includes(newLocale) 
+  // set requested locale
+  const requestedLocale = supportedLocales.includes(newLocale) 
     ? newLocale 
     : currentLocale
   // if requested locale is not yet loaded
-  if (!i18n.global.availableLocales.includes(localeToSet)) {
+  if (!i18n.global.availableLocales.includes(requestedLocale)) {
     try {
       // try to load requested locale messages
-      await loadLocaleMessages(localeToSet)
+      await loadLocaleMessages(requestedLocale)
       // error while loading requested locale messages
     } catch (err) {
       // notify user
@@ -51,7 +51,7 @@ export async function setI18nLocale(newLocale, currentLocale) {
     }
   }
   // set requested locale
-  i18n.global.locale.value = localeToSet
+  i18n.global.locale.value = requestedLocale
   // resolve request
   return Promise.resolve()
 }

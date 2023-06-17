@@ -22,7 +22,6 @@ router.beforeEach(async (to, from, next) => {
       locale.value = to.query.locale
       // in case locale was not found
     } catch (err) {
-      console.log(currentLocale, i18n.global.t(err))
       // notify user
       console.log(i18n.global.t(err))
     }
