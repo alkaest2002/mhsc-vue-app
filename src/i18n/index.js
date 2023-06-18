@@ -32,13 +32,13 @@ const loadLocaleMessages = async (locale) => {
   }
 }
 
-export async function setI18nLocale(newLocale, currentLocale) {
+export async function setI18nLocale(locale) {
   // get supported locales
   const supportedLocales = getSupportedLocales(true)
   // set requested locale
-  const requestedLocale = supportedLocales.includes(newLocale) 
-    ? newLocale 
-    : currentLocale
+  const requestedLocale = supportedLocales.includes(locale) 
+    ? locale 
+    : i18n.global.locale.value
   // if requested locale is not yet loaded
   if (!i18n.global.availableLocales.includes(requestedLocale)) {
     try {
