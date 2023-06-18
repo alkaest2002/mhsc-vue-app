@@ -18,13 +18,13 @@
     },
     "start": {
       "title": "Consenso al rilascio di informazioni",
-      "disclaimer": "Autorizzo il rilascio dei dati contenuti in questa form all’AME e, ove necessario, all’esaminatore medico dell’autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno e rimarranno di proprietà dell’autorità di rilascio delle licenze, a condizione che io o il mio medico possiamo accedervi secondo la legislazione nazionale. La riservatezza medica sarà comunque sempre rispettata. I dati saranno conservati in formato cartaceo e allegati alla mia pratica.",
-      "agree": "Sono d'accordo e intendo procedere alla compilazione della checklist"
+      "disclaimer": "Autorizzo il rilascio dei dati contenuti in questa form all’AME e, ove necessario, all’esaminatore medico dell’autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno di proprietà dell’autorità di rilascio delle licenze, a condizione che io o il mio medico possiamo accedervi secondo la legislazione nazionale. La riservatezza medica sarà comunque sempre rispettata.",
+      "agree": "Do il mio consenso"
     },
     "bio": {
       "title": "Dati anagrafici",
       "form": {
-        "info": "Compila i seguenti campi. Ti ricordiamo che queste informazioni rimangono memorizzate in modalità locale nel tuo dispositivo.",
+        "info": "Compila i seguenti campi. Le informazioni rimangono memorizzate in locale nel tuo dispositivo.",
         "input": {
           "name": { "label": "Name", "placeholder": "Mario" },
           "surname": { "label": "Surname", "placeholder": "Rossi" },
@@ -46,5 +46,204 @@
       "enter": "entra",
       "continue": "continua"
     }
-  }
+  },
+  "checklist": [
+    {
+      "type": "likert",
+      "text": "Affaticamento, stanchezza, difficoltà a recuperare le energie", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Stress, sensazione di sovraccarico", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Difficoltà nel controllo degli impulsi", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Emozionalità negativa (es., tensione, irritabilità, tristezza, ansia)", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Aggressività verso gli altri o verso sé stessi", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Difficoltà nei rapporti interpersonali", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Preoccupazioni che riguardano la sfera del privato", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Preoccupazioni che riguardano il contesto lavorativo", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Preoccupazioni per il proprio stato di salute", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Preoccupazioni finanziarie", 
+      "options": [
+        { "label": "nessun problema", "value": 0},
+        { "label": "qualche problema", "value": 1},
+        { "label": "molti problemi", "value": 2}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Bevande eccitanti (es., caffè, tè, energy drink)", 
+      "options": [
+        { "label": "nessun consumo", "value": 0},
+        { "label": "consumo occasionale", "value": 1},
+        { "label": "consumo settimanale", "value": 2},
+        { "label": "consumo giornaliero", "value": 3}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Bevande alcoliche", 
+      "options": [
+        { "label": "nessun consumo", "value": 0},
+        { "label": "consumo occasionale", "value": 1},
+        { "label": "consumo settimanale", "value": 2},
+        { "label": "consumo giornaliero", "value": 3}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Tabacco o prodotti derivati dal tabacco", 
+      "options": [
+        { "label": "nessun consumo", "value": 0},
+        { "label": "consumo occasionale", "value": 1},
+        { "label": "consumo settimanale", "value": 2},
+        { "label": "consumo giornaliero", "value": 3}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Droghe leggere (es., marijuana)", 
+      "options": [
+        { "label": "nessun consumo", "value": 0},
+        { "label": "consumo occasionale", "value": 1},
+        { "label": "consumo settimanale", "value": 2},
+        { "label": "consumo giornaliero", "value": 3}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Altre droghe", 
+      "options": [
+        { "label": "nessun consumo", "value": 0},
+        { "label": "consumo occasionale", "value": 1},
+        { "label": "consumo settimanale", "value": 2},
+        { "label": "consumo giornaliero", "value": 3}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Trattamenti psichiatrici o psicologici in corso o conclusi nell'ultimo anno", 
+      "options": [
+        { "label": "no", "value": 0},
+        { "label": "sì", "value": 1}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Accesso ai servizi aziendali dedicati al supporto del lavoratore (es., peer support)", 
+      "options": [
+        { "label": "no", "value": 0},
+        { "label": "sì", "value": 1}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Inconvenienti, eventi di pericolo, incidenti sul luogo di lavoro nell'ultimo anno", 
+      "options": [
+        { "label": "no", "value": 0},
+        { "label": "sì", "value": 1}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Altri eventi significativi in corso o accaduti nell'ultimo anno", 
+      "options": [
+        { "label": "no", "value": 0},
+        { "label": "sì", "value": 1}
+      ]
+    },
+    { 
+      "type": "likert",
+      "text": "Procedimenti giudiziali/extra-giudiziali/disciplinari in corso o conclusi nell'ultimo anno", 
+      "options": [
+        { "label": "no", "value": 0},
+        { "label": "sì", "value": 1}
+      ]
+    },
+    { 
+      "type": "rating",
+      "text": "Esprima, in una scala da 0 (molto basso) a 10 (molto alto), il suo attuale benessere psico-fisico", 
+      "options": [
+        { "label": "0", "value": 0},
+        { "label": "1", "value": 1},
+        { "label": "2", "value": 2},
+        { "label": "3", "value": 3},
+        { "label": "4", "value": 4},
+        { "label": "5", "value": 5},
+        { "label": "6", "value": 6},
+        { "label": "7", "value": 7},
+        { "label": "8", "value": 8},
+        { "label": "9", "value": 9},
+        { "label": "10", "value": 10}
+      ]
+    }
+  ]
 }
