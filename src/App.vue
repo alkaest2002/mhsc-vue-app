@@ -1,5 +1,5 @@
 <template>
-  <div id="app-container" class="h-full w-full bg-zinc-50 font-nunito font-light p-6">
+  <div id="app-container" class="h-full w-full font-nunito font-light text-sky-800 p-2">
     <router-view v-slot="{ Component }">
       <Suspense>
         <transition
