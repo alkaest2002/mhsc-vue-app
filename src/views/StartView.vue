@@ -18,7 +18,7 @@ let supportedLocales = getSupportedLocales(false)
 const { locale } = storeToRefs(useAppStore())
 // watch locale
 watch(locale, (newLocale) => {
-  router.replace({ name: 'home', query: { locale: newLocale } })
+  router.replace({ name: 'start', query: { locale: newLocale } })
 })
 </script>
 
@@ -38,7 +38,7 @@ watch(locale, (newLocale) => {
         <FormSelect class="w-full mb-3" :options="supportedLocales" v-model="locale" />
       </div>
       <div>
-          <RouterLinkButton :to="{ name: 'info' }" class="w-full">
+        <RouterLinkButton :to="{ name: 'info' }" class="w-full">
           {{ t('ui.button.enter') }}
         </RouterLinkButton>
       </div>
@@ -49,5 +49,6 @@ watch(locale, (newLocale) => {
 <style scoped>
 img {
   width: 30vw;
+  max-width: 150px;
 }
 </style>
