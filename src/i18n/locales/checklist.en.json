@@ -1,6 +1,6 @@
 [
   {
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Fatigue, weariness, difficulties in recovering from fatigue", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -10,7 +10,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Stress, feeling of being overwhelmed", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -20,7 +20,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Difficulties in controlling impulses", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -30,7 +30,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Negative emotionality (e.g., tension, irritability, sadness, anxiety)", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -40,7 +40,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Aggressività verso gli altri o verso sé stessi", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -50,7 +50,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Difficulties in interpersonal relationships", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -60,7 +60,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Concerns about private life", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -70,7 +70,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Concerns about job", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -80,7 +80,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Health concerns", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -90,7 +90,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Financial concerns", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -100,7 +100,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Energizing beverages (coffee, tea, energy drinks, ...)", 
     "itemOptions": [
       { "label": "No problem", "value": 0},
@@ -110,7 +110,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Alcoholic beverages", 
     "itemOptions": [
       { "label": "never", "value": 0},
@@ -121,7 +121,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Tobacco or tobacco-related products", 
     "itemOptions": [
       { "label": "never", "value": 0},
@@ -132,7 +132,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Light drugs (e.g., marijuana", 
     "itemOptions": [
       { "label": "never", "value": 0},
@@ -143,7 +143,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Other drugs", 
     "itemOptions": [
       { "label": "never", "value": 0},
@@ -154,7 +154,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Psychiatric or psychological treatments in progress or finished in the last year", 
     "itemOptions": [
       { "label": "no", "value": 0},
@@ -163,7 +163,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Access to corporate services dedicated to worker support (e.g., peer support)", 
     "itemOptions": [
       { "label": "no", "value": 0},
@@ -172,7 +172,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Inconveniences, dangerous events, accidents in the workplace in the last year", 
     "itemOptions": [
       { "label": "no", "value": 0},
@@ -181,7 +181,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Other significant/relevant events in progress or occurred in the last year", 
     "itemOptions": [
       { "label": "no", "value": 0},
@@ -190,7 +190,7 @@
     ]
   },
   { 
-    "itemType": "likert",
+    "itemType": "itemLikert",
     "itemText": "Judicial/quasi-judicial/disciplinary proceedings in progress or closed in the last year", 
     "itemOptions": [
       { "label": "no", "value": 0},
@@ -199,7 +199,7 @@
     ]
   },
   { 
-    "itemType": "rating",
+    "itemType": "itemRating",
     "itemText": "Using a scale from 0 (very low) to 10 (very high), rate your current psychological well-being", 
     "itemOptions": [
       { "label": "0", "value": 0},

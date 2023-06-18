@@ -1,8 +1,16 @@
 <script setup>
+/* eslint-disable no-unused-vars */
 import { useI18n } from 'vue-i18n'
 import { i18n } from '@/i18n'
 import { useChecklistStore } from '@/stores/checklist.store'
 import { storeToRefs } from 'pinia'
+import ItemLikert from '@/components/checklist/ItemLikert.vue'
+import ItemRating from '@/components/checklist/ItemRating.vue'
+
+const checklistComponents = {
+  "itemLikert": ItemLikert,
+  "ItemRating": ItemRating
+}
 
 const { t } = useI18n()
 
@@ -12,6 +20,9 @@ const module = await import(`@/i18n/locales/checklist.${i18n.global.locale.value
 
 const checklist = module.default
 
+const onAnswer = (answer) => {
+  answers.value.splice(index.value, 1, answer)
+}
 </script>
 
 <template>
@@ -20,9 +31,14 @@ const checklist = module.default
       {{ t('views.checklist.title') }}
     </template>
     <template #content>
+      <div>
         {{ answers  }}
-        {{ checklist[index].itemText }}
-        {{ checklist[index].itemOptions }}
+      </div>
+      <component 
+        :is="checklistComponents[checklist[index].itemType]" 
+        :item="checklist[index]" 
+        @on-answer="onAnswer"
+      />
     </template>
   </AppPanel>
 </template>
