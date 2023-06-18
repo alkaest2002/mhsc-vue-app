@@ -34,11 +34,23 @@ const onAnswer = (answer) => {
       <div>
         {{ answers  }}
       </div>
-      <component 
-        :is="checklistComponents[checklist[index].itemType]" 
-        :item="checklist[index]" 
-        @on-answer="onAnswer"
-      />
+      <transition
+          enter-active-class="duration-300 ease-out"
+          enter-from-class="transform opacity-0"
+          enter-to-class="opacity-100"
+          leave-active-class="duration-200 ease-in"
+          leave-from-class="opacity-100"
+          leave-to-class="transform opacity-0"
+          mode="out-in"
+          appear
+        >
+          <component
+            :key="index"
+            :is="checklistComponents[checklist[index].itemType]" 
+            :item="checklist[index]" 
+            @on-answer="onAnswer"
+          />
+        </transition>
     </template>
   </AppPanel>
 </template>
