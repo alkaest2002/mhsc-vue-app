@@ -12,11 +12,14 @@
     }
   },
   "views": {
-    "home": {
+    "start": {
       "title": "Checklist per lo Screening del<br />Benessere Psichico",
       "selectLanguage": "Per favore, seleziona una lingua"
     },
-    "start": {
+    "info": {
+      "title": "Informazioni sul sito"
+    },
+    "disclaimer": {
       "title": "Consenso al rilascio di informazioni",
       "disclaimer": "Autorizzo il rilascio dei dati contenuti in questa form all’AME e, ove necessario, all’esaminatore medico dell’autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno di proprietà dell’autorità di rilascio delle licenze, a condizione che io o il mio medico possiamo accedervi secondo la legislazione nazionale. La riservatezza medica sarà comunque sempre rispettata.",
       "agree": "Do il mio consenso"

@@ -1,36 +1,53 @@
 <script setup>
-import { useI18n } from 'vue-i18n'
+import { watch } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useChecklistStore } from '@/stores/checklist.store'
+import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+import { useAppStore } from '@/stores/app.store'
+import { getSupportedLocales } from '@/i18n'
+import FormSelect from '@/components/form/FormSelect.vue'
 import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
 
+// get router
+const router = useRouter()
 // get i18n
 const { t } = useI18n()
-// get pinia checkList store prop
-const { disclaimer } = storeToRefs(useChecklistStore())
+// get supported locales
+let supportedLocales = getSupportedLocales(false)
+// get pinia appStore prop
+const { locale } = storeToRefs(useAppStore())
+// watch locale
+watch(locale, (newLocale) => {
+  router.replace({ name: 'home', query: { locale: newLocale } })
+})
 </script>
 
 <template>
   <AppPanel>
-    <template #title>
-      {{ t('views.start.title') }}
-    </template>
-    <template #content>
-      <p class="mb-6">{{ t('views.start.disclaimer') }}</p>
-      <input
-        type="checkbox"
-        id="disclaimer-checkbox"
-        name="disclaimer-checkbox"
-        v-model="disclaimer"
-        @click="onSubmit"
-        class="accent-sky-800 text-sky-800"
-      />
-      <label class="ml-2 text-sm" for="disclaimer-checkbox">{{ t('views.start.agree') }}</label>
+    <template #content>      
+      <div class="flex flex-col justify-center items-center h-full">
+        <img src="@/assets/airport.svg" />
+        <h1 class="text-2xl font-bold text-center mt-2" v-html="t('views.start.title')" />
+      </div>  
     </template>
     <template #footer>
-      <RouterLinkButton :to="{ name: 'bio' }" :class="'w-full mt-2'" :disabled="!disclaimer">
-        {{ t('ui.button.ok') }}
-      </RouterLinkButton>
+      <div class="mb-2">
+        {{ t('views.start.selectLanguage') }}
+      </div>
+      <div>
+        <FormSelect class="w-full mb-3" :options="supportedLocales" v-model="locale" />
+      </div>
+      <div>
+          <RouterLinkButton :to="{ name: 'info' }" class="w-full">
+          {{ t('ui.button.enter') }}
+        </RouterLinkButton>
+      </div>
     </template>
   </AppPanel>
 </template>
+
+<style scoped>
+img {
+  width: 30vw;
+}
+</style>

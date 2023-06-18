@@ -1,4 +1,4 @@
-import HomeView from '@/views/HomeView.vue'
+import StartView from '@/views/StartView.vue'
 import { useChecklistStore } from '@/stores/checklist.store'
 
 const disclaimerGuard = () => {
@@ -10,13 +10,18 @@ const disclaimerGuard = () => {
 export const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'start',
+    component: StartView
   },
   {
-    path: '/start',
-    name: 'start',
-    component: () => import('@/views/StartView.vue')
+    path: '/info',
+    name: 'info',
+    component: () => import('@/views/InfoView.vue')
+  },
+  {
+    path: '/disclaimer',
+    name: 'disclaimer',
+    component: () => import('@/views/DisclaimerView.vue')
   },
   {
     path: '/bio',
