@@ -64,7 +64,7 @@ const submitFormData = async () => {
           :auto-focus="index == 0"
           :label="t(`views.bio.form.input.${field}.label`)"
           :placeholder="t(`views.bio.form.input.${field}.placeholder`)"
-          :css="'mb-4'"
+          :css="'mb-3'"
           :errors="v[field].$errors"
           :type="type"
         />
