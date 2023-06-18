@@ -15,7 +15,7 @@ export default defineConfig({
       }
     }),
     VueI18nPlugin({
-      include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**'),
+      include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/app.*'),
       runtimeOnly: false,
       strictMessage: false
     })
