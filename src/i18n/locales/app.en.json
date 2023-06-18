@@ -13,7 +13,7 @@
   },
   "views": {
     "home": {
-      "title": "Mental Health checklist",
+      "title": "Mental Health<br />Screening Checklist",
       "selectLanguage": "Please, select a language"
     },
     "start": {

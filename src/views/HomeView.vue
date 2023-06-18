@@ -24,19 +24,30 @@ watch(locale, (newLocale) => {
 
 <template>
   <AppPanel>
-    <template #title>
-      {{ t('views.home.title') }}
-    </template>
-    <template #content>
-      <p class="mb-3">
-        {{ t('views.home.selectLanguage') }}
-      </p>
-      <FormSelect :class="'mb-3 w-full'" :options="supportedLocales" v-model="locale" />
+    <template #content>      
+      <div class="flex flex-col justify-center items-center h-full">
+        <img src="@/assets/airport.svg"  class="stroke-slate-100"/>
+        <h1 class="text-2xl font-bold text-center mt-2" v-html="t('views.home.title')" />
+      </div>  
     </template>
     <template #footer>
-      <RouterLinkButton :to="{ name: 'start' }" class="w-full">
-        {{ t('ui.button.enter') }}
-      </RouterLinkButton>
+      <div class="mb-2">
+        {{ t('views.home.selectLanguage') }}
+      </div>
+      <div>
+        <FormSelect class="w-full mb-3" :options="supportedLocales" v-model="locale" />
+      </div>
+      <div>
+          <RouterLinkButton :to="{ name: 'start' }" class="w-full">
+          {{ t('ui.button.enter') }}
+        </RouterLinkButton>
+      </div>
     </template>
   </AppPanel>
 </template>
+
+<style scoped>
+img {
+  width: 30vw;
+}
+</style>

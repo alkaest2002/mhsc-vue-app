@@ -13,7 +13,7 @@
   },
   "views": {
     "home": {
-      "title": "Checklist Benessere Psichico",
+      "title": "Checklist per lo Screening del<br />Benessere Psichico",
       "selectLanguage": "Per favore, seleziona una lingua"
     },
     "start": {
