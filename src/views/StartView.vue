@@ -23,12 +23,12 @@ watch(locale, (newLocale) => {
 </script>
 
 <template>
-  <AppPanel>
-    <template #content>      
+  <AppContainer>
+    <template #content>
       <div class="flex flex-col justify-center items-center h-full">
-        <img src="@/assets/airport.svg" class="max-w-[30vw] md:max-w-[150px]"/>
+        <img src="@/assets/airport.svg" class="max-w-[30vw] md:max-w-[150px]" />
         <h1 class="text-2xl font-bold text-center mt-2" v-html="t('views.start.title')" />
-      </div>  
+      </div>
     </template>
     <template #footer>
       <div class="mb-2">
@@ -43,5 +43,5 @@ watch(locale, (newLocale) => {
         </RouterLinkButton>
       </div>
     </template>
-  </AppPanel>
+  </AppContainer>
 </template>

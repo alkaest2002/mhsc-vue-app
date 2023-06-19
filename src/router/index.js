@@ -14,7 +14,7 @@ router.beforeEach(async (to, from, next) => {
   // get current i18n locale
   const requestedLocale = to.query.locale || locale.value || i18n.global.locale.value
   // if requested locale is diffent from current i18n locale
-  if (requestedLocale!= i18n.global.locale.value) {
+  if (requestedLocale != i18n.global.locale.value) {
     try {
       // try to set requested locale
       await setI18nLocale(requestedLocale)

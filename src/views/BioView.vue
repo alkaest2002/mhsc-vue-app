@@ -50,7 +50,7 @@ const submitFormData = async () => {
 </script>
 
 <template>
-  <AppPanel>
+  <AppContainer>
     <template #title>
       {{ t('views.bio.title') }}
     </template>
@@ -75,5 +75,5 @@ const submitFormData = async () => {
         {{ t('ui.button.continue') }}
       </LoadingButton>
     </template>
-  </AppPanel>
+  </AppContainer>
 </template>

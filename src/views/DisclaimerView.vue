@@ -11,7 +11,7 @@ const { disclaimer } = storeToRefs(useChecklistStore())
 </script>
 
 <template>
-  <AppPanel>
+  <AppContainer>
     <template #title>
       {{ t('views.disclaimer.title') }}
     </template>
@@ -25,12 +25,14 @@ const { disclaimer } = storeToRefs(useChecklistStore())
         @click="onSubmit"
         class="accent-sky-800 text-sky-800"
       />
-      <label class="ml-2 text-sm" for="disclaimer-checkbox">{{ t('views.disclaimer.agree') }}</label>
+      <label class="ml-2 text-sm" for="disclaimer-checkbox">{{
+        t('views.disclaimer.agree')
+      }}</label>
     </template>
     <template #footer>
       <RouterLinkButton :to="{ name: 'bio' }" :class="'w-full mt-2'" :disabled="!disclaimer">
         {{ t('ui.button.continue') }}
       </RouterLinkButton>
     </template>
-  </AppPanel>
+  </AppContainer>
 </template>

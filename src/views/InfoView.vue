@@ -7,7 +7,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <AppPanel>
+  <AppContainer>
     <template #title>
       {{ t('views.info.title') }}
     </template>
@@ -23,5 +23,5 @@ const { t } = useI18n()
         </RouterLinkButton>
       </div>
     </template>
-  </AppPanel>
+  </AppContainer>
 </template>

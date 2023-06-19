@@ -13,15 +13,15 @@ export const useChecklistStore = defineStore('checklistStore', {
         birthWhere: '',
         birthWhen: ''
       },
-      answers: Array.from({ length: 21 }, () => null)
+      answers: Array.from({ length: 21 }, () => null),
+      currentItemIndex: 0
     }
   },
-
   getters: {
-    getFirstItemIndex: () => 0,
-    getLastItemIndex: (state) => state.answers.length -1,
-    getFirstItemIndexToAnswer: (state) => state.answers.findLastIndex(e => e !== null) + 1 || 0,
-    getChecklistData: (state) => [ ...Object.values(state.bio), Object.values(state.answers) ].join(';')
-  },
-  actions: {}
+    getCurrentAnswer: (state) => state.answers[state.currentItemIndex],
+    getIsFirstItemIndex: (state) => state.currentItemIndex == 0,
+    getIsLastItemIndex: (state) => state.currentItemIndex == state.answers.length - 1,
+    getChecklistData: (state) =>
+      [...Object.values(state.bio), Object.values(state.answers)].join(';')
+  }
 })

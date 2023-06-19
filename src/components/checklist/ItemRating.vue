@@ -1,15 +1,19 @@
 <script setup>
-/* eslint-disable no-unused-vars */
-const props = defineProps({
-  item: {
-    type: Object,
+/* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
+
+// props
+const { options } = defineProps({
+  options: {
+    type: Array,
     required: true
   }
 })
+
+const emit = defineEmits(['onAnswer'])
 </script>
 
 <template>
-  <h1>Rating</h1>
-  {{ item.itemText }}
-  {{ item.itemOptions }}
+  <div class="flex flex-col" v-for="option in options" :key="option.value">
+    <div @click="$emit('on-answer', option.value)">{{ option.label }}</div>
+  </div>
 </template>

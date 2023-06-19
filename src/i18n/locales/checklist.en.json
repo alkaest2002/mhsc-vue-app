@@ -1,219 +1,219 @@
 [
   {
     "itemType": "itemLikert",
-    "itemText": "Fatigue, weariness, difficulties in recovering from fatigue", 
+    "itemText": "Fatigue, weariness, difficulties in recovering from fatigue",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Stress, feeling of being overwhelmed", 
+    "itemText": "Stress, feeling of being overwhelmed",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Difficulties in controlling impulses", 
+    "itemText": "Difficulties in controlling impulses",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Negative emotionality (e.g., tension, irritability, sadness, anxiety)", 
+    "itemText": "Negative emotionality (e.g., tension, irritability, sadness, anxiety)",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Aggressività verso gli altri o verso sé stessi", 
+    "itemText": "Aggressività verso gli altri o verso sé stessi",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Difficulties in interpersonal relationships", 
+    "itemText": "Difficulties in interpersonal relationships",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Concerns about private life", 
+    "itemText": "Concerns about private life",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Concerns about job", 
+    "itemText": "Concerns about job",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Health concerns", 
+    "itemText": "Health concerns",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Financial concerns", 
+    "itemText": "Financial concerns",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Energizing beverages (coffee, tea, energy drinks, ...)", 
+    "itemText": "Energizing beverages (coffee, tea, energy drinks, ...)",
     "itemOptions": [
-      { "label": "No problem", "value": 0},
-      { "label": "Some problems", "value": 1},
-      { "label": "A lot of problems", "value": 2},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "No problem", "value": 0 },
+      { "label": "Some problems", "value": 1 },
+      { "label": "A lot of problems", "value": 2 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Alcoholic beverages", 
+    "itemText": "Alcoholic beverages",
     "itemOptions": [
-      { "label": "never", "value": 0},
-      { "label": "occasionally", "value": 1},
-      { "label": "weekly", "value": 2},
-      { "label": "daily", "value": 3},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "never", "value": 0 },
+      { "label": "occasionally", "value": 1 },
+      { "label": "weekly", "value": 2 },
+      { "label": "daily", "value": 3 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Tobacco or tobacco-related products", 
+    "itemText": "Tobacco or tobacco-related products",
     "itemOptions": [
-      { "label": "never", "value": 0},
-      { "label": "occasionally", "value": 1},
-      { "label": "weekly", "value": 2},
-      { "label": "daily", "value": 3},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "never", "value": 0 },
+      { "label": "occasionally", "value": 1 },
+      { "label": "weekly", "value": 2 },
+      { "label": "daily", "value": 3 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Light drugs (e.g., marijuana", 
+    "itemText": "Light drugs (e.g., marijuana",
     "itemOptions": [
-      { "label": "never", "value": 0},
-      { "label": "occasionally", "value": 1},
-      { "label": "weekly", "value": 2},
-      { "label": "daily", "value": 3},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "never", "value": 0 },
+      { "label": "occasionally", "value": 1 },
+      { "label": "weekly", "value": 2 },
+      { "label": "daily", "value": 3 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Other drugs", 
+    "itemText": "Other drugs",
     "itemOptions": [
-      { "label": "never", "value": 0},
-      { "label": "occasionally", "value": 1},
-      { "label": "weekly", "value": 2},
-      { "label": "daily", "value": 3},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "never", "value": 0 },
+      { "label": "occasionally", "value": 1 },
+      { "label": "weekly", "value": 2 },
+      { "label": "daily", "value": 3 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Psychiatric or psychological treatments in progress or finished in the last year", 
+    "itemText": "Psychiatric or psychological treatments in progress or finished in the last year",
     "itemOptions": [
-      { "label": "no", "value": 0},
-      { "label": "yes", "value": 1},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "no", "value": 0 },
+      { "label": "yes", "value": 1 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Access to corporate services dedicated to worker support (e.g., peer support)", 
+    "itemText": "Access to corporate services dedicated to worker support (e.g., peer support)",
     "itemOptions": [
-      { "label": "no", "value": 0},
-      { "label": "yes", "value": 1},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "no", "value": 0 },
+      { "label": "yes", "value": 1 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Inconveniences, dangerous events, accidents in the workplace in the last year", 
+    "itemText": "Inconveniences, dangerous events, accidents in the workplace in the last year",
     "itemOptions": [
-      { "label": "no", "value": 0},
-      { "label": "yes", "value": 1},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "no", "value": 0 },
+      { "label": "yes", "value": 1 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Other significant/relevant events in progress or occurred in the last year", 
+    "itemText": "Other significant/relevant events in progress or occurred in the last year",
     "itemOptions": [
-      { "label": "no", "value": 0},
-      { "label": "yes", "value": 1},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "no", "value": 0 },
+      { "label": "yes", "value": 1 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemLikert",
-    "itemText": "Judicial/quasi-judicial/disciplinary proceedings in progress or closed in the last year", 
+    "itemText": "Judicial/quasi-judicial/disciplinary proceedings in progress or closed in the last year",
     "itemOptions": [
-      { "label": "no", "value": 0},
-      { "label": "yes", "value": 1},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "no", "value": 0 },
+      { "label": "yes", "value": 1 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   },
-  { 
+  {
     "itemType": "itemRating",
-    "itemText": "Using a scale from 0 (very low) to 10 (very high), rate your current psychological well-being", 
+    "itemText": "Using a scale from 0 (very low) to 10 (very high), rate your current psychological well-being",
     "itemOptions": [
-      { "label": "0", "value": 0},
-      { "label": "1", "value": 1},
-      { "label": "2", "value": 2},
-      { "label": "3", "value": 3},
-      { "label": "4", "value": 4},
-      { "label": "5", "value": 5},
-      { "label": "6", "value": 6},
-      { "label": "7", "value": 7},
-      { "label": "8", "value": 8},
-      { "label": "9", "value": 9},
-      { "label": "10", "value": 10},
-      { "label": "I do not want to answer", "value": -1}
+      { "label": "0", "value": 0 },
+      { "label": "1", "value": 1 },
+      { "label": "2", "value": 2 },
+      { "label": "3", "value": 3 },
+      { "label": "4", "value": 4 },
+      { "label": "5", "value": 5 },
+      { "label": "6", "value": 6 },
+      { "label": "7", "value": 7 },
+      { "label": "8", "value": 8 },
+      { "label": "9", "value": 9 },
+      { "label": "10", "value": 10 },
+      { "label": "I do not want to answer", "value": -1 }
     ]
   }
 ]

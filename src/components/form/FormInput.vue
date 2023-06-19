@@ -1,5 +1,5 @@
 <script setup>
-/* eslint-disable no-unused-vars, no-undef */
+/* eslint-disable no-undef */
 import { ref, onMounted } from 'vue'
 
 defineOptions({ inheritAttrs: false })

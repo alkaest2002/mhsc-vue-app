@@ -1,5 +1,5 @@
 <script setup>
-/* eslint-disable no-unused-vars, no-undef */
+/* eslint-disable no-undef */
 const modelValue = defineModel()
 
 const props = defineProps({
@@ -29,7 +29,7 @@ const props = defineProps({
   <div class="field">
     <div class="select" :class="props.class">
       <select
-        class=" block p-2 bg-sky-50 border border-sky-800 text-sky-900 text-sm rounded-lg focus:ring-sky-500 focus:border-blindigoue-500"
+        class="block p-2 bg-sky-50 border border-sky-800 text-sky-900 text-sm rounded-lg focus:ring-sky-500 focus:border-blindigoue-500"
         :class="props.class"
         :disabled="disabled"
         @change="modelValue = $event.target.value"

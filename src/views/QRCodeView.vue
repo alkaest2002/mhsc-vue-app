@@ -4,9 +4,9 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <AppPanel>
+  <AppContainer>
     <template #title>
       {{ t('views.qrcode.title') }}
     </template>
-  </AppPanel>
+  </AppContainer>
 </template>

@@ -7,7 +7,7 @@ import App from '@/App.vue'
 import router from '@/router'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import LoadingButton from '@/components/ui/LoadingButton.vue'
-import AppPanel from './components/ui/AppPanel.vue'
+import AppContainer from './components/ui/AppContainer.vue'
 
 // init pinia store
 const pinia = createPinia()
@@ -22,5 +22,5 @@ vueApp
   .use(pinia)
   .use(i18n)
   .component('LoadingButton', LoadingButton)
-  .component('AppPanel', AppPanel)
+  .component('AppContainer', AppContainer)
   .mount('#app')
