@@ -1,14 +1,31 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
+import { ref, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { useChecklistStore } from '@/stores/checklist.store';
+import { useChecklistStore } from '@/stores/checklist.store'
+import { storeToRefs } from 'pinia'
+import QrcodeVue from 'qrcode.vue'
 
+// get router
+const router = useRouter()
 // get i18n t
 const { t } = useI18n()
-
-const { getChecklistData } = useChecklistStore()
-
-
+// get pinia checklist store 
+const checklistStore = useChecklistStore()
+// pick checklist store prop
+const { getChecklistData } = storeToRefs(checklistStore)
+// init isLoading state
+const isLoading = ref(false)
+// onClick function
+const onClick = () => {
+  // stop spinner
+  isLoading.value = false
+  // go to home
+  router.push({ name: 'start' })
+}
+// on unmounted reset pinia checklist store
+onUnmounted(() =>  checklistStore.$reset())
 </script>
 
 <template>
@@ -17,7 +34,33 @@ const { getChecklistData } = useChecklistStore()
       {{ t('views.qrcode.title') }}
     </template>
     <template #content>
-      {{ getChecklistData }}
+      <p class="mb-8">
+        {{ t('views.qrcode.text') }}
+      </p>
+      <div class="border-4 border-sky-800  mt-4 p-2 rounded-lg overflow-scroll w-fit">
+        <qrcode-vue 
+          :value="window.btoa(getChecklistData)" 
+          :size="250" 
+          level="H"
+          :render-as="'svg'"
+          :foreground="'#075985'"
+        />
+      </div>
+    </template>
+    <template #footer>
+      <LoadingButton
+        @click="onClick"
+        v-model="isLoading"
+        :css="'w-full bg-red-800 outline-red-800 hover:bg-red-700'"
+      >
+        {{ t('ui.button.reset') }}
+      </LoadingButton>
     </template>
   </AppContainer>
 </template>
+
+<style lang="scss" scoped>
+  canvas {
+    height: 50%;
+  }
+</style>

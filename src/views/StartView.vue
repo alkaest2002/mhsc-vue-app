@@ -10,7 +10,7 @@ import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
 
 // get router
 const router = useRouter()
-// get i18n
+// get i18n t
 const { t } = useI18n()
 // get supported locales
 let supportedLocales = getSupportedLocales(false)

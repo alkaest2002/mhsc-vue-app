@@ -134,7 +134,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Light drugs (e.g., marijuana",
+    "itemText": "Light drugs (e.g., marijuana)",
     "itemOptions": [
       { "label": "never", "value": 0 },
       { "label": "occasionally", "value": 1 },
@@ -145,7 +145,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Other drugs",
+    "itemText": "Other drugs (e.g., cocaine)",
     "itemOptions": [
       { "label": "never", "value": 0 },
       { "label": "occasionally", "value": 1 },

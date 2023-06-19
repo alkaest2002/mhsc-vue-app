@@ -16,6 +16,9 @@ pinia.use(piniaPluginPersistedstate)
 // init vue app
 const vueApp = createApp(App)
 
+// add window
+vueApp.config.globalProperties = window
+
 // pimp-up app
 vueApp
   .use(router)

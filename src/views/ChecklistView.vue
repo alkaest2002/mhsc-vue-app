@@ -15,7 +15,7 @@ const { t } = useI18n()
 // import locale-aware checklist
 const module = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
 const checklist = module.default
-// get pinia checklistStore
+// get pinia checklistStore props and actions
 const {
   answers,
   currentItemIndex: index,
@@ -33,8 +33,6 @@ const onAnswer = (answer) => {
 }
 // onClick function
 const onClick = () => {
-  // start button spinner
-  isLoading.value = true
   // update pinia checkList store answers prop
   answers.value.splice(index.value, 1, localAnswer.value)
   // in case this is the last item
@@ -53,7 +51,14 @@ const onClick = () => {
 <template>
   <AppContainer>
     <template #title>
-      {{ t('views.checklist.title') }}
+      <div class="flex justify-between ">
+        <span>
+        {{ t('views.checklist.title') }}
+        </span>
+        <span class=" text-sky-800 leading-tight text-1xl text-base flex items-center">
+          {{ `${index + 1} &middot; ${answers.length}` }}
+        </span>  
+      </div>
     </template>
     <template #content>
       <transition

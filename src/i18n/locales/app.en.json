@@ -18,7 +18,7 @@
     },
     "info": {
       "title": "Information on this site",
-      "text": "The data you enter on this site will be stored locally on your device (smartphone, tablet, computer) and will not be communicated to the server. After haveing completed the questionnaire, your device will generate a QRCode to be shown to the AME. This QRCode will contain all the information you have provided."
+      "text": "The data you enter on the forms of this static site will be stored locally on your device (smartphone, tablet, computer) and will not be communicated to our servers. After having completed the questionnaire, your device will generate a QR Code containing all the information you will have provided. When requested to do so, you will show the generated QR Code to the aeromedical examiner (AME)."
     },
     "disclaimer": {
       "title": "Consent to the release of information",
@@ -41,14 +41,16 @@
       "title": "Checklist"
     },
     "qrcode": {
-      "title": "QR Code"
+      "title": "QR Code",
+      "text": "Congratulations, you have completed the checklist. You can show the generated QR Code to the medical examiner."
     }
   },
   "ui": {
     "button": {
       "ok": "ok",
       "enter": "enter",
-      "continue": "continue"
+      "continue": "continue",
+      "reset": "reset data"
     }
   }
 }

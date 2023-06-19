@@ -18,7 +18,7 @@
     },
     "info": {
       "title": "Informazioni sul sito",
-      "text": "I dati da lei inseriti in questo sito saranno memorizzati localmente nel suo dispositivo (smartphone, tablet, computer) e non saranno comunicati al server. Alla fine della compilazione del questionario, il suo dispositivo genererà sempre in locale un QRCode che lei dovrà mostrare all'AME. Tale QRCode conterrà tutte le informazioni da lei rilasciate."
+      "text": "I dati da lei inseriti in questo sito saranno memorizzati localmente nel suo dispositivo (smartphone, tablet, computer) e non saranno comunicati al server. Alla fine della compilazione del questionario, il suo dispositivo genererà sempre in locale un QR Code contenente tutte le informazioni da lei rilasciate. Quando richiesto, dovrà mostrare il QR Code generato al medico AME."
     },
     "disclaimer": {
       "title": "Consenso al rilascio di informazioni",
@@ -41,14 +41,16 @@
       "title": "Checklist"
     },
     "qrcode": {
-      "title": "QR Code"
+      "title": "QR Code",
+      "text": "Complimenti, hai finito il questionario. Adesso, mostra questo QR Code al medico AME."
     }
   },
   "ui": {
     "button": {
       "ok": "ok",
       "enter": "entra",
-      "continue": "continua"
+      "continue": "continua",
+      "reset": "cancella tutti i dati"
     }
   }
 }

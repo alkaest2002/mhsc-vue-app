@@ -22,6 +22,6 @@ export const useChecklistStore = defineStore('checklistStore', {
     getIsFirstItemIndex: (state) => state.currentItemIndex == 0,
     getIsLastItemIndex: (state) => state.currentItemIndex == state.answers.length - 1,
     getChecklistData: (state) =>
-      [...Object.values(state.bio), Object.values(state.answers)].join(';')
+      [...Object.values(state.bio), ...Object.values(state.answers)].join(';')
   }
 })

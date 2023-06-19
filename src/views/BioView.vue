@@ -12,8 +12,10 @@ import LoadingButton from '../components/ui/LoadingButton.vue'
 const router = useRouter()
 // get i18n
 const { t } = useI18n()
-// get pinia checklistStore prop and patch fn
-const { bio, $patch } = useChecklistStore()
+// get pinia checklistStore
+const checklistStore = useChecklistStore()
+// pick pinia checklistStore prop
+const { bio } = checklistStore
 // set loading state
 const isLoading = ref(false)
 // set reactive formData (default values from pinia checklistStore prop)
@@ -38,12 +40,17 @@ const fieldsToRender = [
 const submitFormData = async () => {
   // check forma data
   const isFormCorrect = await v.value.$validate()
+  // on form errors
+  if (!isFormCorrect) {
+    // stop loading state
+    isLoading.value = false
+    // do nothing
+    return
+  }
+  // update pinia checklistStore
+  checklistStore.$patch({ bio: formData })
   // stop loading state
   isLoading.value = false
-  // do nothing on form errors
-  if (!isFormCorrect) return
-  // update pinia checklistStore
-  $patch(formData)
   // goto checklist
   router.push({ name: 'checklist' })
 }
