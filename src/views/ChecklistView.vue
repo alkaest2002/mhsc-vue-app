@@ -58,7 +58,7 @@ const onClick = () => {
     <template #title>
       <div class="flex justify-between ">
         <span>
-        {{ t('views.checklist.title') }} {{ isLoading }}
+        {{ t('views.checklist.title') }}
         </span>
         <span class=" text-sky-800 leading-tight text-1xl text-base flex items-center">
           <span class="text-base">{{ index + 1 }}</span>&nbsp;&middot;&nbsp;<span>{{ answers.length }}</span>

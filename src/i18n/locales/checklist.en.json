@@ -192,7 +192,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Judicial/quasi-judicial/disciplinary proceedings in progress or closed in the last year",
+    "itemText": "Judicial, quasi-judicial, disciplinary proceedings in progress or closed in the last year",
     "itemOptions": [
       { "label": "no", "value": 0 },
       { "label": "yes", "value": 1 },

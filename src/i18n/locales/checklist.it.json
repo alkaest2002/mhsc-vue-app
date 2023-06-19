@@ -192,7 +192,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Procedimenti giudiziali/extra-giudiziali/disciplinari in corso o conclusi nell’ultimo anno",
+    "itemText": "Procedimenti giudiziali, extra-giudiziali, disciplinari in corso o conclusi nell’ultimo anno",
     "itemOptions": [
       { "label": "no", "value": 0 },
       { "label": "sì", "value": 1 },
