@@ -1,206 +1,207 @@
 [
   {
     "itemType": "itemLikert",
-    "itemText": "Fatigue, weariness, difficulties in recovering from fatigue",
+    "itemText": "Affaticamento, stanchezza, difficoltà a recuperare le energie",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Stress, feeling of being overwhelmed",
+    "itemText": "Stress, sensazione di sovraccarico",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Difficulties in controlling impulses",
+    "itemText": "Difficoltà nel controllo degli impulsi",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Negative emotionality (e.g., tension, irritability, sadness, anxiety)",
+    "itemText": "Emozionalità negativa (es., tensione, irritabilità, tristezza, ansia)",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
     "itemText": "Aggressività verso gli altri o verso sé stessi",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Difficulties in interpersonal relationships",
+    "itemText": "Difficoltà nei rapporti interpersonali",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Concerns about private life",
+    "itemText": "Preoccupazioni che riguardano la sfera del privato",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Concerns about job",
+    "itemText": "Preoccupazioni che riguardano il contesto lavorativo",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Health concerns",
+    "itemText": "Preoccupazioni per il proprio stato di salute",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Financial concerns",
+    "itemText": "Preoccupazioni finanziarie",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Nessun problema", "value": 0 },
+      { "label": "Qualche problema", "value": 1 },
+      { "label": "Molti problemi", "value": 2 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Energizing beverages (coffee, tea, energy drinks, ...)",
+    "itemText": "Bevande eccitanti (es., caffè, tè, energy drink)",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "nessun consumo", "value": 0 },
+      { "label": "consumo occasionale", "value": 1 },
+      { "label": "consumo settimanale", "value": 2 },
+      { "label": "consumo giornaliero", "value": 3 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Alcoholic beverages",
+    "itemText": "Bevande alcoliche",
     "itemOptions": [
-      { "label": "never", "value": 0 },
-      { "label": "occasionally", "value": 1 },
-      { "label": "weekly", "value": 2 },
-      { "label": "daily", "value": 3 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "nessun consumo", "value": 0 },
+      { "label": "consumo occasionale", "value": 1 },
+      { "label": "consumo settimanale", "value": 2 },
+      { "label": "consumo giornaliero", "value": 3 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Tobacco or tobacco-related products",
+    "itemText": "Tabacco o prodotti derivati dal tabacco",
     "itemOptions": [
-      { "label": "never", "value": 0 },
-      { "label": "occasionally", "value": 1 },
-      { "label": "weekly", "value": 2 },
-      { "label": "daily", "value": 3 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "nessun consumo", "value": 0 },
+      { "label": "consumo occasionale", "value": 1 },
+      { "label": "consumo settimanale", "value": 2 },
+      { "label": "consumo giornaliero", "value": 3 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Light drugs (e.g., marijuana",
+    "itemText": "Droghe leggere (es., marijuana)",
     "itemOptions": [
-      { "label": "never", "value": 0 },
-      { "label": "occasionally", "value": 1 },
-      { "label": "weekly", "value": 2 },
-      { "label": "daily", "value": 3 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "nessun consumo", "value": 0 },
+      { "label": "consumo occasionale", "value": 1 },
+      { "label": "consumo settimanale", "value": 2 },
+      { "label": "consumo giornaliero", "value": 3 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Other drugs",
+    "itemText": "Altre droghe",
     "itemOptions": [
-      { "label": "never", "value": 0 },
-      { "label": "occasionally", "value": 1 },
-      { "label": "weekly", "value": 2 },
-      { "label": "daily", "value": 3 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "nessun consumo", "value": 0 },
+      { "label": "consumo occasionale", "value": 1 },
+      { "label": "consumo settimanale", "value": 2 },
+      { "label": "consumo giornaliero", "value": 3 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Psychiatric or psychological treatments in progress or finished in the last year",
-    "itemOptions": [
-      { "label": "no", "value": 0 },
-      { "label": "yes", "value": 1 },
-      { "label": "I do not want to answer", "value": -1 }
-    ]
-  },
-  {
-    "itemType": "itemLikert",
-    "itemText": "Access to corporate services dedicated to worker support (e.g., peer support)",
+    "itemText": "Trattamenti psichiatrici o psicologici in corso o conclusi nell’ultimo anno",
     "itemOptions": [
       { "label": "no", "value": 0 },
-      { "label": "yes", "value": 1 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "sì", "value": 1 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Inconveniences, dangerous events, accidents in the workplace in the last year",
+    "itemText": "Accesso ai servizi aziendali dedicati al supporto del lavoratore (es., peer support)",
     "itemOptions": [
       { "label": "no", "value": 0 },
-      { "label": "yes", "value": 1 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "sì", "value": 1 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Other significant/relevant events in progress or occurred in the last year",
+    "itemText": "Inconvenienti, eventi di pericolo, incidenti sul luogo di lavoro nell’ultimo anno",
     "itemOptions": [
       { "label": "no", "value": 0 },
-      { "label": "yes", "value": 1 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "sì", "value": 1 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Judicial/quasi-judicial/disciplinary proceedings in progress or closed in the last year",
+    "itemText": "Altri eventi significativi in corso o accaduti nell’ultimo anno",
     "itemOptions": [
       { "label": "no", "value": 0 },
-      { "label": "yes", "value": 1 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "sì", "value": 1 },
+      { "label": "Non voglio rispondere", "value": -1 }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Procedimenti giudiziali/extra-giudiziali/disciplinari in corso o conclusi nell’ultimo anno",
+    "itemOptions": [
+      { "label": "no", "value": 0 },
+      { "label": "sì", "value": 1 },
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   },
   {
     "itemType": "itemRating",
-    "itemText": "Using a scale from 0 (very low) to 10 (very high), rate your current psychological well-being",
+    "itemText": "Esprima, in una scala da 0 (molto basso) a 10 (molto alto), il suo attuale benessere psico-fisico",
     "itemOptions": [
       { "label": "0", "value": 0 },
       { "label": "1", "value": 1 },
@@ -213,7 +214,7 @@
       { "label": "8", "value": 8 },
       { "label": "9", "value": 9 },
       { "label": "10", "value": 10 },
-      { "label": "I do not want to answer", "value": -1 }
+      { "label": "Non voglio rispondere", "value": -1 }
     ]
   }
 ]

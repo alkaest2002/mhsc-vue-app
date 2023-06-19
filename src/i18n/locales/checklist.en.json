@@ -41,7 +41,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Aggressività verso gli altri o verso sé stessi",
+    "itemText": "Aggressiveness towards others or self",
     "itemOptions": [
       { "label": "No problem", "value": 0 },
       { "label": "Some problems", "value": 1 },
@@ -103,9 +103,10 @@
     "itemType": "itemLikert",
     "itemText": "Energizing beverages (coffee, tea, energy drinks, ...)",
     "itemOptions": [
-      { "label": "No problem", "value": 0 },
-      { "label": "Some problems", "value": 1 },
-      { "label": "A lot of problems", "value": 2 },
+      { "label": "never", "value": 0 },
+      { "label": "occasionally", "value": 1 },
+      { "label": "weekly", "value": 2 },
+      { "label": "daily", "value": 3 },
       { "label": "I do not want to answer", "value": -1 }
     ]
   },

@@ -1,14 +1,12 @@
 <script setup>
 /* eslint-disable no-unused-vars */
-
 import { storeToRefs } from 'pinia'
-import { useI18n } from 'vue-i18n'
 import { useChecklistStore } from '@/stores/checklist.store'
 import ItemLikert from '@/components/checklist/ItemLikert.vue'
 import ItemRating from '@/components/checklist/ItemRating.vue'
 
+// define options
 defineOptions({ inheritAttrs: false })
-
 // props
 const props = defineProps({
   item: {
@@ -16,26 +14,21 @@ const props = defineProps({
     reruired: true
   }
 })
-
 // get pinia checklistStore prop
 const { answers, currentItemIndex } = storeToRefs(useChecklistStore())
-
-// get i18n t
-const { t } = useI18n()
-
 // components
 const checklistComponents = {
   itemLikert: ItemLikert,
-  ItemRating: ItemRating
+  itemRating: ItemRating
 }
 </script>
 
 <template>
   <div>
-    <p class="font-semibold text-sky-800 leading-tight uppercase mb-3 text-1xl">
+    <p class="font-semibold text-sky-800 leading-tight uppercase my-3 text-1xl">
       {{ `${currentItemIndex + 1}/${answers.length}` }}
     </p>
-    <p class="mb-4 text-xl">{{ item.itemText }}</p>
+    <p class="text-xl mb-7">{{ item.itemText }}</p>
     <component
       :is="checklistComponents[item.itemType]"
       :options="item.itemOptions"
