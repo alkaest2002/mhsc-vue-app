@@ -17,11 +17,12 @@
       "selectLanguage": "Per favore, seleziona una lingua"
     },
     "info": {
-      "title": "Informazioni sul sito"
+      "title": "Informazioni sul sito",
+      "text": "I dati da lei inseriti in questo sito saranno memorizzati localmente nel suo dispositivo (smartphone, tablet, computer) e non saranno comunicati al server. Alla fine della compilazione del questionario, il suo dispositivo genererà sempre in locale un QRCode che lei dovrà mostrare all'AME. Tale QRCode conterrà tutte le informazioni da lei rilasciate."
     },
     "disclaimer": {
       "title": "Consenso al rilascio di informazioni",
-      "disclaimer": "Autorizzo il rilascio dei dati contenuti in questa form all’AME e, ove necessario, all’esaminatore medico dell’autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno di proprietà dell’autorità di rilascio delle licenze, a condizione che io o il mio medico possiamo accedervi secondo la legislazione nazionale. La riservatezza medica sarà comunque sempre rispettata.",
+      "text": "Autorizzo il rilascio dei dati contenuti in questa form all’AME e, ove necessario, all’esaminatore medico dell’autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno di proprietà dell’autorità di rilascio delle licenze, a condizione che io o il mio medico possiamo accedervi secondo la legislazione nazionale. La riservatezza medica sarà comunque sempre rispettata.",
       "agree": "Do il mio consenso"
     },
     "bio": {

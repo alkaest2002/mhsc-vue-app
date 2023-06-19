@@ -26,7 +26,7 @@ watch(locale, (newLocale) => {
   <AppPanel>
     <template #content>      
       <div class="flex flex-col justify-center items-center h-full">
-        <img src="@/assets/airport.svg" />
+        <img src="@/assets/airport.svg" class="max-w-[30vw] md:max-w-[150px]"/>
         <h1 class="text-2xl font-bold text-center mt-2" v-html="t('views.start.title')" />
       </div>  
     </template>
@@ -45,10 +45,3 @@ watch(locale, (newLocale) => {
     </template>
   </AppPanel>
 </template>
-
-<style scoped>
-img {
-  width: 30vw;
-  max-width: 150px;
-}
-</style>
