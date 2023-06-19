@@ -24,26 +24,31 @@ const {
 } = storeToRefs(useChecklistStore())
 // init isLoading state
 const isLoading = ref(false)
-// init local answer
+// init local answer variable
 const localAnswer = ref(getCurrentAnswer.value)
 // on answer
 const onAnswer = (answer) => {
-  // store answer into component variable
+  // store answer into local answer variable
   localAnswer.value = answer
 }
-// onClick function
+// on click button function
 const onClick = () => {
+  // start spinner
+  isLoading.value = true
   // update pinia checkList store answers prop
   answers.value.splice(index.value, 1, localAnswer.value)
   // in case this is the last item
-  if (getIsLastItemIndex.value)
+  if (getIsLastItemIndex.value) {
+    // stop spinner
+    isLoading.value = false
     // go to qrcode view
     return router.push({ name: 'qrcode' })
+  }
   // increment pinia checkList store index prop
   index.value++
-  // reset local answer
+  // reset local answer variable
   localAnswer.value = getCurrentAnswer.value
-  // stop button spinner
+  // stop spinner
   isLoading.value = false
 }
 </script>
@@ -53,10 +58,10 @@ const onClick = () => {
     <template #title>
       <div class="flex justify-between ">
         <span>
-        {{ t('views.checklist.title') }}
+        {{ t('views.checklist.title') }} {{ isLoading }}
         </span>
         <span class=" text-sky-800 leading-tight text-1xl text-base flex items-center">
-          {{ `${index + 1} &middot; ${answers.length}` }}
+          <span class="text-base">{{ index + 1 }}</span>&nbsp;&middot;&nbsp;<span>{{ answers.length }}</span>
         </span>  
       </div>
     </template>
@@ -82,7 +87,7 @@ const onClick = () => {
     <template #footer>
       <LoadingButton
         @click="onClick"
-        v-model="isLoading"
+        :is-loading="isLoading"
         :disabled="localAnswer === null"
         :css="'w-full'"
       >

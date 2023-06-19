@@ -36,20 +36,22 @@ const fieldsToRender = [
   { field: 'birthWhere', type: 'text' },
   { field: 'birthWhen', type: 'date' }
 ]
-// submitData
-const submitFormData = async () => {
+// on click button function
+const onClick = async () => {
+  // start spinner
+  isLoading.value = true
   // check forma data
   const isFormCorrect = await v.value.$validate()
   // on form errors
   if (!isFormCorrect) {
-    // stop loading state
+    // stop spinner
     isLoading.value = false
     // do nothing
     return
   }
   // update pinia checklistStore
   checklistStore.$patch({ bio: formData })
-  // stop loading state
+  // stop spinner
   isLoading.value = false
   // goto checklist
   router.push({ name: 'checklist' })
@@ -78,7 +80,7 @@ const submitFormData = async () => {
       </template>
     </template>
     <template #footer>
-      <LoadingButton :css="'w-full'" v-model="isLoading" @click="submitFormData">
+      <LoadingButton :css="'w-full'" :is-loading="isLoading" @click="onClick">
         {{ t('ui.button.continue') }}
       </LoadingButton>
     </template>

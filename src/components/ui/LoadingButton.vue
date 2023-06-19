@@ -2,16 +2,16 @@
 /* eslint-disable no-undef, no-unused-vars, vue/no-setup-props-destructure */
 import { computed, useAttrs } from 'vue'
 
-// get attrs
-const $attrs = useAttrs()
 // do not inherit attribs
 defineOptions({ inheritAttrs: false })
-// get modelValue
-const modelValue = defineModel()
-// define emits
-const emit = defineEmits(['onClickButton'])
+// get attrs
+const $attrs = useAttrs()
 // define props
 const { css, color } = defineProps({ 
+  isLoading: {
+    type: Boolean,
+    default: false
+  },
   css: { 
     type: String,
     default: ''
@@ -24,7 +24,7 @@ const { css, color } = defineProps({
 // compute button css
 const buttonCss = computed(() => {
   let buttonCss = css
-  buttonCss += ` h-10 bg-${color}-800 outline-${color}-800 hover:bg-${color}-700 text-white py-2 px-4 rounded justify-center`
+  buttonCss += ` flex items-center h-10 bg-${color}-800 outline-${color}-800 hover:bg-${color}-700 text-white py-2 px-4 rounded justify-center`
   buttonCss += $attrs.disabled ? ' cursor-not-allowed opacity-25' : ''
   return buttonCss
 })
@@ -41,7 +41,7 @@ const spinnerCss = computed(() => {
     :class="buttonCss"
     v-bind="$attrs"
   >
-    <span v-if="modelValue">
+    <span v-if="isLoading">
       <svg
         :class="spinnerCss"
         viewBox="0 0 100 101"

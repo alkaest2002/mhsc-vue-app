@@ -17,10 +17,8 @@ const checklistStore = useChecklistStore()
 const { getChecklistData } = storeToRefs(checklistStore)
 // init isLoading state
 const isLoading = ref(false)
-// onClick function
+// on click button function
 const onClick = () => {
-  // stop spinner
-  isLoading.value = false
   // go to home
   router.push({ name: 'start' })
 }
@@ -50,7 +48,7 @@ onUnmounted(() =>  checklistStore.$reset())
     <template #footer>
       <LoadingButton
         @click="onClick"
-        v-model="isLoading"
+        :is-loading="isLoading"
         :color="'red'"
         :css="'w-full'"
       >
