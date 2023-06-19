@@ -51,16 +51,11 @@ onUnmounted(() =>  checklistStore.$reset())
       <LoadingButton
         @click="onClick"
         v-model="isLoading"
-        :css="'w-full bg-red-800 outline-red-800 hover:bg-red-700'"
+        :color="'red'"
+        :css="'w-full'"
       >
         {{ t('ui.button.reset') }}
       </LoadingButton>
     </template>
   </AppContainer>
 </template>
-
-<style lang="scss" scoped>
-  canvas {
-    height: 50%;
-  }
-</style>

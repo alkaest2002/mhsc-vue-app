@@ -1,5 +1,5 @@
 <script setup>
-/* eslint-disable no-undef, no-unused-vars */
+/* eslint-disable no-undef, no-unused-vars, vue/no-setup-props-destructure */
 import { computed, useAttrs } from 'vue'
 
 // get attrs
@@ -11,25 +11,39 @@ const modelValue = defineModel()
 // define emits
 const emit = defineEmits(['onClickButton'])
 // define props
-const props = defineProps({ css: { type: String } })
-// compute css class
-const computedCss = computed(() => {
-  let css = props.css
-  css += modelValue.value ? ' is-loading' : ''
-  css += $attrs.disabled ? ' cursor-not-allowed opacity-25' : ''
-  return css
+const { css, color } = defineProps({ 
+  css: { 
+    type: String,
+    default: ''
+  },
+  color: {
+    type: String,
+    default: 'sky'
+  }
+})
+// compute button css
+const buttonCss = computed(() => {
+  let buttonCss = css
+  buttonCss += ` h-10 bg-${color}-800 outline-${color}-800 hover:bg-${color}-700 text-white py-2 px-4 rounded justify-center`
+  buttonCss += $attrs.disabled ? ' cursor-not-allowed opacity-25' : ''
+  return buttonCss
+})
+//compute spinner css
+const spinnerCss = computed(() => {
+  let spinnerCss = `w-6 h-6 mr-2 text-gray-200 animate-spin stroke-${color}-800 fill-${color}-800 hover:stroke-${color}-700 hover:fill-${color}-700`
+  spinnerCss += $attrs.disabled ? ' cursor-not-allowed opacity-25' : ''
+  return spinnerCss
 })
 </script>
 
 <template>
-  <button
-    class="flex h-10 bg-sky-800 outline-sky-800 hover:bg-sky-700 text-white py-2 px-4 rounded justify-center"
-    :class="computedCss"
+  <button 
+    :class="buttonCss"
     v-bind="$attrs"
   >
     <span v-if="modelValue">
       <svg
-        class="w-6 h-6 mr-2 text-gray-200 animate-spin stroke-sky-800 fill-sky-800 hover:stroke-sky-700 hover:fill-sky-700"
+        :class="spinnerCss"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +58,7 @@ const computedCss = computed(() => {
         />
       </svg>
     </span>
-    <span v-else class="grow">
+    <span v-else>
       <slot />
     </span>
   </button>

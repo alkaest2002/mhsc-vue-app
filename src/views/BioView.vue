@@ -78,7 +78,7 @@ const submitFormData = async () => {
       </template>
     </template>
     <template #footer>
-      <LoadingButton class="w-full" v-model="isLoading" @click="submitFormData">
+      <LoadingButton :css="'w-full'" v-model="isLoading" @click="submitFormData">
         {{ t('ui.button.continue') }}
       </LoadingButton>
     </template>
