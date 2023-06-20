@@ -30,9 +30,8 @@
       "form": {
         "info": "Compila i seguenti campi. Le informazioni rimangono memorizzate in locale nel tuo dispositivo.",
         "input": {
-          "name": { "label": "Name", "placeholder": "Mario" },
-          "surname": { "label": "Surname", "placeholder": "Rossi" },
-          "birthWhere": { "label": "Nato a", "placeholder": "Padova" },
+          "name": { "label": "Nome", "placeholder": "Mario" },
+          "surname": { "label": "Cognome", "placeholder": "Rossi" },
           "birthWhen": { "label": "Nato in data", "placeholder": "gg/mm/aaaaa" }
         }
       }

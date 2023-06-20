@@ -32,8 +32,7 @@
         "input": {
           "name": { "label": "Name", "placeholder": "John" },
           "surname": { "label": "Surname", "placeholder": "Doe" },
-          "birthWhere": { "label": "Place of birth", "placeholder": "New York" },
-          "birthWhen": { "label": "Date of birth", "placeholder": "dd/mm/yyyy" }
+          "birthWhen": { "label": "Date of birth", "placeholder": "yyyy//mm/dd" }
         }
       }
     },

@@ -10,7 +10,6 @@ export const useChecklistStore = defineStore('checklistStore', {
       bio: {
         name: '',
         surname: '',
-        birthWhere: '',
         birthWhen: ''
       },
       answers: Array.from({ length: 21 }, () => null),

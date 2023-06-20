@@ -24,7 +24,6 @@ const formData = reactive(bio)
 const rules = {
   name: { required, extendedAlpha },
   surname: { required, extendedAlpha },
-  birthWhere: { required, extendedAlpha },
   birthWhen: { required }
 }
 // init validator
@@ -33,7 +32,6 @@ const v = useVuelidate(rules, formData, { $lazy: true })
 const fieldsToRender = [
   { field: 'name', type: 'text' },
   { field: 'surname', type: 'text' },
-  { field: 'birthWhere', type: 'text' },
   { field: 'birthWhen', type: 'date' }
 ]
 // on click button function
