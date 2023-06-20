@@ -11,8 +11,7 @@ const { t } = useI18n()
 const { qrcodeWasGenerated } = storeToRefs(useChecklistStore())
 // computed routerlin to prop
 const to = computed(() => {
-  if (qrcodeWasGenerated.value)
-    return { name: 'qrcode' }
+  if (qrcodeWasGenerated.value) return { name: 'qrcode' }
   return { name: 'disclaimer' }
 })
 </script>

@@ -30,9 +30,7 @@ const emit = defineEmits(['onAnswer'])
           }"
           class="relative flex flex-col p-3 rounded-lg shadow-md cursor-pointer border-2"
         >
-          <span class="font-semibold text-sky-800 leading-tight"
-            >{{ option.label }}</span
-          >
+          <span class="font-semibold text-sky-800 leading-tight">{{ option.label }}</span>
         </div>
       </div>
     </div>
@@ -48,12 +46,9 @@ const emit = defineEmits(['onAnswer'])
           }"
           class="relative flex flex-col p-3 rounded-lg shadow-md cursor-pointer border-2"
         >
-          <span class="font-semibold text-sky-800 leading-tight"
-            >{{ option.label }}</span
-          >
+          <span class="font-semibold text-sky-800 leading-tight">{{ option.label }}</span>
         </div>
       </div>
     </div>
   </div>
- 
 </template>

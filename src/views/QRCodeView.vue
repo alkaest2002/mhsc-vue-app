@@ -11,7 +11,7 @@ import QrcodeVue from 'qrcode.vue'
 const router = useRouter()
 // get i18n t
 const { t } = useI18n()
-// get pinia checklist store 
+// get pinia checklist store
 const checklistStore = useChecklistStore()
 // pick checklist store prop
 const { getChecklistData, qrcodeWasGenerated } = storeToRefs(checklistStore)
@@ -41,10 +41,10 @@ onUnmounted(() => {
       <p class="mb-8">
         {{ t('views.qrcode.text') }}
       </p>
-      <div class="border-4 border-sky-800  mt-4 p-2 rounded-lg overflow-scroll w-fit">
-        <qrcode-vue 
-          :value="window.btoa(getChecklistData)" 
-          :size="250" 
+      <div class="border-4 border-sky-800 mt-4 p-2 rounded-lg overflow-scroll w-fit">
+        <qrcode-vue
+          :value="window.btoa(getChecklistData)"
+          :size="250"
           level="H"
           :render-as="'svg'"
           :foreground="'#075985'"
@@ -52,13 +52,8 @@ onUnmounted(() => {
       </div>
     </template>
     <template #footer>
-      <LoadingButton
-        @click="onClick"
-        :is-loading="isLoading"
-        :color="'red'"
-        :css="'w-full'"
-      >
-        {{ t('ui.button.reset') }} 
+      <LoadingButton @click="onClick" :is-loading="isLoading" :color="'red'" :css="'w-full'">
+        {{ t('ui.button.reset') }}
       </LoadingButton>
     </template>
   </AppContainer>

@@ -7,7 +7,8 @@ export const content = [
 export const theme = {
   extend: {
     fontFamily: {
-      'nunito': ['Nunito', 'sans-serif']
+      'nunito': ['Nunito', 'sans-serif'],
+      'sans': ['Nunito', 'sans-serif']
     },
   },
 };

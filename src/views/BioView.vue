@@ -72,7 +72,6 @@ const onClick = async () => {
           v-model="formData[field]"
           :auto-focus="index == 0"
           :label="t(`views.bio.form.input.${field}.label`)"
-          :placeholder="t(`views.bio.form.input.${field}.placeholder`)"
           :css="'mb-3'"
           :errors="v[field].$errors"
           :type="type"

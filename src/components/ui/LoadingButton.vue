@@ -7,12 +7,12 @@ defineOptions({ inheritAttrs: false })
 // get attrs
 const $attrs = useAttrs()
 // define props
-const { css, color } = defineProps({ 
+const { css, color } = defineProps({
   isLoading: {
     type: Boolean,
     default: false
   },
-  css: { 
+  css: {
     type: String,
     default: ''
   },
@@ -35,7 +35,7 @@ const spinnerCss = computed(() => {
 </script>
 
 <template>
-  <button 
+  <button
     class="flex items-center h-10 bg-sky-800 outline-sky-800 hover:bg-sky-700 text-white py-2 px-4 rounded justify-center"
     :class="buttonCss"
     v-bind="$attrs"
@@ -63,7 +63,7 @@ const spinnerCss = computed(() => {
       <slot />
     </span>
   </button>
-  <button 
+  <button
     class="flex items-center h-10 bg-red-800 outline-red-800 hover:bg-red-700 text-white py-2 px-4 rounded justify-center"
     :class="buttonCss"
     v-bind="$attrs"

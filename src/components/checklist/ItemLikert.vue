@@ -28,12 +28,15 @@ const emit = defineEmits(['onAnswer'])
           'bg-sky-100': option.value == currentAnswer,
           'border-sky-800': option.value == currentAnswer
         }"
-        class="relative flex justify-between p-3 rounded-lg shadow-md cursor-pointer border-2 "
+        class="relative flex justify-between p-3 rounded-lg shadow-md cursor-pointer border-2"
       >
         <span class="font-semibold text-sky-800 leading-tight">
           {{ option.label }}
         </span>
-        <IconCheckmark v-show="option.value == currentAnswer" class="stroke-sky-800 fill-none stroke-[30] h-4" />
+        <IconCheckmark
+          v-show="option.value == currentAnswer"
+          class="stroke-sky-800 fill-none stroke-[30] h-4"
+        />
       </div>
     </div>
   </div>
