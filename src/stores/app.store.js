@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useAppStore = defineStore('appStore', {
   persist: {
-    storage: sessionStorage
+    storage: localStorage
   },
   state: () => {
     return {

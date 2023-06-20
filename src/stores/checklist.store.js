@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useChecklistStore = defineStore('checklistStore', {
   persist: {
-    storage: sessionStorage
+    storage: localStorage
   },
   state: () => {
     return {
