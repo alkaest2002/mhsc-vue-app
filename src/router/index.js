@@ -4,7 +4,7 @@ import { useAppStore } from '@/stores/app.store'
 import { useChecklistStore } from '@/stores/checklist.store'
 import { storeToRefs } from 'pinia'
 import { routes } from './routes'
-import pageNotFound from '@/views/pageNotFound.vue'
+import pageNotFound from '@/views/PageNotFound.vue'
 
 // init router
 const router = createRouter({ 
