@@ -18,7 +18,7 @@
     },
     "info": {
       "title": "Informazioni sul sito",
-      "text": "I dati da lei inseriti in questo sito saranno memorizzati localmente nel suo dispositivo (smartphone, tablet, computer) e non saranno comunicati al server. Alla fine della compilazione del questionario, il suo dispositivo genererà sempre in locale un QR Code contenente tutte le informazioni da lei rilasciate. Quando richiesto, dovrà mostrare il QR Code generato al medico AME."
+      "text": "I dati da lei inseriti in questo sito saranno memorizzati localmente nel suo dispositivo (smartphone, tablet, computer) e non saranno comunicati ai nostri server. Alla fine della compilazione del questionario, il suo dispositivo genererà, sempre in locale, un QR Code contenente tutte le informazioni da lei rilasciate. Quando richiesto, dovrà mostrare il QR Code al medico AME."
     },
     "disclaimer": {
       "title": "Consenso al rilascio di informazioni",
@@ -28,11 +28,11 @@
     "bio": {
       "title": "Dati anagrafici",
       "form": {
-        "info": "Compila i seguenti campi. Le informazioni rimangono memorizzate in locale nel tuo dispositivo.",
+        "info": "Compila i seguenti campi. Le informazioni rimarranno memorizzate in locale nel tuo dispositivo.",
         "input": {
           "name": { "label": "Nome", "placeholder": "Mario" },
           "surname": { "label": "Cognome", "placeholder": "Rossi" },
-          "birthWhen": { "label": "Nato in data", "placeholder": "gg/mm/aaaaa" }
+          "birthWhen": { "label": "Data di nascita", "placeholder": "gg/mm/aaaaa" }
         }
       }
     },
