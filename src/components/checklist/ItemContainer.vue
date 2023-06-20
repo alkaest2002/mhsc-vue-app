@@ -20,7 +20,7 @@ const checklistComponents = {
 </script>
 
 <template>
-  <div>
+  <div class="mt-2">
     <p class="text-xl mb-7">{{ item.itemText }}</p>
     <component
       :is="checklistComponents[item.itemType]"
