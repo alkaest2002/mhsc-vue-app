@@ -1,5 +1,7 @@
 <script setup>
 /* eslint-disable no-unused-vars */
+
+// get props
 const props = defineProps({
   css: {
     type: String,
@@ -11,7 +13,7 @@ const props = defineProps({
 <template>
   <div class="h-full m-auto flex max-w-[1024px]">
     <div class="w-full flex flex-col rounded-lg overflow-auto p-4" :class="css">
-      <div>
+      <div v-if="$slots.title">
         <h1 class="text-2xl font-bold mb-3">
           <slot name="title" />
         </h1>

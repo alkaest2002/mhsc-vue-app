@@ -42,6 +42,9 @@
     "qrcode": {
       "title": "QR Code",
       "text": "Complimenti, hai finito il questionario. Adesso, mostra questo QR Code al medico AME."
+    },
+    "pageNotFound":{
+      "title": "pagina non trovata"
     }
   },
   "ui": {

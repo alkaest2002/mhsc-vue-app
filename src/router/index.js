@@ -4,9 +4,20 @@ import { useAppStore } from '@/stores/app.store'
 import { useChecklistStore } from '@/stores/checklist.store'
 import { storeToRefs } from 'pinia'
 import { routes } from './routes'
+import pageNotFound from '@/views/pageNotFound.vue'
 
 // init router
-const router = createRouter({ history: createWebHistory(import.meta.env.BASE_URL), routes })
+const router = createRouter({ 
+  history: createWebHistory(import.meta.env.BASE_URL), 
+  routes: [
+    ...routes,
+    {
+      path: "/:catchAll(.*)",
+      name: "route-not-found",
+      component: pageNotFound,
+    }
+  ]}
+)
 
 // router 'before each' middleware
 router.beforeEach(async (to, from, next) => {

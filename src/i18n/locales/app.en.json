@@ -42,6 +42,9 @@
     "qrcode": {
       "title": "QR Code",
       "text": "Congratulations, you have completed the checklist. You can show the generated QR Code to the medical examiner."
+    },
+    "pageNotFound":{
+      "title": "page not found"
     }
   },
   "ui": {
