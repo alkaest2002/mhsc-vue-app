@@ -14,7 +14,8 @@ export const useChecklistStore = defineStore('checklistStore', {
         birthWhen: ''
       },
       answers: Array.from({ length: 21 }, () => null),
-      currentItemIndex: 0
+      currentItemIndex: 0,
+      qrcodeWasGenerated: false,
     }
   },
   getters: {

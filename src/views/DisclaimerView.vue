@@ -1,6 +1,6 @@
 <script setup>
-import { useI18n } from 'vue-i18n'
 import { storeToRefs } from 'pinia'
+import { useI18n } from 'vue-i18n'
 import { useChecklistStore } from '@/stores/checklist.store'
 import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
 

@@ -14,16 +14,22 @@ const { t } = useI18n()
 // get pinia checklist store 
 const checklistStore = useChecklistStore()
 // pick checklist store prop
-const { getChecklistData } = storeToRefs(checklistStore)
+const { getChecklistData, qrcodeWasGenerated } = storeToRefs(checklistStore)
+// set pinia checklost store prop
+qrcodeWasGenerated.value = true
 // init isLoading state
 const isLoading = ref(false)
 // on click button function
 const onClick = () => {
+  // reset pinia checklistStore prop
+  qrcodeWasGenerated.value = false
   // go to home
   router.push({ name: 'start' })
 }
 // on unmounted reset pinia checklist store
-onUnmounted(() =>  checklistStore.$reset())
+onUnmounted(() => {
+  if (!qrcodeWasGenerated.value) checklistStore.$reset()
+})
 </script>
 
 <template>
@@ -52,7 +58,7 @@ onUnmounted(() =>  checklistStore.$reset())
         :color="'red'"
         :css="'w-full'"
       >
-        {{ t('ui.button.reset') }}
+        {{ t('ui.button.reset') }} 
       </LoadingButton>
     </template>
   </AppContainer>
