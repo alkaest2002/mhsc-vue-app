@@ -5,9 +5,30 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Health Checklist</title>
+    <style>
+      html, body, #app {
+        height:100%;
+        padding:0;
+        margin: 0;
+      }
+      #loading {
+        height: 100%; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #e5e7eb;
+        color: rgb(7, 89, 133);
+        display: flex;justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body class="bg-zinc-100">
-    <div id="app"></div>
+    <div id="app" >
+      <div id="loading">
+        <span>
+          Loading...
+        </span>
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

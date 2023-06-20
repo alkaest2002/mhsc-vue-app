@@ -37,7 +37,7 @@ body,
   @font-face {
     font-family: 'Nunito';
     font-weight: 500;
-    src: url('/fonts/Nunito-Regular.woff') format('woff');
+    src: url('/fonts/Nunito-SemiBold.woff') format('woff');
   }
 
   @font-face {
