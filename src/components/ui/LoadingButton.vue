@@ -6,7 +6,7 @@ import { computed, useAttrs } from 'vue'
 defineOptions({ inheritAttrs: false })
 // get attrs
 const $attrs = useAttrs()
-// define props
+// get props
 const { css, color } = defineProps({
   isLoading: {
     type: Boolean,

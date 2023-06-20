@@ -1,7 +1,7 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
 
-// props
+// get props
 const { options, currentAnswer } = defineProps({
   options: {
     type: Array,

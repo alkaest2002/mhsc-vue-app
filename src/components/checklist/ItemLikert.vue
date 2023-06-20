@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
 import IconCheckmark from '@/components/icons/IconCheckmark.vue'
 
-// props
+// get props
 const { options, currentAnswer } = defineProps({
   options: {
     type: Array,

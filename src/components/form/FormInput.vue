@@ -2,10 +2,11 @@
 /* eslint-disable no-undef */
 import { ref, onMounted } from 'vue'
 
+// define options
 defineOptions({ inheritAttrs: false })
-
+// get modelValue
 const modelValue = defineModel()
-
+// get props
 const props = defineProps({
   label: {
     type: String,
@@ -29,9 +30,9 @@ const props = defineProps({
     default: false
   }
 })
-
+// set var that will hold html node
 const inputRef = ref(null)
-
+// on mounted
 onMounted(() => {
   // autofocus if it's the case
   if (props.autoFocus) inputRef.value.focus()

@@ -1,4 +1,5 @@
 <script setup>
+// get props
 const props = defineProps({
   to: { type: Object },
   css: { type: String },

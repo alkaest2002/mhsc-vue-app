@@ -1,7 +1,9 @@
 <script setup>
 /* eslint-disable no-undef */
-const modelValue = defineModel()
 
+// get modelValue
+const modelValue = defineModel()
+// props
 const props = defineProps({
   options: {
     type: Array,

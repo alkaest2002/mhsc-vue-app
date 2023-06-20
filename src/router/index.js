@@ -7,17 +7,17 @@ import { routes } from './routes'
 import pageNotFound from '@/views/PageNotFound.vue'
 
 // init router
-const router = createRouter({ 
-  history: createWebHistory(import.meta.env.BASE_URL), 
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     ...routes,
     {
-      path: "/:catchAll(.*)",
-      name: "route-not-found",
-      component: pageNotFound,
+      path: '/:catchAll(.*)',
+      name: 'route-not-found',
+      component: pageNotFound
     }
-  ]}
-)
+  ]
+})
 
 // router 'before each' middleware
 router.beforeEach(async (to, from, next) => {
