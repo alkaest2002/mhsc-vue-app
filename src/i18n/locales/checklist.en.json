@@ -101,7 +101,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Energizing beverages (coffee, tea, energy drinks, ...)",
+    "itemText": "Consumption of energizing beverages (coffee, tea, energy drinks, ...)",
     "itemOptions": [
       { "label": "never", "value": 0 },
       { "label": "occasionally", "value": 1 },
@@ -112,7 +112,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Alcoholic beverages",
+    "itemText": "Consumption of alcoholic beverages",
     "itemOptions": [
       { "label": "never", "value": 0 },
       { "label": "occasionally", "value": 1 },
@@ -123,7 +123,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Tobacco or tobacco-related products",
+    "itemText": "Consumption of tobacco or tobacco-related products",
     "itemOptions": [
       { "label": "never", "value": 0 },
       { "label": "occasionally", "value": 1 },
@@ -134,7 +134,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Light drugs (e.g., marijuana)",
+    "itemText": "Consumption of light drugs (e.g., marijuana)",
     "itemOptions": [
       { "label": "never", "value": 0 },
       { "label": "occasionally", "value": 1 },
@@ -145,7 +145,7 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Other drugs (e.g., cocaine)",
+    "itemText": "Consumption of other drugs (e.g., cocaine)",
     "itemOptions": [
       { "label": "never", "value": 0 },
       { "label": "occasionally", "value": 1 },
