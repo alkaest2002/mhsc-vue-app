@@ -4,6 +4,12 @@ export const content = [
   "./index.html",
   "./src/**/*.{vue,js,ts,jsx,tsx}",
 ];
+export const safelist = [
+  { 
+    pattern: /(bg|outline)-(red|sky)-(700|800)/, 
+    variants: ['hover'],
+  },
+]
 export const theme = {
   extend: {
     fontFamily: {

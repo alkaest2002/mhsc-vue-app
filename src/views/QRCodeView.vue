@@ -41,7 +41,7 @@ onUnmounted(() => {
       <p class="mb-8">
         {{ t('views.qrcode.text') }}
       </p>
-      <div class="border-4 border-sky-800 mt-4 p-2 rounded-lg overflow-scroll w-fit">
+      <div class="border-4 border-sky-800 mt-4 p-2 rounded-lg w-fit mx-auto">
         <qrcode-vue
           :value="window.btoa(getChecklistData)"
           :size="250"
