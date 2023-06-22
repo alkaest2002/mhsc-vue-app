@@ -1,0 +1,496 @@
+[
+  {
+    "itemType": "itemLikert",
+    "itemText": "Fatiga, cansancio, dificultades para recuperarse de la fatiga",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Estrés, sensación de estar abrumado",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Dificultades para controlar los impulsos",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Emocionalidad negativa (por ejemplo, tensión, irritabilidad, tristeza, ansiedad)",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Agresividad hacia los demás o a sí mismo",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Dificultades en las relaciones interpersonales",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Preocupaciones sobre la vida privada",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Preocupaciones sobre el trabajo",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Preocupaciones de salud",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Preocupaciones financieras",
+    "itemOptions": [
+      {
+        "label": "Ningún problema",
+        "value": 0
+      },
+      {
+        "label": "Algunos problemas",
+        "value": 1
+      },
+      {
+        "label": "Muchos problemas",
+        "value": 2
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Consumo de bebidas energizantes (café, té, bebidas energéticas, ...)",
+    "itemOptions": [
+      {
+        "label": "nunca",
+        "value": 0
+      },
+      {
+        "label": "ocasionalmente",
+        "value": 1
+      },
+      {
+        "label": "semanalmente",
+        "value": 2
+      },
+      {
+        "label": "a diario",
+        "value": 3
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Consumo de bebidas alcohólicas",
+    "itemOptions": [
+      {
+        "label": "nunca",
+        "value": 0
+      },
+      {
+        "label": "ocasionalmente",
+        "value": 1
+      },
+      {
+        "label": "semanalmente",
+        "value": 2
+      },
+      {
+        "label": "a diario",
+        "value": 3
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Consumo de productos relacionados con el tabaco o el tabaco",
+    "itemOptions": [
+      {
+        "label": "nunca",
+        "value": 0
+      },
+      {
+        "label": "ocasionalmente",
+        "value": 1
+      },
+      {
+        "label": "semanalmente",
+        "value": 2
+      },
+      {
+        "label": "a diario",
+        "value": 3
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Consumo de drogas ligeras (por ejemplo, marihuana)",
+    "itemOptions": [
+      {
+        "label": "nunca",
+        "value": 0
+      },
+      {
+        "label": "ocasionalmente",
+        "value": 1
+      },
+      {
+        "label": "semanalmente",
+        "value": 2
+      },
+      {
+        "label": "a diario",
+        "value": 3
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Consumo de otras drogas (por ejemplo, cocaína)",
+    "itemOptions": [
+      {
+        "label": "nunca",
+        "value": 0
+      },
+      {
+        "label": "ocasionalmente",
+        "value": 1
+      },
+      {
+        "label": "semanalmente",
+        "value": 2
+      },
+      {
+        "label": "a diario",
+        "value": 3
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Tratamientos psiquiátricos o psicológicos en progreso o terminados en el último año",
+    "itemOptions": [
+      {
+        "label": "No",
+        "value": 0
+      },
+      {
+        "label": "Sí",
+        "value": 1
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Acceso a servicios corporativos dedicados al apoyo de los trabajadores (por ejemplo, apoyo entre pares)",
+    "itemOptions": [
+      {
+        "label": "No",
+        "value": 0
+      },
+      {
+        "label": "Sí",
+        "value": 1
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Inconvenientes, eventos peligrosos, accidentes en el lugar de trabajo en el último año",
+    "itemOptions": [
+      {
+        "label": "No",
+        "value": 0
+      },
+      {
+        "label": "Sí",
+        "value": 1
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Otros eventos significativos/relevantes en progreso o ocurridos en el último año",
+    "itemOptions": [
+      {
+        "label": "No",
+        "value": 0
+      },
+      {
+        "label": "Sí",
+        "value": 1
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemLikert",
+    "itemText": "Procedimientos judiciales, cuasi judiciales y disciplinarios en progreso o cerrado en el último año",
+    "itemOptions": [
+      {
+        "label": "No",
+        "value": 0
+      },
+      {
+        "label": "Sí",
+        "value": 1
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  },
+  {
+    "itemType": "itemRating",
+    "itemText": "Usando una escala de 0 (muy baja) a 10 (muy alta), califique su bienestar psicológico actual",
+    "itemOptions": [
+      {
+        "label": "0",
+        "value": 0
+      },
+      {
+        "label": "1",
+        "value": 1
+      },
+      {
+        "label": "2",
+        "value": 2
+      },
+      {
+        "label": "3",
+        "value": 3
+      },
+      {
+        "label": "4",
+        "value": 4
+      },
+      {
+        "label": "5",
+        "value": 5
+      },
+      {
+        "label": "6",
+        "value": 6
+      },
+      {
+        "label": "7",
+        "value": 7
+      },
+      {
+        "label": "8",
+        "value": 8
+      },
+      {
+        "label": "9",
+        "value": 9
+      },
+      {
+        "label": "10",
+        "value": 10
+      },
+      {
+        "label": "No quiero responder",
+        "value": -1
+      }
+    ]
+  }
+]

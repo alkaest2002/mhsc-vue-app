@@ -1,0 +1,68 @@
+{
+  "check": "i18n",
+  "validations": {
+    "required": "Se requiere información",
+    "alpha": "solo cartas",
+    "extendedAlpha": "Solo caracteres alfabéticos"
+  },
+  "errors": {
+    "i18n": {
+      "unsupportedLocale": "El idioma solicitado no es compatible",
+      "unableToLoadLocaleFile": "Error mientras se carga {locale} mensajes"
+    }
+  },
+  "views": {
+    "start": {
+      "title": "Checklist para la<br />Salud mental",
+      "selectLanguage": "Por favor, seleccione un idioma"
+    },
+    "info": {
+      "title": "Información en este sitio",
+      "text": "Los datos que ingrese en los formularios de este sitio estático se almacenarán localmente en su dispositivo (teléfono inteligente, tableta, computadora) y no se comunicarán a nuestros servidores. Después de haber completado el cuestionario, su dispositivo generará un código QR que contenga toda la información que le proporcionará. Cuando se solicite que lo haga, mostrará el código QR generado al examinador aeromedical (AME)."
+    },
+    "disclaimer": {
+      "title": "Consentimiento para el lanzamiento de la información",
+      "text": "Por la presente, autorizo la publicación de toda la información contenida en este formulario a la AME y, cuando sea necesario, al asesor médico de la autoridad de licencias. Soy consciente de que dicha información se convertirá y seguirá siendo propiedad de la autoridad de licencias, siempre que yo o mi médico tengamos acceso a ellos de acuerdo con las leyes nacionales. La confidencialidad médica será respetada en todo momento.",
+      "agree": "Doy mi consentimiento"
+    },
+    "bio": {
+      "title": "Datos biograficos",
+      "form": {
+        "info": "Complete los siguientes campos. La información se almacenará localmente en su dispositivo.",
+        "input": {
+          "name": {
+            "label": "Nombre",
+            "placeholder": "John"
+          },
+          "surname": {
+            "label": "Apellido",
+            "placeholder": "Gama"
+          },
+          "birthWhen": {
+            "label": "Fecha de nacimiento",
+            "placeholder": "yyyy // mm/dd"
+          }
+        }
+      }
+    },
+    "checklist": {
+      "title": "Checklist"
+    },
+    "qrcode": {
+      "title": "Código QR",
+      "text": "Felicitaciones, has completado la Checklist. Puede mostrar el código QR generado al médico forense.",
+      "generatingCode": "Generación del código <br /> Por favor, espera ..."
+    },
+    "pageNotFound": {
+      "title": "página no encontrada"
+    }
+  },
+  "ui": {
+    "button": {
+      "ok": "OK",
+      "enter": "ingresar",
+      "continue": "continuar",
+      "reset": "reiniciar datos"
+    }
+  }
+}
