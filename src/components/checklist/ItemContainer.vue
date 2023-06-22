@@ -5,7 +5,7 @@ import ItemRating from '@/components/checklist/ItemRating.vue'
 
 // define options
 defineOptions({ inheritAttrs: false })
-// get props
+// define props
 const props = defineProps({
   item: {
     type: Object,

@@ -6,25 +6,22 @@ import { ref, onMounted } from 'vue'
 defineOptions({ inheritAttrs: false })
 // get modelValue
 const modelValue = defineModel()
-// get props
+// define props
 const props = defineProps({
   label: {
     type: String,
     default: null
   },
-
   css: {
     type: String,
     default: ''
   },
-
   errors: {
     type: Array,
     default: () => {
-      []
+      ;[]
     }
   },
-
   autoFocus: {
     type: Boolean,
     default: false
