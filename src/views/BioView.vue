@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { useChecklistStore } from '@/stores/checklist.store'
@@ -49,11 +49,11 @@ const onClick = async () => {
   }
   // update pinia checklistStore
   checklistStore.$patch({ bio: formData })
-  // stop spinner
-  isLoading.value = false
   // goto checklist
   router.push({ name: 'checklist' })
 }
+// stop spinner before unmoung
+onBeforeUnmount(() => (isLoading.value = false))
 </script>
 
 <template>

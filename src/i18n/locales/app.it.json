@@ -41,7 +41,8 @@
     },
     "qrcode": {
       "title": "QR Code",
-      "text": "Complimenti, hai finito il questionario. Adesso, mostra questo QR Code al medico AME."
+      "text": "Complimenti, hai finito il questionario. Adesso, mostra questo QR Code al medico AME.",
+      "generatingCode": "Generazione del QR Code<br />Per favore, attendi..."
     },
     "pageNotFound": {
       "title": "pagina non trovata"

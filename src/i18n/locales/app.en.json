@@ -41,7 +41,8 @@
     },
     "qrcode": {
       "title": "QR Code",
-      "text": "Congratulations, you have completed the checklist. You can show the generated QR Code to the medical examiner."
+      "text": "Congratulations, you have completed the checklist. You can show the generated QR Code to the medical examiner.",
+      "generatingCode": "Generating code<br />Please, wait..."
     },
     "pageNotFound": {
       "title": "page not found"

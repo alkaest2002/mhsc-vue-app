@@ -1,6 +1,6 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
-import { ref, onUnmounted } from 'vue'
+import { ref, onBeforeUnmount, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useChecklistStore } from '@/stores/checklist.store'
@@ -26,6 +26,8 @@ const onClick = () => {
   // go to home
   router.push({ name: 'start' })
 }
+// stop spinner before unmount
+onBeforeUnmount(() => (isLoading.value = false))
 // on unmounted reset pinia checklist store
 onUnmounted(() => {
   if (!qrcodeWasGenerated.value) checklistStore.$reset()
@@ -42,13 +44,22 @@ onUnmounted(() => {
         {{ t('views.qrcode.text') }}
       </p>
       <div class="border-4 border-sky-800 mt-4 p-2 rounded-lg w-fit mx-auto">
-        <qrcode-vue
-          :value="window.btoa(getChecklistData)"
-          :size="250"
-          level="H"
-          :render-as="'svg'"
-          :foreground="'#075985'"
-        />
+        <Suspense>
+          <qrcode-vue
+            :value="window.btoa(getChecklistData)"
+            :size="250"
+            level="H"
+            :render-as="'svg'"
+            :foreground="'#075985'"
+          />
+          <template #fallback>
+            <div
+              class="w-[250px] h-[250px] flex justify-center items-center text-center font-semibold"
+            >
+              <p v-html="t('views.qrcode.generatingCode')" />
+            </div>
+          </template>
+        </Suspense>
       </div>
     </template>
     <template #footer>

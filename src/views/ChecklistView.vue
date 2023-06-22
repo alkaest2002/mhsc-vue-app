@@ -1,6 +1,6 @@
 <script setup>
 /* eslint-disable no-unused-vars */
-import { ref } from 'vue'
+import { ref, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { i18n } from '@/i18n'
@@ -39,8 +39,6 @@ const onClick = () => {
   answers.value.splice(index.value, 1, localAnswer.value)
   // in case this is the last item
   if (getIsLastItemIndex.value) {
-    // stop spinner
-    isLoading.value = false
     // go to qrcode view
     return router.push({ name: 'qrcode' })
   }
@@ -51,6 +49,8 @@ const onClick = () => {
   // stop spinner
   isLoading.value = false
 }
+// stop spinner jaust before unmount
+onBeforeUnmount(() => (isLoading.value = false))
 </script>
 
 <template>
