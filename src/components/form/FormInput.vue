@@ -21,7 +21,7 @@ const props = defineProps({
   errors: {
     type: Array,
     default: () => {
-      ;[]
+      []
     }
   },
 
