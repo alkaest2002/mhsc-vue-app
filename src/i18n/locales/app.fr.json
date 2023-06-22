@@ -1,0 +1,68 @@
+{
+  "check": "i18n",
+  "validations": {
+    "required": "information requise",
+    "alpha": "lettres seulement",
+    "extendedAlpha": "caractères alphabétiques uniquement"
+  },
+  "errors": {
+    "i18n": {
+      "unsupportedLocale": "La langue demandée n'est pas prise en charge",
+      "unableToLoadLocaleFile": "Erreur lors du chargement des messages de langugage {locale}"
+    }
+  },
+  "views": {
+    "start": {
+      "title": "Dépistage bref en<br />Santé mentale",
+      "selectLanguage": "S'il vous plaît, sélectionnez une langue"
+    },
+    "info": {
+      "title": "Informations sur ce site",
+      "text": "Les données que vous entrez sur le formulaire de ce site statique seront stockées localement sur votre appareil (smartphone, tablette, ordinateur) et ne seront pas communiquées à nos serveurs. Après avoir rempli le questionnaire, votre appareil générera un code QR contenant toutes les informations que vous aurez fournies. Lorsqu'on vous demande, vous afficherez le code QR généré à l'examinateur aéromédical (AME)."
+    },
+    "disclaimer": {
+      "title": "Consentement à la publication d'informations",
+      "text": "J'autorise par la présente la publication de toutes les informations contenues sous ce formulaire à l'AME et, le cas échéant, à l'évaluateur médical de l'autorité de licence. Je suis conscient que ces informations deviendront et resteront la propriété de l'autorité de licence, à condition que moi ou mon médecin y aient accès conformément aux lois nationales. La confidentialité médicale sera respectée à tout moment.",
+      "agree": "Je donne mon consentement"
+    },
+    "bio": {
+      "title": "Donnée biographique",
+      "form": {
+        "info": "Remplissez les champs suivants. Les informations seront stockées localement sur votre appareil.",
+        "input": {
+          "name": {
+            "label": "Nom",
+            "placeholder": "John"
+          },
+          "surname": {
+            "label": "Nom de famille",
+            "placeholder": "Doe"
+          },
+          "birthWhen": {
+            "label": "Date de naissance",
+            "placeholder": "dd/mm/yyyy"
+          }
+        }
+      }
+    },
+    "checklist": {
+      "title": "Formulaire"
+    },
+    "qrcode": {
+      "title": "QR Code",
+      "text": "Félicitations, vous avez terminé le formulaire. Vous pouvez montrer le code QR généré au médecin légiste.",
+      "generatingCode": "Génération de code<br /> S'il vous plaît, attendez ..."
+    },
+    "pageNotFound": {
+      "title": "Page non trouvée"
+    }
+  },
+  "ui": {
+    "button": {
+      "ok": "d'accord",
+      "enter": "entrer",
+      "continue": "continuer",
+      "reset": "Réinitialiser les données"
+    }
+  }
+}

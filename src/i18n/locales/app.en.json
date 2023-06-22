@@ -7,8 +7,8 @@
   },
   "errors": {
     "i18n": {
-      "unsupportedLocale": "the requested locale is not supported",
-      "unableToLoadLocaleFile": "error while loading {locale} locale message"
+      "unsupportedLocale": "the requested language is not supported",
+      "unableToLoadLocaleFile": "error while loading {locale} langugage messages"
     }
   },
   "views": {

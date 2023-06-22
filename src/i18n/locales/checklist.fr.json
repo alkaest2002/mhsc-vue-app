@@ -1,447 +1,447 @@
 [
   {
     "itemType": "itemLikert",
-    "itemText": "Affaticamento, stanchezza, difficoltà a recuperare le energie",
+    "itemText": "Fatigue, lassitude, difficultés à se remettre de la fatigue",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Stress, sensazione di sovraccarico",
+    "itemText": "Stress, sentiment d'être dépassé",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Difficoltà nel controllo degli impulsi",
+    "itemText": "Difficultés à contrôler les impulsions",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Emozionalità negativa (es., tensione, irritabilità, tristezza, ansia)",
+    "itemText": "Émotivité négative (par exemple, tension, irritabilité, tristesse, anxiété)",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Aggressività verso gli altri o verso sé stessi",
+    "itemText": "Aggressivité à l'égard d'autrui ou de soi-même",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Difficoltà nei rapporti interpersonali",
+    "itemText": "Difficultés dans les relations interpersonnelles",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Preoccupazioni che riguardano la sfera del privato",
+    "itemText": "Préoccupations concernant la vie privée",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Preoccupazioni che riguardano il contesto lavorativo",
+    "itemText": "Préoccupations concernant le travail",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Preoccupazioni per il proprio stato di salute",
+    "itemText": "Préoccupations au sujet de l'état de santé",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Preoccupazioni finanziarie",
+    "itemText": "Préoccupations financières",
     "itemOptions": [
       {
-        "label": "Nessun problema",
+        "label": "Aucun problème",
         "value": 0
       },
       {
-        "label": "Qualche problema",
+        "label": "Quelques problèmes",
         "value": 1
       },
       {
-        "label": "Molti problemi",
+        "label": "Beaucoup de problèmes",
         "value": 2
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Bevande eccitanti (es., caffè, tè, energy drink)",
+    "itemText": "Consommation de boissons énergisantes (café, thé, boissons énergisantes, ...)",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "jamais",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionnellement",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "hebdomadaire",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "quotidienne",
         "value": 3
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Bevande alcoliche",
+    "itemText": "Consommation de boissons alcoolisées",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "jamais",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionnellement",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "hebdomadaire",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "quotidienne",
         "value": 3
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Tabacco o prodotti derivati dal tabacco",
+    "itemText": "Consommation de produits du tabac ou du tabac",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "jamais",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionnellement",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "hebdomadaire",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "quotidienne",
         "value": 3
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Droghe leggere (es., marijuana)",
+    "itemText": "Consommation de drogue douce (par exemple, marijuana)",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "jamais",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionnellement",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "hebdomadaire",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "quotidienne",
         "value": 3
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Altre droghe",
+    "itemText": "Consommation d'autres drogues (par exemple, cocaïne)",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "jamais",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionnellement",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "hebdomadaire",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "quotidienne",
         "value": 3
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Trattamenti psichiatrici o psicologici in corso o conclusi nell’ultimo anno",
+    "itemText": "Traitements psychiatriques ou psychologiques en cours ou terminé l'année dernière",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "Non",
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "Oui",
         "value": 1
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Accesso ai servizi aziendali dedicati al supporto del lavoratore (es., peer support)",
+    "itemText": "Accès aux services d'entreprise dédiés au soutien des travailleurs (par exemple, soutien par les pairs)",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "Non",
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "Oui",
         "value": 1
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Inconvenienti, eventi di pericolo, incidenti sul luogo di lavoro nell’ultimo anno",
+    "itemText": "Inconvénients, événements dangereux, accidents sur le lieu de travail au cours de la dernière année",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "Non",
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "Oui",
         "value": 1
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Altri eventi significativi in corso o accaduti nell’ultimo anno",
+    "itemText": "D'autres événements significatifs / pertinents en cours ou se sont produits au cours de la dernière année",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "Non",
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "Oui",
         "value": 1
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Procedimenti giudiziali, extra-giudiziali, disciplinari in corso o conclusi nell’ultimo anno",
+    "itemText": "Procédures judiciaires, quasi-judiciaires, disciplinaires en cours ou fermées au cours de la dernière année",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "Non",
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "Oui",
         "value": 1
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]
   },
   {
     "itemType": "itemRating",
-    "itemText": "Esprima, in una scala da 0 (molto basso) a 10 (molto alto), il suo attuale benessere psico-fisico",
+    "itemText": "En utilisant une échelle de 0 (très bas) à 10 (très élevée), évaluez votre bien-être psychologique actuel",
     "itemOptions": [
       {
         "label": "0",
@@ -488,7 +488,7 @@
         "value": 10
       },
       {
-        "label": "Non voglio rispondere",
+        "label": "Je ne veux pas répondre",
         "value": -1
       }
     ]

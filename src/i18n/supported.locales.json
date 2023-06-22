@@ -1,4 +1,5 @@
 [
   { "value": "en", "label": "ENG" },
-  { "value": "it", "label": "ITA" }
+  { "value": "it", "label": "ITA" },
+  { "value": "fr", "label": "FRA" }
 ]
