@@ -4,11 +4,13 @@ import { computed, useAttrs } from 'vue'
 
 // do not inherit attribs
 defineOptions({ inheritAttrs: false })
-// get attrs
-const $attrs = useAttrs()
 // define props
-const { css, color } = defineProps({
+const { css, color, disabled } = defineProps({
   isLoading: {
+    type: Boolean,
+    default: false
+  },
+  disabled: {
     type: Boolean,
     default: false
   },
@@ -25,13 +27,13 @@ const { css, color } = defineProps({
 const buttonCss = computed(() => {
   let buttonCss = css
   buttonCss += ` flex items-center justify-center  outline-${color}-800 bg-${color}-800 hover:bg-${color}-700 text-white h-10 py-2 px-4 rounded`
-  buttonCss += $attrs.disabled ? ' cursor-not-allowed opacity-25' : ''
+  buttonCss += disabled ? ' cursor-not-allowed opacity-25' : ''
   return buttonCss
 })
 //compute spinner css
 const spinnerCss = computed(() => {
   let spinnerCss = ` w-6 h-6 mr-2 text-gray-200 animate-spin stroke-${color}-800 fill-${color}-800 hover:stroke-${color}}-700`
-  spinnerCss += $attrs.disabled ? ' cursor-not-allowed opacity-25' : ''
+  spinnerCss += disabled ? ' cursor-not-allowed opacity-25' : ''
   return spinnerCss
 })
 </script>
