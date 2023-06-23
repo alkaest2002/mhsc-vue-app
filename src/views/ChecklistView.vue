@@ -90,7 +90,7 @@ onBeforeUnmount(() => (isLoading.value = false))
           :key="index"
           :item="checklist[index]"
           :current-answer="localAnswer"
-          @on-answer="onClickAnswer"
+          @click="onClickAnswer"
         />
       </transition>
     </template>

@@ -13,13 +13,11 @@ const { option } = defineProps({
     required: true
   }
 })
-
-const emit = defineEmits(['onAnswer'])
 </script>
 
 <template>
   <div
-    @click="$emit('onAnswer', option.value)"
+    @click.capture.stop="$attrs.onClick(option.value)"
     :class="{
       'bg-white': option.value != currentAnswer,
       'border-white': option.value != currentAnswer,
