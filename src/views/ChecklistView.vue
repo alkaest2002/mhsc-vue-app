@@ -10,11 +10,14 @@ import ItemContainer from '@/components/checklist/ItemContainer.vue'
 
 // get router
 const router = useRouter()
+
 // get i18n
 const { t } = useI18n()
+
 // import locale-aware checklist
 const module = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
 const checklist = module.default
+
 // get pinia checklistStore props and actions
 const {
   answers,
@@ -22,17 +25,21 @@ const {
   getIsLastItemIndex,
   getCurrentAnswer
 } = storeToRefs(useChecklistStore())
+
 // init isLoading state
 const isLoading = ref(false)
+
 // init local answer variable
 const localAnswer = ref(getCurrentAnswer.value)
+
 // on answer
-const onAnswer = (answer) => {
+const onClickAnswer = (answer) => {
   // store answer into local answer variable
   localAnswer.value = answer
 }
+
 // on click button function
-const onClick = () => {
+const onClickContinue = () => {
   // start spinner
   isLoading.value = true
   // update pinia checkList store answers prop
@@ -87,13 +94,13 @@ onBeforeUnmount(() => (isLoading.value = false))
           :key="index"
           :item="checklist[index]"
           :current-answer="localAnswer"
-          @on-answer="onAnswer"
+          @on-answer="onClickAnswer"
         />
       </transition>
     </template>
     <template #footer>
       <LoadingButton
-        @click="onClick"
+        @click="onClickContinue"
         :is-loading="isLoading"
         :disabled="localAnswer === null"
         :css="'w-full'"
