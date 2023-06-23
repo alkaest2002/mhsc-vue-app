@@ -1,19 +1,9 @@
 <script setup>
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { storeToRefs } from 'pinia'
-import { useChecklistStore } from '@/stores/checklist.store'
 import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
 
 // get i18n t
 const { t } = useI18n()
-// get pinia checkList store prop
-const { qrcodeWasGenerated } = storeToRefs(useChecklistStore())
-// computed routerlin to prop
-const to = computed(() => {
-  if (qrcodeWasGenerated.value) return { name: 'qrcode' }
-  return { name: 'disclaimer' }
-})
 </script>
 
 <template>
@@ -28,7 +18,7 @@ const to = computed(() => {
     </template>
     <template #footer>
       <div>
-        <RouterLinkButton :to="to" class="w-full">
+        <RouterLinkButton :to="{ name: 'disclaimer' }" class="w-full">
           {{ t('ui.button.continue') }}
         </RouterLinkButton>
       </div>

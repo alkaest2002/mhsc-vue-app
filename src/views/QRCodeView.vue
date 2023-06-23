@@ -19,6 +19,7 @@ const { getChecklistData, qrcodeWasGenerated } = storeToRefs(checklistStore)
 qrcodeWasGenerated.value = true
 // init isLoading state
 const isLoading = ref(false)
+
 // on click button function
 const onClick = () => {
   // reset pinia checklistStore prop
@@ -26,8 +27,10 @@ const onClick = () => {
   // go to home
   router.push({ name: 'start' })
 }
+
 // stop spinner before unmount
 onBeforeUnmount(() => (isLoading.value = false))
+
 // on unmounted reset pinia checklist store
 onUnmounted(() => {
   if (!qrcodeWasGenerated.value) checklistStore.$reset()

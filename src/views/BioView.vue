@@ -26,14 +26,17 @@ const rules = {
   surname: { required, extendedAlpha },
   birthWhen: { required }
 }
+
 // init validator
 const v = useVuelidate(rules, formData, { $lazy: true })
+
 // set array of fields
 const fieldsToRender = [
   { field: 'name', type: 'text' },
   { field: 'surname', type: 'text' },
   { field: 'birthWhen', type: 'date' }
 ]
+
 // on click button function
 const onClick = async () => {
   // start spinner
@@ -52,6 +55,7 @@ const onClick = async () => {
   // goto checklist
   router.push({ name: 'checklist' })
 }
+
 // stop spinner before unmoung
 onBeforeUnmount(() => (isLoading.value = false))
 </script>

@@ -26,7 +26,7 @@ const emit = defineEmits(['onAnswer'])
       'bg-sky-100': option.value == currentAnswer,
       'border-sky-800': option.value == currentAnswer
     }"
-    class="relative flex justify-between p-2 rounded-lg shadow-md cursor-pointer border-2 min-w-6  overflow-scroll"
+    class="relative flex justify-between p-2 rounded-lg shadow-md cursor-pointer border-2 min-w-6 overflow-scroll"
   >
     <span class="font-semibold text-sky-800 leading-tight">
       {{ option.label }}
