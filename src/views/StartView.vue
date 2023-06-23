@@ -26,7 +26,7 @@ watch(locale, (newLocale) => {
   <AppContainer>
     <template #content>
       <div class="flex flex-col justify-center items-center h-full">
-        <img src="@/assets/airport.svg" class="max-w-[30vw] md:max-w-[150px]" />
+        <img src="@/assets/airport.svg" class="max-w-[30vw] md:max-w-[150px]" alt="logo" />
         <h1 class="text-2xl font-bold text-center mt-2" v-html="t('views.start.title')" />
       </div>
     </template>
