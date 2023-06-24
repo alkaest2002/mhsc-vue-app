@@ -14,7 +14,8 @@
   "views": {
     "start": {
       "title": "Checklist para la<br />Salud mental",
-      "selectLanguage": "Por favor, seleccione un idioma"
+      "selectLanguage": "Por favor, seleccione un idioma",
+      "userIsAME": "version AME"
     },
     "info": {
       "title": "Información en este sitio",
@@ -48,10 +49,13 @@
     "checklist": {
       "title": "Checklist"
     },
-    "qrcode": {
+    "qrcodeGenerate": {
       "title": "Código QR",
       "text": "Felicitaciones, has completado la Checklist. Puede mostrar el código QR generado al médico forense.",
       "generatingCode": "Generación del código <br /> Por favor, espera ..."
+    },
+    "qrcodeScan": {
+      "title": "escanear código QR"
     },
     "pageNotFound": {
       "title": "página no encontrada"

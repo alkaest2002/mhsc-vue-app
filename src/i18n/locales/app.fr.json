@@ -14,7 +14,8 @@
   "views": {
     "start": {
       "title": "Dépistage bref en<br />Santé mentale",
-      "selectLanguage": "S'il vous plaît, sélectionnez une langue"
+      "selectLanguage": "S'il vous plaît, sélectionnez une langue",
+      "userIsAME": "version AME"
     },
     "info": {
       "title": "Informations sur ce site",
@@ -48,10 +49,13 @@
     "checklist": {
       "title": "Formulaire"
     },
-    "qrcode": {
+    "qrcodeGenerate": {
       "title": "QR Code",
       "text": "Félicitations, vous avez terminé le formulaire. Vous pouvez montrer le code QR généré au médecin légiste.",
       "generatingCode": "Génération de code<br /> S'il vous plaît, attendez ..."
+    },
+    "qrcodeScan": {
+      "title": "Scanner le code QR"
     },
     "pageNotFound": {
       "title": "Page non trouvée"

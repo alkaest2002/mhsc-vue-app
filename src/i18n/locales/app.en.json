@@ -14,7 +14,8 @@
   "views": {
     "start": {
       "title": "Mental Health<br />Screening Checklist",
-      "selectLanguage": "Please, select a language"
+      "selectLanguage": "Please, select a language",
+      "userIsAME": "version AME"
     },
     "info": {
       "title": "Information on this site",
@@ -39,10 +40,13 @@
     "checklist": {
       "title": "Checklist"
     },
-    "qrcode": {
+    "qrcodeGenerate": {
       "title": "QR Code",
       "text": "Congratulations, you have completed the checklist. You can show the generated QR Code to the medical examiner.",
       "generatingCode": "Generating code<br />Please, wait..."
+    },
+    "qrcodeScan": {
+      "title": "Scan QR Code"
     },
     "pageNotFound": {
       "title": "page not found"

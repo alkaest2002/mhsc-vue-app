@@ -14,7 +14,8 @@
   "views": {
     "start": {
       "title": "Screening veloce della<br />Salute mentale",
-      "selectLanguage": "Per favore, seleziona una lingua"
+      "selectLanguage": "Per favore, seleziona una lingua",
+      "userIsAME": "versione AME"
     },
     "info": {
       "title": "Informazioni sul sito",
@@ -39,10 +40,13 @@
     "checklist": {
       "title": "Checklist"
     },
-    "qrcode": {
+    "qrcodeGenerate": {
       "title": "QR Code",
       "text": "Complimenti, hai finito il questionario. Adesso, mostra questo QR Code al medico AME.",
       "generatingCode": "Generazione del QR Code<br />Per favore, attendi..."
+    },
+    "qrcodeScan": {
+      "title": "Scansiona QR Code"
     },
     "pageNotFound": {
       "title": "pagina non trovata"
