@@ -62,6 +62,9 @@
     }
   },
   "ui": {
+    "label": {
+      "loading": "Chargement..."
+    },
     "button": {
       "ok": "d'accord",
       "enter": "entrer",

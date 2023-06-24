@@ -53,6 +53,9 @@
     }
   },
   "ui": {
+    "label": {
+      "loading": "Loading..."
+    },
     "button": {
       "ok": "ok",
       "enter": "enter",

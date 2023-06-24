@@ -1,3 +1,10 @@
+
+<script setup>
+import { useI18n } from 'vue-i18n'
+// get i18n t
+const { t } = useI18n() 
+</script>
+
 <template>
   <div id="app-container" class="h-full w-full font-nunito font-light text-sky-800 p-2 md:p-12">
     <router-view v-slot="{ Component }">
@@ -14,7 +21,15 @@
         >
           <component :is="Component" />
         </transition>
-        <template #fallback>Loading...</template>
+        <template #fallback >
+          <div class="h-full m-auto flex max-w-[576px]">
+            <div class="w-full flex flex-col rounded-lg overflow-auto p-4">
+              <div class="grow">
+                {{ t('ui.label.loading')  }}
+              </div>
+            </div>
+          </div>
+        </template>
       </Suspense>
     </router-view>
   </div>

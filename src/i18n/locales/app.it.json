@@ -53,6 +53,9 @@
     }
   },
   "ui": {
+    "label": {
+      "loading": "Caricamento..."
+    },
     "button": {
       "ok": "ok",
       "enter": "entra",
