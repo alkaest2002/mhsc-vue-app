@@ -20,7 +20,10 @@ watch(qrCode, () => qrScanner.value.stop())
 // on mounter
 onMounted(() => {
   // create scanner instace
-  qrScanner.value = new QrScanner(videoElem.value, result => qrCode.value = window.atob(result))
+  qrScanner.value = new QrScanner(videoElem.value, (result) => {
+    console.log(result)
+    qrCode.value = window.atob(result)}
+  )
   // start scanner
   qrScanner.value.start();
 })
@@ -39,7 +42,7 @@ onUnmounted(() => qrScanner.value.stop())
       <p class="mb-3">{{ t('views.qrcodeScan.text') }}</p>
       <video id="video" ref="videoElem" class="border-2 border-sky-800 p-2 rounded w-full"></video>
       <div>
-        {{  qrcode  }}
+        {{ qrCode }}
       </div>
     </template>
     <template #footer>

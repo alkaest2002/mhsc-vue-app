@@ -22,12 +22,16 @@ const router = createRouter({
 // router 'before each' middleware
 router.beforeEach(async (to, from, next) => {
   // get pinia appStore prop
-  const { locale } = storeToRefs(useAppStore())
+  const { locale, userIsAME } = storeToRefs(useAppStore())
   // get pinia checkList store prop
   const { qrcodeIsPresent } = storeToRefs(useChecklistStore())
   // go directly to qrcode if it's the case
-  if (qrcodeIsPresent.value && [from.name != 'qrcode', to.name != 'qrcode'].every(Boolean))
-    return next({ name: 'qrcode' })
+  if (qrcodeIsPresent.value && [
+    from.name != 'qrcode', 
+    to.name != 'qrcode',
+    !userIsAME
+  ].every(Boolean))
+    return next({ name: 'qrcode-generate' })
   // get current i18n locale
   const requestedLocale = to.query.locale || locale.value || i18n.global.locale.value
   // if requested locale is diffent from current i18n locale
