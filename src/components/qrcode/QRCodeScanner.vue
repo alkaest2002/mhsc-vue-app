@@ -70,7 +70,7 @@ onMounted(() => {
   qrScanner.value = new QrScanner(
     scannerElement.value,
     (result) => emit('update:qrcode', window.atob(result?.data)),
-    { onDecodeError: () => {} }
+    { onDecodeError: () => {}, highlightScanRegion: true }
   )
 })
 
@@ -81,16 +81,15 @@ onUnmounted(() => qrScanner.value.destroy())
 <template>
   <div>
     <p class="block mb-6">{{ t('views.qrcodeScan.text') }}</p>
+    <div class="mt-3 mb-2 text-sm">
+      <span v-show="!qrCode && !qrScanner?._active">{{ t('views.qrcodeScan.scanner.start') }}</span>
+      <span v-show="!qrCode && qrScanner?._active">{{ t('views.qrcodeScan.scanner.pending') }}</span>
+      <span v-show="qrCode">{{ t('views.qrcodeScan.scanner.done') }}</span>
+    </div>
     <video
       id="video"
       ref="scannerElement"
-      class="border-2 border-sky-800 p-3 rounded w-full border-dashed relative"
+      class="rounded-lg w-full"
     />
-    <div class="mt-3" v-if="qrCode">
-      {{ t('views.qrcodeScan.scanner.done') }}
-    </div>
-    <div class="mt-3" v-if="qrScanner?._active">
-      {{ t('views.qrcodeScan.scanner.pending') }}
-    </div>
   </div>
 </template>

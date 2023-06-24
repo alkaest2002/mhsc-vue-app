@@ -59,6 +59,7 @@
       "text": "Please, scan the QR Code provided by the examinee.",
       "scanner": {
         "noCamera": "Oooops! This device has not any camera to scan the QR Code",
+        "start": "Inicie la cámara para capturar el código QR",
         "pending": "Esperando a reconocer el código QR.",
         "done": "¡Excelente! Se adquirió el código QR."
       }
