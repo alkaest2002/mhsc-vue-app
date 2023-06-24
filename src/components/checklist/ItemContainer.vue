@@ -23,7 +23,7 @@ const checklistComponents = {
 
 <template>
   <div class="mt-2">
-    <p class="text-xl mb-7">{{ item.itemText }}</p>
+    <p class="block mb-6 text-xl">{{ item.itemText }}</p>
     <component
       :is="checklistComponents[item.itemType]"
       :options="item.itemOptions"

@@ -22,7 +22,7 @@ const { t } = useI18n()
           <component :is="Component" />
         </transition>
         <template #fallback >
-          <div class="h-full m-auto flex max-w-[576px]">
+          <div class="h-full m-auto flex max-w-[576px] min-w-[375px]">
             <div class="w-full flex flex-col rounded-lg overflow-auto p-4">
               <div class="grow">
                 {{ t('ui.label.loading')  }}

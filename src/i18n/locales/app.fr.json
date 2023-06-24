@@ -56,7 +56,11 @@
     },
     "qrcodeScan": {
       "title": "Scanner le code QR",
-      "text": "Veuillez scanner le code QR fourni par le sujét testé."
+      "text": "Veuillez scanner le code QR fourni par le sujét testé.",
+      "scanner": {
+        "pending": "En attente de reconnaissance du QR Code.",
+        "done": "Super! QR Code a été acquis."
+      }
     },
     "pageNotFound": {
       "title": "Page non trouvée"
@@ -70,7 +74,10 @@
       "ok": "d'accord",
       "enter": "entrer",
       "continue": "continuer",
-      "reset": "Réinitialiser les données"
+      "reset": "Réinitialiser les données",
+      "cameraStart": "activer la caméra",
+      "cameraStop": "désactiver la caméra",
+      "printQRCode": "générer un rapport"
     }
   }
 }

@@ -1,6 +1,5 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
-import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
 
 // get i18n t
 const { t } = useI18n()
@@ -12,7 +11,7 @@ const { t } = useI18n()
       {{ t('views.info.title') }}
     </template>
     <template #content>
-      <p>
+      <p class="block mb-6">
         {{ t('views.info.text') }}
       </p>
     </template>

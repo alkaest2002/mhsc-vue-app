@@ -6,7 +6,6 @@ import { useRouter } from 'vue-router'
 import { useAppStore } from '@/stores/app.store'
 import { getSupportedLocales } from '@/i18n'
 import FormSelect from '@/components/form/FormSelect.vue'
-import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
 
 // get router
 const router = useRouter()

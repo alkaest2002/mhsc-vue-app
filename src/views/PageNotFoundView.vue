@@ -1,6 +1,5 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
-import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
 
 // get i18n t
 const { t } = useI18n()

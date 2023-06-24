@@ -43,7 +43,7 @@ onUnmounted(() => {
       {{ t('views.qrcodeGenerate.title') }}
     </template>
     <template #content>
-      <p class="mb-8">
+      <p class="block mb-6">
         {{ t('views.qrcodeGenerate.text') }}
       </p>
       <div class="border-4 border-sky-800 mt-4 p-2 rounded-lg w-fit mx-auto">

@@ -47,7 +47,11 @@
     },
     "qrcodeScan": {
       "title": "Scan QR Code",
-      "text": "Please, scan the QR Code provided by the examinee."
+      "text": "Please, scan the QR Code provided by the examinee.",
+      "scanner": {
+        "pending": "Waiting to recognize QR Code.",
+        "done": "Great! QR Code was acquired."
+      }
     },
     "pageNotFound": {
       "title": "page not found"
@@ -61,7 +65,10 @@
       "ok": "ok",
       "enter": "enter",
       "continue": "continue",
-      "reset": "reset data"
+      "reset": "reset data",
+      "cameraStart": "activate camera",
+      "cameraStop": "activate camera",
+      "printQRCode": "generate report"
     }
   }
 }

@@ -6,7 +6,6 @@ import { useChecklistStore } from '@/stores/checklist.store'
 import { useVuelidate } from '@vuelidate/core'
 import { required, extendedAlpha } from '@/utils/i18n-validators'
 import FormInput from '@/components/form/FormInput.vue'
-import LoadingButton from '../components/ui/LoadingButton.vue'
 
 // get router
 const router = useRouter()
@@ -66,9 +65,7 @@ onBeforeUnmount(() => (isLoading.value = false))
       {{ t('views.bio.title') }}
     </template>
     <template #content>
-      <p class="block mb-5">
-        {{ t('views.bio.form.info') }}
-      </p>
+      <p class="block mb-6">{{ t('views.bio.form.info') }}</p>
       <template v-for="({ field, type }, index) of fieldsToRender" :key="field">
         <FormInput
           v-model="formData[field]"

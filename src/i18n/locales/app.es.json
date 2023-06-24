@@ -55,7 +55,12 @@
       "generatingCode": "Generación del código <br /> Por favor, espera ..."
     },
     "qrcodeScan": {
-      "title": "escanear código QR"
+      "title": "escanear código QR",
+      "text": "Please, scan the QR Code provided by the examinee.",
+      "scanner": {
+        "pending": "Esperando a reconocer el código QR.",
+        "done": "¡Excelente! Se adquirió el código QR."
+      }
     },
     "pageNotFound": {
       "title": "página no encontrada",
@@ -70,7 +75,10 @@
       "ok": "OK",
       "enter": "ingresar",
       "continue": "continuar",
-      "reset": "reiniciar datos"
+      "reset": "reiniciar datos",
+      "cameraStart": "activar cámara",
+      "cameraStop": "desactivar cámara",
+      "printQRCode": "generar informe"
     }
   }
 }

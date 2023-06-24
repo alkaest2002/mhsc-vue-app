@@ -2,7 +2,6 @@
 import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useChecklistStore } from '@/stores/checklist.store'
-import RouterLinkButton from '@/components/ui/RouterLinkButton.vue'
 
 // get i18n
 const { t } = useI18n()
@@ -16,7 +15,7 @@ const { disclaimer } = storeToRefs(useChecklistStore())
       {{ t('views.disclaimer.title') }}
     </template>
     <template #content>
-      <p class="mb-6">{{ t('views.disclaimer.text') }}</p>
+      <p class="block mb-6">{{ t('views.disclaimer.text') }}</p>
       <input
         type="checkbox"
         id="disclaimer-checkbox"
