@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { routes } from './routes'
+import { workersRoutes } from './routes'
 import { routerBeforeEach } from '../composables/router'
 import pageNotFound from '@/views/PageNotFound.vue'
 
@@ -7,7 +7,7 @@ import pageNotFound from '@/views/PageNotFound.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    ...routes,
+    ...workersRoutes,
     {
       path: '/:catchAll(.*)',
       name: 'route-not-found',

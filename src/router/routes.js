@@ -7,7 +7,7 @@ const disclaimerGuard = () => {
   return true
 }
 
-export const routes = [
+export const workersRoutes = [
   {
     path: '/',
     name: 'start',
@@ -36,7 +36,7 @@ export const routes = [
     beforeEnter: disclaimerGuard
   },
   {
-    path: '/qrcode',
+    path: '/generate-qrcode',
     name: 'qrcode',
     component: () => import('@/views/QRCodeView.vue'),
     beforeEnter: disclaimerGuard
