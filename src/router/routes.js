@@ -7,7 +7,7 @@ import StartView from '@/views/StartView.vue'
 const disclaimerGuard = () => {
   const checklistStore = useChecklistStore()
   const { disclaimer } = storeToRefs(checklistStore)
-  if (!disclaimer.value) return { name: 'start' }
+  if (!disclaimer.value) return { name: 'disclaimer' }
   return true
 }
 
@@ -19,12 +19,13 @@ export const routes = [
     component: StartView
   },
   {
-    path: '/ame',
-    name: 'ame',
-    beforeEnter: () => {
+    path: '/role/:role',
+    name: 'role',
+    beforeEnter: (to) => {
+      console.log(to)
       const appStore = useAppStore()
       const { userIsAME } = storeToRefs(appStore)
-      userIsAME.value = true
+      userIsAME.value = to.params?.role?.toLowerCase() === "ame"
       return { name: 'start' }
     },
   },
