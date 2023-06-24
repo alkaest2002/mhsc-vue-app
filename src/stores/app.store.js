@@ -6,7 +6,8 @@ export const useAppStore = defineStore('appStore', {
   },
   state: () => {
     return {
-      locale: 'en'
+      locale: 'en',
+      userIsAME: false,
     }
   }
 })

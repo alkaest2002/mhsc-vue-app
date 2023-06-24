@@ -40,11 +40,11 @@ onUnmounted(() => {
 <template>
   <AppContainer>
     <template #title>
-      {{ t('views.qrcode.title') }}
+      {{ t('views.qrcodeGenerate.title') }}
     </template>
     <template #content>
       <p class="mb-8">
-        {{ t('views.qrcode.text') }}
+        {{ t('views.qrcodeGenerate.text') }}
       </p>
       <div class="border-4 border-sky-800 mt-4 p-2 rounded-lg w-fit mx-auto">
         <Suspense>
@@ -59,14 +59,14 @@ onUnmounted(() => {
             <div
               class="w-[250px] h-[250px] flex justify-center items-center text-center font-semibold"
             >
-              <p v-html="t('views.qrcode.generatingCode')" />
+              <p v-html="t('views.qrcodeGenerate.generatingCode')" />
             </div>
           </template>
         </Suspense>
       </div>
     </template>
     <template #footer>
-      <LoadingButton @click="onClickResetQRCode" :is-loading="isLoading" :color="'red'" :css="'w-full'" :disabled="true">
+      <LoadingButton @click="onClickResetQRCode" :is-loading="isLoading" :color="'red'" :css="'w-full'">
         {{ t('ui.button.reset') }}
       </LoadingButton>
     </template>
