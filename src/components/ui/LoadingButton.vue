@@ -1,11 +1,11 @@
 <script setup>
 /* eslint-disable no-undef, no-unused-vars, vue/no-setup-props-destructure */
-import { computed, useAttrs } from 'vue'
+import { computed } from 'vue'
 
 // do not inherit attribs
 defineOptions({ inheritAttrs: false })
 // define props
-const { css, color, disabled } = defineProps({
+const { css, color, disabled, isLoading } = defineProps({
   isLoading: {
     type: Boolean,
     default: false
@@ -36,10 +36,12 @@ const spinnerCss = computed(() => {
   spinnerCss += disabled ? ' cursor-not-allowed opacity-25' : ''
   return spinnerCss
 })
+// compute disable button
+const disableButton = computed(() => [disabled, isLoading].some(Boolean))
 </script>
 
 <template>
-  <button :class="buttonCss" v-bind="$attrs">
+  <button :class="buttonCss" :disabled="disableButton" v-bind="$attrs">
     <span v-if="isLoading">
       <svg :class="spinnerCss" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
