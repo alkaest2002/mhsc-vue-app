@@ -9,7 +9,7 @@ import FormInput from '@/components/form/FormInput.vue'
 
 // get router
 const router = useRouter()
-// get i18n
+// get i18n t
 const { t } = useI18n()
 // get pinia checklistStore
 const checklistStore = useChecklistStore()
