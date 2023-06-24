@@ -46,7 +46,8 @@
       "generatingCode": "Generazione del QR Code<br />Per favore, attendi..."
     },
     "qrcodeScan": {
-      "title": "Scansiona QR Code"
+      "title": "Scansiona QR Code",
+      "text": "Per favore, scansiona il codice QR fornito dal soggetto in esame."
     },
     "pageNotFound": {
       "title": "pagina non trovata"

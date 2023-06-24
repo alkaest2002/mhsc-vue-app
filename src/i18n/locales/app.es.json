@@ -58,7 +58,8 @@
       "title": "escanear código QR"
     },
     "pageNotFound": {
-      "title": "página no encontrada"
+      "title": "página no encontrada",
+      "text": "Por favor, escanee el código QR proporcionado por el examinado."
     }
   },
   "ui": {

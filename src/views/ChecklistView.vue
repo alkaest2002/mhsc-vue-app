@@ -42,7 +42,7 @@ const onClickContinue = () => {
   // in case this is the last item
   if (getIsLastItemIndex.value) {
     // go to qrcode view
-    return router.push({ name: 'qrcode' })
+    return router.push({ name: 'qrcode-generate' })
   }
   // increment pinia checkList store index prop
   index.value++

@@ -55,7 +55,8 @@
       "generatingCode": "Génération de code<br /> S'il vous plaît, attendez ..."
     },
     "qrcodeScan": {
-      "title": "Scanner le code QR"
+      "title": "Scanner le code QR",
+      "text": "Veuillez scanner le code QR fourni par le sujét testé."
     },
     "pageNotFound": {
       "title": "Page non trouvée"

@@ -22,7 +22,6 @@ export const routes = [
     path: '/role/:role',
     name: 'role',
     beforeEnter: (to) => {
-      console.log(to)
       const appStore = useAppStore()
       const { userIsAME } = storeToRefs(appStore)
       userIsAME.value = to.params?.role?.toLowerCase() === "ame"

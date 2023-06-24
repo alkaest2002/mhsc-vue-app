@@ -46,7 +46,8 @@
       "generatingCode": "Generating code<br />Please, wait..."
     },
     "qrcodeScan": {
-      "title": "Scan QR Code"
+      "title": "Scan QR Code",
+      "text": "Please, scan the QR Code provided by the examinee."
     },
     "pageNotFound": {
       "title": "page not found"
