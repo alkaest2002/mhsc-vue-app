@@ -24,9 +24,9 @@ export const routes = [
     beforeEnter: (to) => {
       const appStore = useAppStore()
       const { userIsAME } = storeToRefs(appStore)
-      userIsAME.value = to.params?.role?.toLowerCase() === "ame"
+      userIsAME.value = to.params?.role?.toLowerCase() === 'ame'
       return { name: 'start' }
-    },
+    }
   },
   {
     path: '/info',
@@ -59,6 +59,6 @@ export const routes = [
   {
     path: '/scan-qrcode',
     name: 'qrcode-scan',
-    component: () => import('@/views/QRCodeScanView.vue'),
+    component: () => import('@/views/QRCodeScanView.vue')
   }
 ]

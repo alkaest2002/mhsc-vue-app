@@ -21,7 +21,7 @@ watch(locale, (newLocale) => {
 })
 // computed prop
 const to = computed(() => {
-  if (userIsAME.value) return { name: 'qrcode-scan'}
+  if (userIsAME.value) return { name: 'qrcode-scan' }
   return { name: 'info' }
 })
 </script>

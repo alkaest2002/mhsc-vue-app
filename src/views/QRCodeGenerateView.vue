@@ -66,7 +66,12 @@ onUnmounted(() => {
       </div>
     </template>
     <template #footer>
-      <LoadingButton @click="onClickResetQRCode" :is-loading="isLoading" :color="'red'" :css="'w-full'">
+      <LoadingButton
+        @click="onClickResetQRCode"
+        :is-loading="isLoading"
+        :color="'red'"
+        :css="'w-full'"
+      >
         {{ t('ui.button.reset') }}
       </LoadingButton>
     </template>

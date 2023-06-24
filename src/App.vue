@@ -1,8 +1,7 @@
-
 <script setup>
 import { useI18n } from 'vue-i18n'
 // get i18n t
-const { t } = useI18n() 
+const { t } = useI18n()
 </script>
 
 <template>
@@ -21,11 +20,11 @@ const { t } = useI18n()
         >
           <component :is="Component" />
         </transition>
-        <template #fallback >
+        <template #fallback>
           <div class="h-full m-auto flex max-w-[576px] min-w-[375px]">
             <div class="w-full flex flex-col rounded-lg overflow-auto p-4">
               <div class="grow">
-                {{ t('ui.label.loading')  }}
+                {{ t('ui.label.loading') }}
               </div>
             </div>
           </div>
