@@ -26,7 +26,7 @@ const { css, color, disabled, isLoading } = defineProps({
 // compute button css
 const buttonCss = computed(() => {
   let buttonCss = css
-  buttonCss += ` flex items-center justify-center  outline-${color}-800 bg-${color}-800 hover:bg-${color}-700 text-white h-10 py-2 px-4 rounded`
+  buttonCss += ` flex items-center justify-center outline-${color}-800 bg-${color}-800 hover:bg-${color}-700 text-white h-10 py-2 px-4 rounded`
   buttonCss += disabled ? ' cursor-not-allowed opacity-25' : ''
   return buttonCss
 })

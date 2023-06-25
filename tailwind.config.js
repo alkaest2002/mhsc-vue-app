@@ -6,7 +6,7 @@ export const content = [
 ];
 export const safelist = [
   { 
-    pattern: /(bg|outline)-(red|sky|green)-(700|800)/, 
+    pattern: /(bg|outline)-(red|sky|yellow)-(700|800)/, 
     variants: ['hover'],
   },
 ]
