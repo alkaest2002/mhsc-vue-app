@@ -30,7 +30,10 @@ const scannerStatus = ref('idle')
 // define rendered report
 const renderedReport = ref(null)
 // watch qrcode
-watch(qrcode, (reportData) => renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON))
+watch(
+  qrcode,
+  (reportData) => (renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON))
+)
 
 // on download report
 const onDownloadReport = () => {
@@ -84,7 +87,7 @@ onMounted(async () => {
           :disabled="renderedReport === null"
           @click.prevent="onDownloadReport"
         >
-          {{ t('ui.button.printQRCode') }} {{  renderedReport }}
+          {{ t('ui.button.printQRCode') }} {{ renderedReport }}
         </LoadingButton>
       </div>
       <div v-else>

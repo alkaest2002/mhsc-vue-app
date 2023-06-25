@@ -83,13 +83,11 @@ onUnmounted(() => qrScanner.value.destroy())
     <p class="block mb-6">{{ t('views.qrcodeScan.text') }}</p>
     <div class="mt-3 mb-2 text-sm">
       <span v-show="!qrCode && !qrScanner?._active">{{ t('views.qrcodeScan.scanner.start') }}</span>
-      <span v-show="!qrCode && qrScanner?._active">{{ t('views.qrcodeScan.scanner.pending') }}</span>
+      <span v-show="!qrCode && qrScanner?._active">{{
+        t('views.qrcodeScan.scanner.pending')
+      }}</span>
       <span v-show="qrCode">{{ t('views.qrcodeScan.scanner.done') }}</span>
     </div>
-    <video
-      id="video"
-      ref="scannerElement"
-      class="rounded-lg w-full"
-    />
+    <video id="video" ref="scannerElement" class="rounded-lg w-full" />
   </div>
 </template>
