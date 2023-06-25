@@ -221,22 +221,22 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Bevande eccitanti (es., caffè, tè, energy drink)",
+    "itemText": "Consumo di bevande eccitanti (es., caffè, tè, energy drink)",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "nessuno",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionale",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "settimanale",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "giornaliero",
         "value": 3
       },
       {
@@ -247,22 +247,22 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Bevande alcoliche",
+    "itemText": "Consumo di bevande alcoliche",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "nessuno",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionale",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "settimanale",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "giornaliero",
         "value": 3
       },
       {
@@ -273,22 +273,22 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Tabacco o prodotti derivati dal tabacco",
+    "itemText": "Consumo di tabacco o prodotti derivati dal tabacco",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "nessuno",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionale",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "settimanale",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "giornaliero",
         "value": 3
       },
       {
@@ -299,22 +299,22 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Droghe leggere (es., marijuana)",
+    "itemText": "Consumo di droghe leggere (es., marijuana)",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "nessuno",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionale",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "settimanale",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "giornaliero",
         "value": 3
       },
       {
@@ -325,22 +325,22 @@
   },
   {
     "itemType": "itemLikert",
-    "itemText": "Altre droghe (es., cocaina)",
+    "itemText": "Consumo di altre droghe (es., cocaina)",
     "itemOptions": [
       {
-        "label": "nessun consumo",
+        "label": "nessuno",
         "value": 0
       },
       {
-        "label": "consumo occasionale",
+        "label": "occasionale",
         "value": 1
       },
       {
-        "label": "consumo settimanale",
+        "label": "settimanale",
         "value": 2
       },
       {
-        "label": "consumo giornaliero",
+        "label": "giornaliero",
         "value": 3
       },
       {
@@ -358,7 +358,7 @@
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "si",
         "value": 1
       },
       {
@@ -376,7 +376,7 @@
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "si",
         "value": 1
       },
       {
@@ -394,7 +394,7 @@
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "si",
         "value": 1
       },
       {
@@ -412,7 +412,7 @@
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "si",
         "value": 1
       },
       {
@@ -430,7 +430,7 @@
         "value": 0
       },
       {
-        "label": "sì",
+        "label": "si",
         "value": 1
       },
       {

@@ -15,6 +15,8 @@ const reportTemplate = reportModule.default
 const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
 const checklistJSON = checklistModule.default
 
+const mockData = "Calanna;Pierpaolo;15/11/1971;-1;1;2;0;0;0;0;0;0;0;0;1;2;3;0;0;1;0;0;0;6"
+
 // get i18n t
 const { t } = useI18n()
 // define device has camera
@@ -37,13 +39,14 @@ watch(
 
 // on download report
 const onDownloadReport = () => {
-  downloadReport(renderedReport, isLoading)
+  downloadReport(renderedReport.value, isLoading)
 }
 
 // on mounted
 onMounted(async () => {
   // flag whether device has camera or not
   deviceHasCamera.value = await QrScanner.hasCamera()
+  qrcode.value = mockData
 })
 </script>
 
@@ -87,7 +90,7 @@ onMounted(async () => {
           :disabled="renderedReport === null"
           @click.prevent="onDownloadReport"
         >
-          {{ t('ui.button.printQRCode') }} {{ renderedReport }}
+          {{ t('ui.button.printQRCode') }}
         </LoadingButton>
       </div>
       <div v-else>
