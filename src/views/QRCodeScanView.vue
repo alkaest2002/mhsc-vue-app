@@ -34,12 +34,20 @@ const renderedReport = ref(null)
 // watch qrcode
 watch(
   qrcode,
-  (reportData) => (renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON))
+  (reportData) => {
+    if (reportData !== null)
+    renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON)
+  }
 )
 
 // on download report
 const onDownloadReport = () => {
+  // download report
   downloadReport(renderedReport.value, isLoading)
+  // delete qrcode
+  qrcode.value = null
+  // delete rendered report
+  renderedReport.value = null
 }
 
 // on mounted
@@ -68,7 +76,7 @@ onMounted(async () => {
     <template #footer>
       <div v-if="deviceHasCamera">
         <LoadingButton
-          v-show="scannerStatus == 'active'"
+          v-show="scannerStatus == 'active' && renderedReport === null"
           :css="'w-full mb-2'"
           :is-loading="isLoading"
           @click="scannerCommand = 'stop'"
@@ -76,7 +84,7 @@ onMounted(async () => {
           {{ t('ui.button.cameraStop') }}
         </LoadingButton>
         <LoadingButton
-          v-show="scannerStatus == 'idle'"
+          v-show="scannerStatus == 'idle' && renderedReport === null"
           :css="'w-full mb-2'"
           :is-loading="isLoading"
           @click="scannerCommand = 'start'"
@@ -84,10 +92,9 @@ onMounted(async () => {
           {{ t('ui.button.cameraStart') }}
         </LoadingButton>
         <LoadingButton
+          v-show="renderedReport !== null"
           :class="'w-full'"
-          :color="'yellow'"
           :is-loading="isLoading"
-          :disabled="renderedReport === null"
           @click.prevent="onDownloadReport"
         >
           {{ t('ui.button.printQRCode') }}

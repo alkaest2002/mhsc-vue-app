@@ -17,7 +17,7 @@ const props = defineProps({
     type: Boolean,
     required: true
   },
-  qrCode: {
+  qrcode: {
     type: String,
     default: ''
   },
@@ -82,12 +82,12 @@ onUnmounted(() => qrScanner.value.destroy())
   <div>
     <p class="block mb-6">{{ t('views.qrcodeScan.text') }}</p>
     <div class="mt-3 mb-2 text-sm">
-      <span v-show="!qrCode && !qrScanner?._active">{{ t('views.qrcodeScan.scanner.start') }}</span>
-      <span v-show="!qrCode && qrScanner?._active">{{
+      <span v-show="!qrcode && !qrScanner?._active">{{ t('views.qrcodeScan.scanner.start') }}</span>
+      <span v-show="!qrcode && qrScanner?._active">{{
         t('views.qrcodeScan.scanner.pending')
-      }}</span>
-      <span v-show="qrCode">{{ t('views.qrcodeScan.scanner.done') }}</span>
+      }}</span> 
+      <span v-show="qrcode">{{ t('views.qrcodeScan.scanner.done') }}</span>
     </div>
-    <video id="video" ref="scannerElement" class="rounded-lg w-full" />
+    <video id="video" ref="scannerElement" class="rounded-lg w-full h-max-[300px]" />
   </div>
 </template>
