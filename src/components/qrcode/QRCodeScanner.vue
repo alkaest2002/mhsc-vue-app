@@ -3,6 +3,7 @@
 import { ref, onUnmounted, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import QrScanner from 'qr-scanner'
+import IconCamera from '@/components/icons/IconCamera.vue'
 
 // get i18n t
 const { t } = useI18n()
@@ -88,6 +89,10 @@ onUnmounted(() => qrScanner.value.destroy())
       }}</span> 
       <span v-show="qrcode">{{ t('views.qrcodeScan.scanner.done') }}</span>
     </div>
-    <video id="video" ref="scannerElement" class="rounded-lg w-full h-max-[300px]" />
+    <div class="rounded-md w-full h-[320px] h-max-[320px] border-2 border-sky-800 border-dashed p-3 overflow-clip flex justify-center items-center relative">
+      <IconCamera v-show="!qrScanner?._active" class="relative left-[150px] w-[100px]" />
+      <video id="video" ref="scannerElement" class="rounded-md"  />
+    </div>
+    
   </div>
 </template>
