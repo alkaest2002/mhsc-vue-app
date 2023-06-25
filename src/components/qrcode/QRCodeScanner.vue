@@ -4,7 +4,7 @@ import { ref, onUnmounted, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import QrScanner from 'qr-scanner'
 
-// get i18n
+// get i18n t
 const { t } = useI18n()
 
 // define props

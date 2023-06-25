@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useChecklistStore } from '@/stores/checklist.store'
 
-// get i18n
+// get i18n t
 const { t } = useI18n()
 // get pinia checkList store prop
 const { disclaimer } = storeToRefs(useChecklistStore())

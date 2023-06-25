@@ -20,7 +20,7 @@ export const downloadReport = (report, isLoading) => {
   link.click()
   // revoke object url
   URL.revokeObjectURL(link.href)
-  // remove a
+  // remove fake link
   link.remove()
   // stop spinner
   isLoading.value = false

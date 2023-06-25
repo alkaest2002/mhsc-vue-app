@@ -10,7 +10,7 @@ import ItemContainer from '@/components/checklist/ItemContainer.vue'
 
 // get router
 const router = useRouter()
-// get i18n
+// get i18n t
 const { t } = useI18n()
 // import locale-aware checklist
 const module = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)

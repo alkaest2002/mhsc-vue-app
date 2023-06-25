@@ -15,7 +15,7 @@ const reportTemplate = reportModule.default
 const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
 const checklistJSON = checklistModule.default
 
-// get i18n
+// get i18n t
 const { t } = useI18n()
 // define device has camera
 const deviceHasCamera = ref(true)
@@ -52,7 +52,7 @@ onMounted(async () => {
     <template #content>
       <QRCodeScanner
         v-if="deviceHasCamera"
-        :scannerCommand="scannerCommand"
+        :scanner-command="scannerCommand"
         v-model:qrcode="qrcode"
         v-model:is-loading="isLoading"
         v-model:scanner-status="scannerStatus"
