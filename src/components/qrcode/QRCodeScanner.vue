@@ -3,7 +3,6 @@
 import { ref, onUnmounted, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import QrScanner from 'qr-scanner'
-import IconCamera from '@/components/icons/IconCamera.vue'
 
 // get i18n t
 const { t } = useI18n()
@@ -29,7 +28,7 @@ const props = defineProps({
 })
 
 // define emits
-const emit = defineEmits(['update:isLoading', 'update:qrcode', 'update:scannerStatus'])
+const emit = defineEmits(['update:scannerCommand', 'update:scannerStatus', 'update:qrcode', 'update:isLoading'])
 
 // define video element ref
 const scannerElement = ref(null)
@@ -75,24 +74,15 @@ onMounted(() => {
   )
 })
 
-// destroy scanner onUnmount
-onUnmounted(() => qrScanner.value.destroy())
+// on beforeunmount
+onUnmounted(() => {
+  // destroy scanner
+  qrScanner.value.destroy()
+  // update scanner command
+  emit('update:scannerCommand', null)
+})
 </script>
 
 <template>
-  <div>
-    <p class="block mb-6">{{ t('views.qrcodeScan.text') }}</p>
-    <div class="mt-3 mb-2 text-sm">
-      <span v-show="!qrcode && !qrScanner?._active">{{ t('views.qrcodeScan.scanner.start') }}</span>
-      <span v-show="!qrcode && qrScanner?._active">{{
-        t('views.qrcodeScan.scanner.pending')
-      }}</span> 
-      <span v-show="qrcode">{{ t('views.qrcodeScan.scanner.done') }}</span>
-    </div>
-    <div class="rounded-md w-full h-[320px] h-max-[320px] border-2 border-sky-800 border-dashed p-3 overflow-clip flex justify-center items-center relative">
-      <IconCamera v-show="!qrScanner?._active" class="relative left-[150px] w-[100px]" />
-      <video id="video" ref="scannerElement" class="rounded-md"  />
-    </div>
-    
-  </div>
+  <video id="video" ref="scannerElement" class="rounded-md"  />    
 </template>

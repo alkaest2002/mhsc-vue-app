@@ -6,6 +6,7 @@ import { i18n } from '@/i18n'
 import QrScanner from 'qr-scanner'
 import { renderReport, downloadReport } from '@/composables/useRenderReport'
 import QRCodeScanner from '@/components/qrcode/QRCodeScanner.vue'
+import QRCodePlaceholder from '@/components/qrcode/QRCodePlaceholder.vue'
 
 // import locale-aware report template
 const reportModule = await import(`@/i18n/locales/report.${i18n.global.locale.value}.rtf?raw`)
@@ -64,14 +65,22 @@ onMounted(async () => {
       {{ t('views.qrcodeScan.title') }}
     </template>
     <template #content>
-      <QRCodeScanner
-        v-if="deviceHasCamera"
-        :scanner-command="scannerCommand"
-        v-model:qrcode="qrcode"
-        v-model:is-loading="isLoading"
-        v-model:scanner-status="scannerStatus"
-      />
-      <p v-else>{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
+      <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
+      <p v-else class="mb-6">{{ t('views.qrcodeScan.text') }}</p>
+      <div class="relative">
+        <QRCodeScanner
+          v-model:scanner-command="scannerCommand"
+          v-model:qrcode="qrcode"
+          v-model:is-loading="isLoading"
+          v-model:scanner-status="scannerStatus"
+        />
+        <QRCodePlaceholder 
+          v-if="scannerStatus == 'idle' || scannerCommand == 'stop'"
+          class="absolute top-0 left-[17%]"
+          :scanner-command="scannerCommand" 
+          :qrcode="qrcode" 
+        />
+      </div>
     </template>
     <template #footer>
       <div v-if="deviceHasCamera">
