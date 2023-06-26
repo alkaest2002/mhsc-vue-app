@@ -3,15 +3,12 @@
 import { useI18n } from 'vue-i18n'
 import IconCamera from '@/components/icons/IconCamera.vue'
 import IconQRCode from '@/components/icons/IconQRCode.vue'
+
 // get i18n t
 const { t } = useI18n()
 
 // define props
 const props = defineProps({
-  scannerCommand: {
-    type: [null, String],
-    default: null
-  },
   qrcode: {
     type: String,
     default: ''
@@ -21,12 +18,12 @@ const props = defineProps({
 
 <template>
   <div class="flex justify-center items-start bg-zinc-100 w-full">
-    <div v-if="!qrcode" class="flex flex-col items-center">
-      <IconCamera />
+    <div v-show="!qrcode" class="flex flex-col items-center">
+      <IconCamera class="h-48" />
       <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
     </div>
-    <div v-else class="flex flex-col items-center">
-      <IconQRCode />
+    <div v-show="qrcode" class="flex flex-col items-center">
+      <IconQRCode class="h-48" />
       <span class="text-sm">{{ t('views.qrcodeScan.scanner.done') }}</span>
     </div>
   </div>

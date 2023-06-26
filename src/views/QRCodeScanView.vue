@@ -35,10 +35,10 @@ const renderedReport = ref(null)
 watch(qrcode, (reportData) => {
   // if qrcode was acquired
   if (reportData !== null) {
-    // stop the camera
-    scannerCommand.value = 'stop'
     // render report and store it
     renderedReport.value = renderReport(checklist, report, reportData)
+    // stop the camera
+    scannerCommand.value = 'stop'
   }
 })
 
@@ -71,23 +71,26 @@ onMounted(async () => {
         <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
         <p v-else>{{ t('views.qrcodeScan.text') }}</p>
       </div>
-      <div class="relative grow">
-        <QRCodeScanner
-          v-model:scanner-command="scannerCommand"
-          v-model:qrcode="qrcode"
-          v-model:is-loading="isLoading"
-          v-model:scanner-status="scannerStatus"
-        />
-        <QRCodePlaceholder
-          v-if="scannerCommand !== 'start'"
-          :class="{
-            absolute: scannerStatus == 'idle' || scannerCommand == 'stop',
-            'top-0': scannerStatus == 'idle' || scannerCommand == 'stop',
-            'h-full': scannerStatus == 'idle' || scannerCommand == 'stop'
-          }"
-          :scanner-command="scannerCommand"
-          :qrcode="qrcode"
-        />
+      <div class="flex-1">
+        <div class="relative h-full w-full">
+          <QRCodePlaceholder
+            v-show="scannerCommand !== 'start'"
+            :class="{
+              'absolute': scannerStatus == 'idle' || scannerCommand == 'stop',
+              'top-0': scannerStatus == 'idle' || scannerCommand == 'stop',
+              'bottom-0': scannerStatus == 'idle' || scannerCommand == 'stop',
+              'left-0': scannerStatus == 'idle' || scannerCommand == 'stop',
+              'right-0': scannerStatus == 'idle' || scannerCommand == 'stop'
+            }"
+            :qrcode="qrcode"
+          />
+          <QRCodeScanner
+            v-model:scanner-command="scannerCommand"
+            v-model:qrcode="qrcode"
+            v-model:is-loading="isLoading"
+            v-model:scanner-status="scannerStatus"
+          />
+        </div>
       </div>
     </template>
     <template #footer>

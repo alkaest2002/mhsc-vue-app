@@ -26,8 +26,8 @@ export const downloadReport = (report, isLoading) => {
   const link = document.createElement('a')
   // add href attribute to fake link
   link.href = URL.createObjectURL(blob)
-  // add download attribute to fake link
-  link.download = 'report.html'
+  // add attribute
+  link.target = '_blank'
   // click fake link
   link.click()
   // revoke object url
