@@ -6,7 +6,7 @@
           <slot name="title" />
         </h1>
       </div>
-      <div class="grow">
+      <div class="grow overflow-scroll">
         <slot name="content" />
       </div>
       <div>

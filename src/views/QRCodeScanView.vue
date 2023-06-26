@@ -77,7 +77,10 @@ onMounted(async () => {
         <QRCodePlaceholder
           v-if="scannerCommand !== 'start'"
           class="w-full"
-          :class="{ 'absolute': scannerStatus == 'idle' || scannerCommand == 'stop' }"
+          :class="{ 
+            'absolute': scannerStatus == 'idle' || scannerCommand == 'stop',
+            'top-0': scannerStatus == 'idle' || scannerCommand == 'stop',
+          }"
           :scanner-command="scannerCommand" 
           :qrcode="qrcode" 
         />
