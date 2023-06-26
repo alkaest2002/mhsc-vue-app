@@ -224,19 +224,19 @@
     "itemText": "Consumo de bebidas energizantes (café, té, bebidas energéticas, ...)",
     "itemOptions": [
       {
-        "label": "nunca",
+        "label": "Nunca",
         "value": 0
       },
       {
-        "label": "ocasionalmente",
+        "label": "Ocasionalmente",
         "value": 1
       },
       {
-        "label": "semanalmente",
+        "label": "Semanalmente",
         "value": 2
       },
       {
-        "label": "a diario",
+        "label": "A diario",
         "value": 3
       },
       {
@@ -250,19 +250,19 @@
     "itemText": "Consumo de bebidas alcohólicas",
     "itemOptions": [
       {
-        "label": "nunca",
+        "label": "Nunca",
         "value": 0
       },
       {
-        "label": "ocasionalmente",
+        "label": "Ocasionalmente",
         "value": 1
       },
       {
-        "label": "semanalmente",
+        "label": "Semanalmente",
         "value": 2
       },
       {
-        "label": "a diario",
+        "label": "A diario",
         "value": 3
       },
       {
@@ -276,19 +276,19 @@
     "itemText": "Consumo de productos relacionados con el tabaco o el tabaco",
     "itemOptions": [
       {
-        "label": "nunca",
+        "label": "Nunca",
         "value": 0
       },
       {
-        "label": "ocasionalmente",
+        "label": "Ocasionalmente",
         "value": 1
       },
       {
-        "label": "semanalmente",
+        "label": "Semanalmente",
         "value": 2
       },
       {
-        "label": "a diario",
+        "label": "A diario",
         "value": 3
       },
       {
@@ -302,19 +302,19 @@
     "itemText": "Consumo de drogas ligeras (por ejemplo, marihuana)",
     "itemOptions": [
       {
-        "label": "nunca",
+        "label": "Nunca",
         "value": 0
       },
       {
-        "label": "ocasionalmente",
+        "label": "Ocasionalmente",
         "value": 1
       },
       {
-        "label": "semanalmente",
+        "label": "Semanalmente",
         "value": 2
       },
       {
-        "label": "a diario",
+        "label": "A diario",
         "value": 3
       },
       {
@@ -328,19 +328,19 @@
     "itemText": "Consumo de otras drogas (por ejemplo, cocaína)",
     "itemOptions": [
       {
-        "label": "nunca",
+        "label": "Nunca",
         "value": 0
       },
       {
-        "label": "ocasionalmente",
+        "label": "Ocasionalmente",
         "value": 1
       },
       {
-        "label": "semanalmente",
+        "label": "Semanalmente",
         "value": 2
       },
       {
-        "label": "a diario",
+        "label": "A diario",
         "value": 3
       },
       {

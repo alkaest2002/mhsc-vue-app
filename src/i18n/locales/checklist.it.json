@@ -224,19 +224,19 @@
     "itemText": "Consumo di bevande eccitanti (es., caffè, tè, energy drink)",
     "itemOptions": [
       {
-        "label": "nessuno",
+        "label": "Nessuno",
         "value": 0
       },
       {
-        "label": "occasionale",
+        "label": "Occasionale",
         "value": 1
       },
       {
-        "label": "settimanale",
+        "label": "Settimanale",
         "value": 2
       },
       {
-        "label": "giornaliero",
+        "label": "Giornaliero",
         "value": 3
       },
       {
@@ -250,19 +250,19 @@
     "itemText": "Consumo di bevande alcoliche",
     "itemOptions": [
       {
-        "label": "nessuno",
+        "label": "Nessuno",
         "value": 0
       },
       {
-        "label": "occasionale",
+        "label": "Occasionale",
         "value": 1
       },
       {
-        "label": "settimanale",
+        "label": "Settimanale",
         "value": 2
       },
       {
-        "label": "giornaliero",
+        "label": "Giornaliero",
         "value": 3
       },
       {
@@ -276,19 +276,19 @@
     "itemText": "Consumo di tabacco o prodotti derivati dal tabacco",
     "itemOptions": [
       {
-        "label": "nessuno",
+        "label": "Nessuno",
         "value": 0
       },
       {
-        "label": "occasionale",
+        "label": "Occasionale",
         "value": 1
       },
       {
-        "label": "settimanale",
+        "label": "Settimanale",
         "value": 2
       },
       {
-        "label": "giornaliero",
+        "label": "Giornaliero",
         "value": 3
       },
       {
@@ -302,19 +302,19 @@
     "itemText": "Consumo di droghe leggere (es., marijuana)",
     "itemOptions": [
       {
-        "label": "nessuno",
+        "label": "Nessuno",
         "value": 0
       },
       {
-        "label": "occasionale",
+        "label": "Occasionale",
         "value": 1
       },
       {
-        "label": "settimanale",
+        "label": "Settimanale",
         "value": 2
       },
       {
-        "label": "giornaliero",
+        "label": "Giornaliero",
         "value": 3
       },
       {
@@ -328,19 +328,19 @@
     "itemText": "Consumo di altre droghe (es., cocaina)",
     "itemOptions": [
       {
-        "label": "nessuno",
+        "label": "Nessuno",
         "value": 0
       },
       {
-        "label": "occasionale",
+        "label": "Occasionale",
         "value": 1
       },
       {
-        "label": "settimanale",
+        "label": "Settimanale",
         "value": 2
       },
       {
-        "label": "giornaliero",
+        "label": "Giornaliero",
         "value": 3
       },
       {
@@ -354,11 +354,11 @@
     "itemText": "Trattamenti psichiatrici o psicologici in corso o conclusi nell’ultimo anno",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "No",
         "value": 0
       },
       {
-        "label": "si",
+        "label": "Sí",
         "value": 1
       },
       {
@@ -372,11 +372,11 @@
     "itemText": "Accesso ai servizi aziendali dedicati al supporto del lavoratore (es., peer support)",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "No",
         "value": 0
       },
       {
-        "label": "si",
+        "label": "Sí",
         "value": 1
       },
       {
@@ -390,11 +390,11 @@
     "itemText": "Inconvenienti, eventi di pericolo, incidenti sul luogo di lavoro nell’ultimo anno",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "No",
         "value": 0
       },
       {
-        "label": "si",
+        "label": "Sí",
         "value": 1
       },
       {
@@ -408,11 +408,11 @@
     "itemText": "Altri eventi significativi in corso o accaduti nell’ultimo anno",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "No",
         "value": 0
       },
       {
-        "label": "si",
+        "label": "Sí",
         "value": 1
       },
       {
@@ -426,11 +426,11 @@
     "itemText": "Procedimenti giudiziali, extra-giudiziali, disciplinari in corso o conclusi nell’ultimo anno",
     "itemOptions": [
       {
-        "label": "no",
+        "label": "No",
         "value": 0
       },
       {
-        "label": "si",
+        "label": "Sí",
         "value": 1
       },
       {

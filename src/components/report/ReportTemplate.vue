@@ -41,6 +41,12 @@ const date = new Date().toISOString().slice(0, 10)
       </tr>
     </table>
     <div>
+      <table>
+        <tr v-for="(item, index) of items" :key="index">
+          <td>{{ checklist[index].itemOptions[item].label }}</td>
+          <td>{{ checklist[index].itemText }}</td>
+        </tr>
+      </table>
       {{ items }}
     </div>
     <div>

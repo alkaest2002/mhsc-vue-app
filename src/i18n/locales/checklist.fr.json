@@ -224,19 +224,19 @@
     "itemText": "Consommation de boissons énergisantes (café, thé, boissons énergisantes, ...)",
     "itemOptions": [
       {
-        "label": "jamais",
+        "label": "Jamais",
         "value": 0
       },
       {
-        "label": "occasionnellement",
+        "label": "Occasionnellement",
         "value": 1
       },
       {
-        "label": "hebdomadaire",
+        "label": "Hebdomadaire",
         "value": 2
       },
       {
-        "label": "quotidienne",
+        "label": "Quotidien",
         "value": 3
       },
       {
@@ -250,19 +250,19 @@
     "itemText": "Consommation de boissons alcoolisées",
     "itemOptions": [
       {
-        "label": "jamais",
+        "label": "Jamais",
         "value": 0
       },
       {
-        "label": "occasionnellement",
+        "label": "Occasionnellement",
         "value": 1
       },
       {
-        "label": "hebdomadaire",
+        "label": "Hebdomadaire",
         "value": 2
       },
       {
-        "label": "quotidienne",
+        "label": "Quotidien",
         "value": 3
       },
       {
@@ -276,19 +276,19 @@
     "itemText": "Consommation de produits du tabac ou du tabac",
     "itemOptions": [
       {
-        "label": "jamais",
+        "label": "Jamais",
         "value": 0
       },
       {
-        "label": "occasionnellement",
+        "label": "Occasionnellement",
         "value": 1
       },
       {
-        "label": "hebdomadaire",
+        "label": "Hebdomadaire",
         "value": 2
       },
       {
-        "label": "quotidienne",
+        "label": "Quotidien",
         "value": 3
       },
       {
@@ -302,19 +302,19 @@
     "itemText": "Consommation de drogue douce (par exemple, marijuana)",
     "itemOptions": [
       {
-        "label": "jamais",
+        "label": "Jamais",
         "value": 0
       },
       {
-        "label": "occasionnellement",
+        "label": "Occasionnellement",
         "value": 1
       },
       {
-        "label": "hebdomadaire",
+        "label": "Hebdomadaire",
         "value": 2
       },
       {
-        "label": "quotidienne",
+        "label": "Quotidienne",
         "value": 3
       },
       {
@@ -328,19 +328,19 @@
     "itemText": "Consommation d'autres drogues (par exemple, cocaïne)",
     "itemOptions": [
       {
-        "label": "jamais",
+        "label": "Jamais",
         "value": 0
       },
       {
-        "label": "occasionnellement",
+        "label": "Occasionnellement",
         "value": 1
       },
       {
-        "label": "hebdomadaire",
+        "label": "Hebdomadaire",
         "value": 2
       },
       {
-        "label": "quotidienne",
+        "label": "Quotidien",
         "value": 3
       },
       {
