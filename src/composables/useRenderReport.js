@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-const padString = (stringToPad, padLenght=17, padChar = ' ') => 
+const padString = (stringToPad, padLenght = 17, padChar = ' ') =>
   stringToPad.padEnd(padLenght, padChar).slice(0, padLenght)
 
 export const renderReport = (reportTemplate, reportData, checklistJSON) => {
@@ -12,7 +12,7 @@ export const renderReport = (reportTemplate, reportData, checklistJSON) => {
   // ###date###
 
   // convert string to array
-  const data = reportData.split(";")
+  const data = reportData.split(';')
 
   // init data
   const surname = data[0]
@@ -34,11 +34,10 @@ export const renderReport = (reportTemplate, reportData, checklistJSON) => {
   items.forEach((item, index) => {
     const reg = new RegExp(`#####ITM ${index}\\s?######`)
     const options = checklistJSON[index]['itemOptions']
-    const selectedOption = item == -1 
-      ? padString(options.slice(item)[0]['label']) 
-      : padString(options[item]['label'])
+    const selectedOption =
+      item == -1 ? padString(options.slice(item)[0]['label']) : padString(options[item]['label'])
     renderedTemplate = renderedTemplate.replace(reg, selectedOption)
-  });
+  })
   // return rendered template
   return renderedTemplate
 }

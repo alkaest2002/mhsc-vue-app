@@ -16,17 +16,19 @@ const { disclaimer } = storeToRefs(useChecklistStore())
     </template>
     <template #content>
       <p class="block mb-6">{{ t('views.disclaimer.text') }}</p>
-      <input
-        type="checkbox"
-        id="disclaimer-checkbox"
-        name="disclaimer-checkbox"
-        v-model="disclaimer"
-        @click="onSubmit"
-        class="accent-sky-800 text-sky-800 focus:ring-transparent"
-      />
-      <label class="ml-2 text-sm" for="disclaimer-checkbox">{{
-        t('views.disclaimer.agree')
-      }}</label>
+      <div>
+        <input
+          type="checkbox"
+          id="disclaimer-checkbox"
+          name="disclaimer-checkbox"
+          v-model="disclaimer"
+          @click="onSubmit"
+          class="accent-sky-800 text-sky-800 focus:ring-transparent"
+        />
+        <label class="ml-2 text-sm" for="disclaimer-checkbox">{{
+          t('views.disclaimer.agree')
+        }}</label>
+      </div>
     </template>
     <template #footer>
       <RouterLinkButton :to="{ name: 'bio' }" :class="'w-full mt-2'" :disabled="!disclaimer">

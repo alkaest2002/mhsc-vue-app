@@ -20,29 +20,27 @@ const checklistJSON = checklistModule.default
 const { t } = useI18n()
 // define device has camera
 const deviceHasCamera = ref(true)
-// init isLoading state
+// define isLoading state
 const isLoading = ref(false)
-// set qrcode
-const qrcode = ref(null)
 // define command prop
 const scannerCommand = ref(null)
 // define scanned status
 const scannerStatus = ref('idle')
+// define qrcode
+const qrcode = ref(null)
 // define rendered report
 const renderedReport = ref(null)
+
 // watch qrcode
-watch(
-  qrcode,
-  (reportData) => {
-    // if qrcode was acquired
-    if (reportData !== null) {
-      // stop the camera
-      scannerCommand.value = 'stop'
-      // render report and store it
-      renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON)
-    }
+watch(qrcode, (reportData) => {
+  // if qrcode was acquired
+  if (reportData !== null) {
+    // stop the camera
+    scannerCommand.value = 'stop'
+    // render report and store it
+    renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON)
   }
-)
+})
 
 // on download report
 const onDownloadReport = () => {
@@ -53,6 +51,7 @@ const onDownloadReport = () => {
   // delete rendered report
   renderedReport.value = null
 }
+
 // on mounted
 onMounted(async () => {
   // flag whether device has camera or not
@@ -68,7 +67,7 @@ onMounted(async () => {
     <template #content>
       <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
       <p v-else class="mb-6">{{ t('views.qrcodeScan.text') }}</p>
-      <div class="relative h-full">
+      <div class="relative grow">
         <QRCodeScanner
           v-model:scanner-command="scannerCommand"
           v-model:qrcode="qrcode"
@@ -77,15 +76,15 @@ onMounted(async () => {
         />
         <QRCodePlaceholder
           v-if="scannerCommand !== 'start'"
-          :class="{ 
-            'absolute': scannerStatus == 'idle' || scannerCommand == 'stop',
+          :class="{
+            absolute: scannerStatus == 'idle' || scannerCommand == 'stop',
             'top-0': scannerStatus == 'idle' || scannerCommand == 'stop',
+            'h-full': scannerStatus == 'idle' || scannerCommand == 'stop'
           }"
-          :scanner-command="scannerCommand" 
-          :qrcode="qrcode" 
+          :scanner-command="scannerCommand"
+          :qrcode="qrcode"
         />
       </div>
-      <div>{{  qrcode  }}</div>
     </template>
     <template #footer>
       <div v-if="deviceHasCamera">

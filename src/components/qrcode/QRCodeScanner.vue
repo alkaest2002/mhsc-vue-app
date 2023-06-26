@@ -1,11 +1,7 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
-import { ref, watch, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 import QrScanner from 'qr-scanner'
-
-// get i18n t
-const { t } = useI18n()
 
 // define props
 const props = defineProps({
@@ -28,7 +24,12 @@ const props = defineProps({
 })
 
 // define emits
-const emit = defineEmits(['update:scannerCommand', 'update:scannerStatus', 'update:qrcode', 'update:isLoading'])
+const emit = defineEmits([
+  'update:scannerCommand',
+  'update:scannerStatus',
+  'update:qrcode',
+  'update:isLoading',
+])
 
 // define video element ref
 const scannerElement = ref(null)
@@ -40,13 +41,13 @@ const qrScanner = ref(null)
 watch(
   () => props.scannerCommand,
   (command) => {
-    if (command == 'start') onClickStartCamera()
-    if (command == 'stop') onClickStopCamera()
+    if (command == 'start') onClickStartScanner()
+    if (command == 'stop') onClickStopScanner()
   }
 )
 
-// on click start camera
-const onClickStartCamera = async () => {
+// on click start scanner
+const onClickStartScanner = async () => {
   // start scanner
   await qrScanner.value.start()
   // stop spinner
@@ -55,8 +56,9 @@ const onClickStartCamera = async () => {
   emit('update:scannerStatus', 'active')
 }
 
-// on click stop camera
-const onClickStopCamera = async () => {
+// on click stop scanner
+const onClickStopScanner = async () => {
+  // stop scanner
   await qrScanner.value.stop()
   // stop spinner
   emit('update:isLoading', false)
@@ -73,8 +75,16 @@ onMounted(() => {
     { onDecodeError: () => {}, highlightScanRegion: true }
   )
 })
+
+// on unmounted
+onUnmounted(() => {
+  // destroy scanner
+  qrScanner.value.destroy()
+  // set scanner to null
+  qrScanner.value = null
+})
 </script>
 
 <template>
-  <video id="video" ref="scannerElement" class="rounded-md"  />    
+  <video id="video" ref="scannerElement" class="rounded-md" />
 </template>

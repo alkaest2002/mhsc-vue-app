@@ -17,11 +17,10 @@ const props = defineProps({
     default: ''
   }
 })
-
 </script>
 
 <template>
-  <div class="flex justify-center items-center bg-zinc-100 w-full h-[320px]">
+  <div class="flex justify-center items-center bg-zinc-100 w-full">
     <div v-if="!qrcode" class="flex flex-col items-center">
       <IconCamera class="w-[150px]" />
       <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
