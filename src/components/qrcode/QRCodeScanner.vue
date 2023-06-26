@@ -1,6 +1,6 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
-import { ref, onUnmounted, watch, onMounted } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import QrScanner from 'qr-scanner'
 
@@ -72,14 +72,6 @@ onMounted(() => {
     (result) => emit('update:qrcode', window.atob(result?.data)),
     { onDecodeError: () => {}, highlightScanRegion: true }
   )
-})
-
-// on beforeunmount
-onUnmounted(() => {
-  // destroy scanner
-  qrScanner.value.destroy()
-  // update scanner command
-  emit('update:scannerCommand', null)
 })
 </script>
 

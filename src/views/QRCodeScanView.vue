@@ -16,8 +16,6 @@ const reportTemplate = reportModule.default
 const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
 const checklistJSON = checklistModule.default
 
-const mockData = "Calanna;Pierpaolo;15/11/1971;-1;1;2;0;0;0;0;0;0;0;0;1;2;3;0;0;1;0;0;0;6"
-
 // get i18n t
 const { t } = useI18n()
 // define device has camera
@@ -36,8 +34,13 @@ const renderedReport = ref(null)
 watch(
   qrcode,
   (reportData) => {
-    if (reportData !== null)
-    renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON)
+    // if qrcode was acquired
+    if (reportData !== null) {
+      // stop the camera
+      scannerCommand.value = 'stop'
+      // render report and store it
+      renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON)
+    }
   }
 )
 
@@ -50,12 +53,10 @@ const onDownloadReport = () => {
   // delete rendered report
   renderedReport.value = null
 }
-
 // on mounted
 onMounted(async () => {
   // flag whether device has camera or not
   deviceHasCamera.value = await QrScanner.hasCamera()
-  qrcode.value = mockData
 })
 </script>
 
@@ -67,7 +68,7 @@ onMounted(async () => {
     <template #content>
       <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
       <p v-else class="mb-6">{{ t('views.qrcodeScan.text') }}</p>
-      <div class="relative">
+      <div class="relative h-full">
         <QRCodeScanner
           v-model:scanner-command="scannerCommand"
           v-model:qrcode="qrcode"
@@ -76,7 +77,6 @@ onMounted(async () => {
         />
         <QRCodePlaceholder
           v-if="scannerCommand !== 'start'"
-          class="w-full"
           :class="{ 
             'absolute': scannerStatus == 'idle' || scannerCommand == 'stop',
             'top-0': scannerStatus == 'idle' || scannerCommand == 'stop',
@@ -85,6 +85,7 @@ onMounted(async () => {
           :qrcode="qrcode" 
         />
       </div>
+      <div>{{  qrcode  }}</div>
     </template>
     <template #footer>
       <div v-if="deviceHasCamera">
