@@ -74,9 +74,10 @@ onMounted(async () => {
           v-model:is-loading="isLoading"
           v-model:scanner-status="scannerStatus"
         />
-        <QRCodePlaceholder 
-          v-if="scannerStatus == 'idle' || scannerCommand == 'stop'"
-          class="absolute top-0 left-[17%]"
+        <QRCodePlaceholder
+          v-if="scannerCommand !== 'start'"
+          class="w-full"
+          :class="{ 'absolute': scannerStatus == 'idle' || scannerCommand == 'stop' }"
           :scanner-command="scannerCommand" 
           :qrcode="qrcode" 
         />
