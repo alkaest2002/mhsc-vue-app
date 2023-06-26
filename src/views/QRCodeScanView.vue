@@ -8,13 +8,13 @@ import { renderReport, downloadReport } from '@/composables/useRenderReport'
 import QRCodeScanner from '@/components/qrcode/QRCodeScanner.vue'
 import QRCodePlaceholder from '@/components/qrcode/QRCodePlaceholder.vue'
 
-// import locale-aware report template
-const reportModule = await import(`@/i18n/locales/report.${i18n.global.locale.value}.rtf?raw`)
-const reportTemplate = reportModule.default
-
 // import locale-aware checklist
 const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
-const checklistJSON = checklistModule.default
+const checklist = checklistModule.default
+
+// import locale-aware report template
+const reportModule = await import(`@/i18n/locales/report.${i18n.global.locale.value}.json`)
+const report = reportModule.default
 
 // get i18n t
 const { t } = useI18n()
@@ -38,7 +38,7 @@ watch(qrcode, (reportData) => {
     // stop the camera
     scannerCommand.value = 'stop'
     // render report and store it
-    renderedReport.value = renderReport(reportTemplate, reportData, checklistJSON)
+    renderedReport.value = renderReport(checklist, report, reportData)
   }
 })
 

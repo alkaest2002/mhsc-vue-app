@@ -1,0 +1,12 @@
+{
+  "title": "Report MHSC",
+  "bio": {
+    "surname": "Surname",
+    "name": "Name",
+    "dob": "Date of birth"
+  },
+  "itemTable": {
+    "title": "Responses to the checklist"
+  },
+  "disclaimer": "I declare that the answers given are complete and correct to the best of my beliefs. I understand that if I have made false or misleading statements or have withheld information relevant to the eligibility judgment, the licensing authority may refuse to grant me my medical certificate or withdraw any issued medical certificates, without excluding further legal action. I authorize the release of this data to the AME Physician and, where appropriate, the Licensing Authority Medical Examiner. I understand that this data will become the property of the licensing authority, provided it is accessible by me or my doctor in accordance with national law."
+}

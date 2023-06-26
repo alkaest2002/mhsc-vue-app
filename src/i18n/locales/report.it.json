@@ -1,0 +1,12 @@
+{
+  "title": "Report MHSC",
+  "bio": {
+    "surname": "Surname",
+    "name": "Name",
+    "dob": "Date of birth"
+  },
+  "itemTable": {
+    "title": "Responses to the checklist"
+  },
+  "disclaimer": "Dichiaro che le risposte date sono complete e corrette al meglio delle mie convinzioni. Comprendo che, se ho rilasciato dichiarazioni false o fuorvianti oppure ho omesso informazioni rilevanti ai fini del giudizio di idoneità, l'autorità di rilascio delle licenze può rifiutare di concedermi il certificato medico o ritirare qualsiasi certificato medico emesso, senza escludere ulteriori azioni legali. Autorizzo il rilascio dei presenti dati al medico AME e, ove necessario, all'esaminatore medico dell'autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno di proprietà dell'autorità di rilascio delle licenze, a condizione che siano accessibili da me o dal mio medico secondo la legislazione nazionale."
+}
