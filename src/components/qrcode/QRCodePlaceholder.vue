@@ -20,13 +20,13 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex justify-center items-center bg-zinc-100 w-full">
+  <div class="flex justify-center items-start bg-zinc-100 w-full">
     <div v-if="!qrcode" class="flex flex-col items-center">
-      <IconCamera class="w-[150px]" />
+      <IconCamera />
       <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
     </div>
     <div v-else class="flex flex-col items-center">
-      <IconQRCode class="w-[150px]" />
+      <IconQRCode />
       <span class="text-sm">{{ t('views.qrcodeScan.scanner.done') }}</span>
     </div>
   </div>

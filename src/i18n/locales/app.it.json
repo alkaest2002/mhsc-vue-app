@@ -69,8 +69,8 @@
       "continue": "continua",
       "back": "indietro",
       "reset": "cancella tutti i dati",
-      "cameraStart": "attiva fotocamera",
-      "cameraStop": "disattiva fotocamera",
+      "scannerStart": "attiva fotocamera",
+      "scannerStop": "disattiva fotocamera",
       "printQRCode": "genera report"
     }
   }

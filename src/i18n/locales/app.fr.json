@@ -78,8 +78,8 @@
       "continue": "continuer",
       "back": "retourner",
       "reset": "Réinitialiser les données",
-      "cameraStart": "activer la caméra",
-      "cameraStop": "désactiver la caméra",
+      "scannerStart": "activer la caméra",
+      "scannerStop": "désactiver la caméra",
       "printQRCode": "générer un rapport"
     }
   }

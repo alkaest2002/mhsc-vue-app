@@ -69,8 +69,8 @@
       "continue": "continue",
       "back": "back",
       "reset": "reset data",
-      "cameraStart": "activate camera",
-      "cameraStop": "activate camera",
+      "scannerStart": "activate camera",
+      "scannerStop": "deactivate camera",
       "printQRCode": "generate report"
     }
   }

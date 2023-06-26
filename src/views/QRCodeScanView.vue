@@ -62,11 +62,15 @@ onMounted(async () => {
 <template>
   <AppContainer>
     <template #title>
-      {{ t('views.qrcodeScan.title') }}
+      <div class="text-center">
+        {{ t('views.qrcodeScan.title') }}
+      </div>
     </template>
     <template #content>
-      <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
-      <p v-else class="mb-6">{{ t('views.qrcodeScan.text') }}</p>
+      <div class="text-center mb-6">
+        <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
+        <p v-else>{{ t('views.qrcodeScan.text') }}</p>
+      </div>
       <div class="relative grow">
         <QRCodeScanner
           v-model:scanner-command="scannerCommand"
@@ -89,12 +93,12 @@ onMounted(async () => {
     <template #footer>
       <div v-if="deviceHasCamera">
         <LoadingButton
-          v-show="scannerStatus == 'active' && renderedReport === null"
+          v-show="scannerStatus === 'active' && renderedReport === null"
           :css="'w-full mb-2'"
           :is-loading="isLoading"
           @click="scannerCommand = 'stop'"
         >
-          {{ t('ui.button.cameraStop') }}
+          {{ t('ui.button.scannerStop') }}
         </LoadingButton>
         <LoadingButton
           v-show="scannerStatus == 'idle' && renderedReport === null"
@@ -102,7 +106,7 @@ onMounted(async () => {
           :is-loading="isLoading"
           @click="scannerCommand = 'start'"
         >
-          {{ t('ui.button.cameraStart') }}
+          {{ t('ui.button.scannerStart') }}
         </LoadingButton>
         <LoadingButton
           v-show="renderedReport !== null"
