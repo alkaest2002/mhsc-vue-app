@@ -60,7 +60,7 @@ const emit = defineEmits(['update:scannerCommand', 'onDownloadReport'])
       <div v-if="deviceHasCamera">
         <LoadingButton
           v-show="scannerStatus == 'idle' && renderedReport === null"
-          :css="'w-full mb-2'"
+          :css="'w-full'"
           :is-loading="isLoading"
           @click="$emit('update:scannerCommand', 'start')"
         >
