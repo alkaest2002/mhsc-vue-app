@@ -4,7 +4,7 @@
     "title": "Dati biografici",
     "surname": "Cognome",
     "name": "Nome",
-    "dob": "Nato/a il"
+    "dob": "Data di nascita"
   },
   "itemsTable": {
     "title": "Risposte alla checklist"

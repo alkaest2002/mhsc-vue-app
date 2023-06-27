@@ -1,12 +1,27 @@
 {
   "title": "Report MHSC",
-  "bio": {
-    "surname": "Surname",
-    "name": "Name",
-    "dob": "Date of birth"
+  "bioTable": {
+    "title": "Datos biograficos",
+    "surname": "Apellido",
+    "name": "Nombre",
+    "dob": "Fecha de nacimiento"
   },
-  "itemTable": {
-    "title": "Responses to the checklist"
+  "itemsTable": {
+    "title": "Respuestas a la lista de verificación"
   },
-  "disclaimer": "Declaro que las respuestas dadas son completas y correctas a mi leal saber y entender. Entiendo que si he hecho declaraciones falsas o engañosas o he ocultado información relevante para el juicio de elegibilidad, la autoridad que otorga la licencia puede negarse a otorgarme mi certificado médico o retirar cualquier certificado médico emitido, sin excluir otras acciones legales. Autorizo la divulgación de estos datos al Médico de AME y, cuando sea necesario, al Médico Forense de la Autoridad de Licencias. Entiendo que estos datos pasarán a ser propiedad de la autoridad que otorga la licencia, siempre que yo o mi médico podamos acceder a ellos de acuerdo con la legislación nacional."
+  "workerTable": {
+    "title": "Declaración del trabajador",
+    "disclaimer": "Declaro que las respuestas dadas son completas y correctas a mi leal saber y entender. Entiendo que si he hecho declaraciones falsas o engañosas o he ocultado información relevante para el juicio de elegibilidad, la autoridad que otorga la licencia puede negarse a otorgarme mi certificado médico o retirar cualquier certificado médico emitido, sin excluir otras acciones legales. Autorizo ​​la divulgación de estos datos al Médico de AME y, cuando sea necesario, al Médico Forense de la Autoridad de Licencias. Entiendo que estos datos pasarán a ser propiedad de la autoridad emisora ​​de licencias, siempre que yo o mi médico podamos acceder a ellos de conformidad con la legislación nacional..",
+    "date": "Fecha",
+    "signature": "firma legible"
+  },
+  "ameTable": {
+    "title": "Parte reservada para el médico AME",
+    "referral": {
+      "text": "Solicitar visita de especialista",
+      "yes": "Sí",
+      "no": "No"
+    },
+    "signature": "Sello y firma de la AME"
+  }
 }

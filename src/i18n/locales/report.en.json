@@ -1,12 +1,27 @@
 {
   "title": "Report MHSC",
-  "bio": {
+  "bioTable": {
+    "title": "Biographical data",
     "surname": "Surname",
     "name": "Name",
     "dob": "Date of birth"
   },
-  "itemTable": {
-    "title": "Responses to the checklist"
+  "itemsTable": {
+    "title": "Checklist answers"
   },
-  "disclaimer": "I declare that the answers given are complete and correct to the best of my beliefs. I understand that if I have made false or misleading statements or have withheld information relevant to the eligibility judgment, the licensing authority may refuse to grant me my medical certificate or withdraw any issued medical certificates, without excluding further legal action. I authorize the release of this data to the AME Physician and, where appropriate, the Licensing Authority Medical Examiner. I understand that this data will become the property of the licensing authority, provided it is accessible by me or my doctor in accordance with national law."
+  "workerTable": {
+    "title": "Worler Declaration",
+    "disclaimer": "I declare that the answers given are complete and correct to the best of my beliefs. I understand that if I have made false or misleading statements or have withheld information relevant to the eligibility judgment, the licensing authority may refuse to grant me my medical certificate or withdraw any issued medical certificates, without excluding further legal action. I authorize the release of this data to the AME Physician and, where appropriate, the Licensing Authority Medical Examiner. I understand that this data will become the property of the licensing authority, provided it is accessible by me or my doctor in accordance with national law.",
+    "date": "Date",
+    "signature": "Legible signature"
+  },
+  "ameTable": {
+    "title": "Part reserved for the AME doctor",
+    "referral": {
+      "text": "Referral to authorized specialist",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "signature": "AME's seal and signature"
+  }
 }
