@@ -23,7 +23,7 @@ const props = defineProps({
   },
   scannerStatus: {
     type: String,
-    default:'idle'
+    default: 'idle'
   },
   qrcode: {
     type: String,
@@ -31,16 +31,12 @@ const props = defineProps({
   },
   renderedReport: {
     type: [null, String],
-    default: null,
+    default: null
   }
 })
 
 // define emits
-const emit = defineEmits([
-  'update:scannerCommand',
-  'onDownloadReport'
-])
-
+const emit = defineEmits(['update:scannerCommand', 'onDownloadReport'])
 </script>
 
 <template>

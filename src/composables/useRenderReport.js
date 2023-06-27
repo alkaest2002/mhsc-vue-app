@@ -1,20 +1,20 @@
 /* eslint-disable no-unused-vars */
 import { createApp, h } from 'vue'
 import ReportTemplate from '@/components/report/ReportTemplate.vue'
-import ReportBase from "@/components/report/ReportBase.html?raw";
+import ReportBase from '@/components/report/ReportBase.html?raw'
 
 export const renderReport = (checklist, report, reportData) => {
   // create temporary div
   const el = document.createElement('div')
   // create report on the fly
   const reportApp = createApp({
-    name: "ReportFragment",
-    render: () => h(ReportTemplate, { checklist, report, reportData }),
-  });
+    name: 'ReportFragment',
+    render: () => h(ReportTemplate, { checklist, report, reportData })
+  })
   // create report fragment
   const reportHtmlFragment = reportApp.mount(el).$el.outerHTML
   // return rendered report
-  return ReportBase.replace("#fragment#", reportHtmlFragment);
+  return ReportBase.replace('#fragment#', reportHtmlFragment)
 }
 
 export const downloadReport = (report, isLoading) => {

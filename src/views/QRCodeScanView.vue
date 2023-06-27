@@ -61,7 +61,7 @@ onMounted(async () => {
 
 <template>
   <div class="h-full">
-    <QRCodeScanner 
+    <QRCodeScanner
       v-show="scannerCommand === 'start'"
       v-model:is-loading="isLoading"
       v-model:scanner-command="scannerCommand"
@@ -69,8 +69,8 @@ onMounted(async () => {
       v-model:qrcode="qrcode"
       :rendered-report="renderedReport"
     />
-    <QRCodePlaceholder 
-      v-show="scannerCommand !== 'start'" 
+    <QRCodePlaceholder
+      v-show="scannerCommand !== 'start'"
       v-model:is-loading="isLoading"
       v-model:scanner-command="scannerCommand"
       :qrcode="qrcode"

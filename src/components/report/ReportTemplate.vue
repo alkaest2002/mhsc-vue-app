@@ -80,7 +80,8 @@ const date = new Date().toISOString().slice(0, 10)
               {{ report.ameTable.referral.text }}
             </div>
             <p>
-              <span>&#9711; {{ report.ameTable.referral.no }}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span>&#9711; {{ report.ameTable.referral.no }}</span
+              >&nbsp;&nbsp;&nbsp;&nbsp;
               <span>&#9711; {{ report.ameTable.referral.yes }}</span>
             </p>
           </td>

@@ -36,7 +36,7 @@ const emit = defineEmits([
   'update:scannerCommand',
   'update:scannerStatus',
   'update:qrcode',
-  'update:isLoading',
+  'update:isLoading'
 ])
 
 // define video element ref
