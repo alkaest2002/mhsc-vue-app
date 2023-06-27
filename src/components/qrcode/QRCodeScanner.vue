@@ -1,25 +1,33 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import QrScanner from 'qr-scanner'
+
+// get i18n t
+const { t } = useI18n()
 
 // define props
 const props = defineProps({
-  scannerCommand: {
-    type: [null, String],
-    default: null
-  },
   isLoading: {
     type: Boolean,
     required: true
   },
-  qrcode: {
-    type: String,
-    default: ''
+  scannerCommand: {
+    type: [null, String],
+    default: null
   },
   scannerStatus: {
     type: String,
     required: true
+  },
+  renderedReport: {
+    type: String,
+    default: ''
+  },
+  qrcode: {
+    type: String,
+    default: ''
   }
 })
 
@@ -59,7 +67,7 @@ const onClickStartScanner = async () => {
 // on click stop scanner
 const onClickStopScanner = async () => {
   // stop scanner
-  await qrScanner.value.stop()
+  await qrScanner.value.destroy()
   // stop spinner
   emit('update:isLoading', false)
   // update scanner status
@@ -71,20 +79,35 @@ onMounted(() => {
   // create scanner instance
   qrScanner.value = new QrScanner(
     scannerElement.value,
-    (result) => emit('update:qrcode', window.atob(result?.data)),
+    (result) => {
+      emit('update:qrcode', window.atob(result?.data))
+    },
     { onDecodeError: () => {}, highlightScanRegion: true }
   )
-})
-
-// on unmounted
-onUnmounted(() => {
-  // destroy scanner
-  qrScanner.value.destroy()
-  // set scanner to null
-  qrScanner.value = null
 })
 </script>
 
 <template>
-  <video id="video" ref="scannerElement" class="rounded-md" />
+  <AppContainer>
+    <template #title>
+      <div class="text-center">
+        {{ t('views.qrcodeScan.title') }}
+      </div>
+    </template>
+    <template #content>
+      <div class="text-center mb-6">
+        <p>{{ t('views.qrcodeScan.text') }}</p>
+      </div>
+      <video id="video" ref="scannerElement" class="rounded-md" />
+    </template>
+    <template #footer>
+      <LoadingButton
+        :css="'w-full mb-2'"
+        :is-loading="isLoading"
+        @click="$emit('update:scannerCommand', 'stop')"
+      >
+        {{ t('ui.button.scannerStop') }}
+      </LoadingButton>
+    </template>
+  </AppContainer>
 </template>

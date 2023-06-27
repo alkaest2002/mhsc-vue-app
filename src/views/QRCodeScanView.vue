@@ -60,71 +60,21 @@ onMounted(async () => {
 </script>
 
 <template>
-  <AppContainer>
-    <template #title>
-      <div class="text-center">
-        {{ t('views.qrcodeScan.title') }}
-      </div>
-    </template>
-    <template #content>
-      <div class="text-center mb-6">
-        <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
-        <p v-else>{{ t('views.qrcodeScan.text') }}</p>
-      </div>
-      <div class="flex-1">
-        <div class="relative h-full w-full">
-          <QRCodePlaceholder
-            v-show="scannerCommand !== 'start'"
-            :class="{
-              'absolute': scannerStatus == 'idle' || scannerCommand == 'stop',
-              'top-0': scannerStatus == 'idle' || scannerCommand == 'stop',
-              'bottom-0': scannerStatus == 'idle' || scannerCommand == 'stop',
-              'left-0': scannerStatus == 'idle' || scannerCommand == 'stop',
-              'right-0': scannerStatus == 'idle' || scannerCommand == 'stop'
-            }"
-            :qrcode="qrcode"
-          />
-          <QRCodeScanner
-            v-model:scanner-command="scannerCommand"
-            v-model:qrcode="qrcode"
-            v-model:is-loading="isLoading"
-            v-model:scanner-status="scannerStatus"
-          />
-        </div>
-      </div>
-    </template>
-    <template #footer>
-      <div v-if="deviceHasCamera">
-        <LoadingButton
-          v-show="scannerStatus === 'active' && renderedReport === null"
-          :css="'w-full mb-2'"
-          :is-loading="isLoading"
-          @click="scannerCommand = 'stop'"
-        >
-          {{ t('ui.button.scannerStop') }}
-        </LoadingButton>
-        <LoadingButton
-          v-show="scannerStatus == 'idle' && renderedReport === null"
-          :css="'w-full mb-2'"
-          :is-loading="isLoading"
-          @click="scannerCommand = 'start'"
-        >
-          {{ t('ui.button.scannerStart') }}
-        </LoadingButton>
-        <LoadingButton
-          v-show="renderedReport !== null"
-          :class="'w-full'"
-          :is-loading="isLoading"
-          @click.prevent="onDownloadReport"
-        >
-          {{ t('ui.button.printQRCode') }}
-        </LoadingButton>
-      </div>
-      <div v-else>
-        <RouterLinkButton :to="{ name: 'start' }" :class="'w-full mt-2'">
-          {{ t('ui.button.back') }}
-        </RouterLinkButton>
-      </div>
-    </template>
-  </AppContainer>
+  <QRCodeScanner 
+    v-show="scannerCommand === 'start'"
+    v-model:is-loading="isLoading"
+    v-model:scanner-command="scannerCommand"
+    v-model:scanner-status="scannerStatus"
+    v-model:qrcode="qrcode"
+    :rendered-report="renderedReport"
+  />
+  <QRCodePlaceholder 
+    v-show="scannerCommand !== 'start'" 
+    v-model:is-loading="isLoading"
+    v-model:scanner-command="scannerCommand"
+    :qrcode="qrcode"
+    :device-has-camera="deviceHasCamera"
+    :rendered-report="renderedReport"
+    @on-download-report="onDownloadReport"
+  />
 </template>

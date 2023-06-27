@@ -6,91 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>MHSC Report</title>
   <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
     body,
-    div,
-    em,
     h1,
     h2,
     h3,
     h4,
-    h5,
-    h6,
-    header,
-    html,
-    legend,
-    li,
     p,
-    section,
-    small,
-    span,
-    table,
-    tbody,
-    td,
-    tfoot,
-    th,
-    thead,
-    time,
-    tr,
-    ul {
-      font-size: 100%;
-      font-weight: inherit;
+    figure,
+    blockquote,
+    dl,
+    dd {
       margin: 0;
-      padding: 0;
-      vertical-align: baseline;
-      border: 0;
-      background-color: transparent;
     }
 
-    html {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-      font-size: 10pt;
-      overflow-y: scroll;
-      box-sizing: border-box;
+    ul[role='list'],
+    ol[role='list'] {
+      list-style: none;
     }
 
-    *,
-    ::after,
-    ::before {
-      box-sizing: inherit;
-      background-repeat: no-repeat;
+    html:focus-within {
+      scroll-behavior: smooth;
     }
 
     body {
       min-height: 100vh;
       text-rendering: optimizeSpeed;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      line-height: 1.2;
-    }
-
-    li,
-    ul {
-      list-style: none;
-    }
-
-    table {
-      border-spacing: 0;
-      border-collapse: collapse;
-    }
-
-    b,
-    strong {
-      font-weight: 700;
-    }
-
-    a:active,
-    a:hover {
-      outline-width: 0;
+      line-height: 1.5;
     }
   </style>
   <style>
@@ -155,15 +102,16 @@
       margin: 10pt 0;
     }
 
-    #report-legend {
-      margin-top: 12pt;
-      font-size: 10pt;
+    #report-worker-signature {
+      height: 100px;
+      width: 200px;
+      float: right;
+      clear: both;
     }
 
-    #report-legend .legend-task-score {
-      display: inline-block;
-      width: 30px;
-      padding-right: 12pt;
+    #report-ame-signature {
+      height: 100px;
+      width: 200px;
     }
   </style>
 </head>
