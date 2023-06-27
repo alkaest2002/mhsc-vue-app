@@ -18,7 +18,7 @@
   "ameTable": {
     "title": "Parte riservata al medico AME",
     "referral": {
-      "text": "Richiesta visita specialistica",
+      "text": "Demander une visite spécialisée",
       "yes": "Sí",
       "no": "No"
     },
