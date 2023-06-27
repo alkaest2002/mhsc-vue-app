@@ -60,21 +60,23 @@ onMounted(async () => {
 </script>
 
 <template>
-  <QRCodeScanner 
-    v-show="scannerCommand === 'start'"
-    v-model:is-loading="isLoading"
-    v-model:scanner-command="scannerCommand"
-    v-model:scanner-status="scannerStatus"
-    v-model:qrcode="qrcode"
-    :rendered-report="renderedReport"
-  />
-  <QRCodePlaceholder 
-    v-show="scannerCommand !== 'start'" 
-    v-model:is-loading="isLoading"
-    v-model:scanner-command="scannerCommand"
-    :qrcode="qrcode"
-    :device-has-camera="deviceHasCamera"
-    :rendered-report="renderedReport"
-    @on-download-report="onDownloadReport"
-  />
+  <div class="h-full">
+    <QRCodeScanner 
+      v-show="scannerCommand === 'start'"
+      v-model:is-loading="isLoading"
+      v-model:scanner-command="scannerCommand"
+      v-model:scanner-status="scannerStatus"
+      v-model:qrcode="qrcode"
+      :rendered-report="renderedReport"
+    />
+    <QRCodePlaceholder 
+      v-show="scannerCommand !== 'start'" 
+      v-model:is-loading="isLoading"
+      v-model:scanner-command="scannerCommand"
+      :qrcode="qrcode"
+      :device-has-camera="deviceHasCamera"
+      :rendered-report="renderedReport"
+      @on-download-report="onDownloadReport"
+    />
+  </div>
 </template>

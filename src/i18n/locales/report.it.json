@@ -1,12 +1,27 @@
 {
   "title": "Report MHSC",
-  "bio": {
-    "surname": "Surname",
-    "name": "Name",
-    "dob": "Date of birth"
+  "bioTable": {
+    "title": "Dati biografici",
+    "surname": "Cognome",
+    "name": "Nome",
+    "dob": "Nato/a il"
   },
-  "itemTable": {
-    "title": "Responses to the checklist"
+  "itemsTable": {
+    "title": "Risposte alla checklist"
   },
-  "disclaimer": "Dichiaro che le risposte date sono complete e corrette al meglio delle mie convinzioni. Comprendo che, se ho rilasciato dichiarazioni false o fuorvianti oppure ho omesso informazioni rilevanti ai fini del giudizio di idoneità, l'autorità di rilascio delle licenze può rifiutare di concedermi il certificato medico o ritirare qualsiasi certificato medico emesso, senza escludere ulteriori azioni legali. Autorizzo il rilascio dei presenti dati al medico AME e, ove necessario, all'esaminatore medico dell'autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno di proprietà dell'autorità di rilascio delle licenze, a condizione che siano accessibili da me o dal mio medico secondo la legislazione nazionale."
+  "workerTable": {
+    "title": "Dichiarazione del lavoratore",
+    "disclaimer": "Dichiaro che le risposte date sono complete e corrette al meglio delle mie convinzioni. Comprendo che, se ho rilasciato dichiarazioni false o fuorvianti oppure ho omesso informazioni rilevanti ai fini del giudizio di idoneità, l'autorità di rilascio delle licenze può rifiutare di concedermi il certificato medico o ritirare qualsiasi certificato medico emesso, senza escludere ulteriori azioni legali. Autorizzo il rilascio dei presenti dati al medico AME e, ove necessario, all'esaminatore medico dell'autorità di rilascio delle licenze. Sono consapevole che tali dati diventeranno di proprietà dell'autorità di rilascio delle licenze, a condizione che siano accessibili da me o dal mio medico secondo la legislazione nazionale.",
+    "date": "Data",
+    "signature": "Firma Leggibile"
+  },
+  "ameTable": {
+    "title": "Parte riservata al medico AME",
+    "referral": {
+      "text": "Richiesta visita specialistica",
+      "yes": "Sí",
+      "no": "No"
+    },
+    "signature": "Timbro e firma dell'AME"
+  }
 }

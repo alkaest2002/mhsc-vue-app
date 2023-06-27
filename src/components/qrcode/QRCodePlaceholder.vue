@@ -17,6 +17,10 @@ const props = defineProps({
     type: Boolean,
     required: true
   },
+  scannerCommand: {
+    type: String,
+    default: ''
+  },
   scannerStatus: {
     type: String,
     default:'idle'
@@ -51,7 +55,7 @@ const emit = defineEmits([
         <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
         <p v-else>{{ t('views.qrcodeScan.text') }}</p>
       </div>
-      <div class="flex justify-center items-start bg-zinc-100 w-full">
+      <div class="flex justify-center items-start bg-zinc-100 w-full h-full">
         <div v-show="!qrcode" class="flex flex-col items-center">
           <IconCamera class="h-48" />
           <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>

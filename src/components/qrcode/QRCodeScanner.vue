@@ -67,7 +67,7 @@ const onClickStartScanner = async () => {
 // on click stop scanner
 const onClickStopScanner = async () => {
   // stop scanner
-  await qrScanner.value.destroy()
+  await qrScanner.value.stop()
   // stop spinner
   emit('update:isLoading', false)
   // update scanner status
@@ -79,7 +79,7 @@ onMounted(() => {
   // create scanner instance
   qrScanner.value = new QrScanner(
     scannerElement.value,
-    (result) => {
+    async (result) => {
       emit('update:qrcode', window.atob(result?.data))
     },
     { onDecodeError: () => {}, highlightScanRegion: true }
@@ -98,7 +98,7 @@ onMounted(() => {
       <div class="text-center mb-6">
         <p>{{ t('views.qrcodeScan.text') }}</p>
       </div>
-      <video id="video" ref="scannerElement" class="rounded-md" />
+      <video id="video" ref="scannerElement" class="rounded-md relative" />
     </template>
     <template #footer>
       <LoadingButton
