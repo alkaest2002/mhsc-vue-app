@@ -1,5 +1,5 @@
 <script setup>
-/* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
+/* eslint-disable no-unused-vars */
 
 // define props
 const props = defineProps({
@@ -18,15 +18,15 @@ const props = defineProps({
 })
 // convert string to array
 const data = props.reportData.split(';')
-// init data
+// init variables
 const surname = data[0]
 const name = data[1]
 const dob = data[2]
 const items = data.slice(3)
 const date = new Date().toISOString().slice(0, 10)
-
-const flags = Array.from({length: 21}, () => false)
-
+// init flags
+const flags = Array.from({ length: 21 }, () => false)
+// check flags
 flags[0] = items[0] > 0
 flags[1] = items[1] > 0
 flags[2] = items[2] > 0
@@ -76,8 +76,10 @@ flags[20] = items[20] < 7
       <h2>{{ report.itemsTable.title.toUpperCase() }}</h2>
       <table id="report-items-table">
         <tr v-for="(item, index) of items" :key="index">
-          <td :class="{'emphasis': flags[index]}">{{ flags[index] ? "→" : "" }}</td>
-          <td :class="{'emphasis': flags[index]}">{{ checklist[index].itemOptions[item].label }}</td>
+          <td :class="{ emphasis: flags[index] }">{{ flags[index] ? '→' : '' }}</td>
+          <td :class="{ emphasis: flags[index] }">
+            {{ checklist[index].itemOptions[item].label }}
+          </td>
           <td>{{ checklist[index].itemText }}</td>
         </tr>
       </table>

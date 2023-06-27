@@ -56,22 +56,26 @@ watch(
 
 // on click start scanner
 const onClickStartScanner = async () => {
+  // start spinner
+  emit('update:isLoading', true)
   // start scanner
   await qrScanner.value.start()
-  // stop spinner
-  emit('update:isLoading', false)
   // update scanner status
   emit('update:scannerStatus', 'active')
+  // stop spinner
+  emit('update:isLoading', false)
 }
 
 // on click stop scanner
 const onClickStopScanner = async () => {
+  // start spinner
+  emit('update:isLoading', true)
   // stop scanner
   await qrScanner.value.stop()
-  // stop spinner
-  emit('update:isLoading', false)
   // update scanner status
   emit('update:scannerStatus', 'idle')
+  // stop spinner
+  emit('update:isLoading', false)
 }
 
 // init scanner on mount

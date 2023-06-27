@@ -44,12 +44,16 @@ watch(qrcode, (reportData) => {
 
 // on download report
 const onDownloadReport = () => {
+  // start spinner
+  isLoading.value = true
   // download report
   downloadReport(renderedReport.value, isLoading)
   // delete qrcode
   qrcode.value = null
   // delete rendered report
   renderedReport.value = null
+  // stop spinner
+  isLoading.value = false
 }
 
 // on mounted

@@ -48,10 +48,12 @@ const emit = defineEmits(['update:scannerCommand', 'onDownloadReport'])
         <p v-else>{{ t('views.qrcodeScan.text') }}</p>
       </div>
       <div class="flex flex-col items-center justify-start bg-zinc-100 w-full h-full">
-          <IconCamera v-if="!renderedReport" class="h-48" />
-          <IconQRCode v-else class="h-48" />
-          <span v-if="!renderedReport" class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
-          <span v-else class="text-sm">{{ t('views.qrcodeScan.scanner.done') }}</span>
+        <IconCamera v-if="!renderedReport" class="h-48" />
+        <IconQRCode v-else class="h-48" />
+        <span v-if="!renderedReport" class="text-sm">{{
+          t('views.qrcodeScan.scanner.start')
+        }}</span>
+        <span v-else class="text-sm">{{ t('views.qrcodeScan.scanner.done') }}</span>
       </div>
     </template>
     <template #footer>
