@@ -6,7 +6,7 @@
           <slot name="title" />
         </h1>
       </div>
-      <div class="grow overflow-scroll flex flex-col">
+      <div class="grow overflow-scroll flex flex-col relative">
         <slot name="content" />
       </div>
       <div>

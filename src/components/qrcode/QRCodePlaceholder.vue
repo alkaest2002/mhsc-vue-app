@@ -52,11 +52,11 @@ const emit = defineEmits(['update:scannerCommand', 'onDownloadReport'])
         <p v-else>{{ t('views.qrcodeScan.text') }}</p>
       </div>
       <div class="flex justify-center items-start bg-zinc-100 w-full h-full">
-        <div v-show="!qrcode" class="flex flex-col items-center">
+        <div v-show="!qrcode" class="flex flex-col items-center w-full h-full">
           <IconCamera class="h-48" />
           <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
         </div>
-        <div v-show="qrcode" class="flex flex-col items-center">
+        <div v-show="qrcode" class="flex flex-col items-center w-full h-full">
           <IconQRCode class="h-48" />
           <span class="text-sm">{{ t('views.qrcodeScan.scanner.done') }}</span>
         </div>
