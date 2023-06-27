@@ -18,7 +18,7 @@
   "ameTable": {
     "title": "Partie réservée au médecin AME",
     "referral": {
-      "text": "Partie réservée au médecin AME",
+      "text": "Demander une visite spécialisée",
       "yes": "Oui",
       "no": "Non"
     },

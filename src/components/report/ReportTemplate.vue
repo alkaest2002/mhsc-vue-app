@@ -77,14 +77,12 @@ const date = new Date().toISOString().slice(0, 10)
         <tr>
           <td>
             <div>
-              <div>
-                {{ report.ameTable.referral.text }}
-              </div>
-              <div>
-                <span>&#9711; {{ report.ameTable.referral.no }}</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                <span>&#9711; {{ report.ameTable.referral.yes }}</span>
-              </div>
+              {{ report.ameTable.referral.text }}
             </div>
+            <p>
+              <span>&#9711; {{ report.ameTable.referral.no }}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span>&#9711; {{ report.ameTable.referral.yes }}</span>
+            </p>
           </td>
           <td></td>
           <td>
