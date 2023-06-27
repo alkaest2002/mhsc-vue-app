@@ -80,7 +80,7 @@ flags[20] = items[20] < 7
           <td :class="{ emphasis: flags[index] }">
             {{ checklist[index].itemOptions[item].label }}
           </td>
-          <td>{{ checklist[index].itemText }}</td>
+          <td :class="{ emphasis: flags[index] }">{{ checklist[index].itemText }}</td>
         </tr>
       </table>
     </section>
