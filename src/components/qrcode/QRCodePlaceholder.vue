@@ -25,10 +25,6 @@ const props = defineProps({
     type: String,
     default: 'idle'
   },
-  qrcode: {
-    type: String,
-    default: ''
-  },
   renderedReport: {
     type: [null, String],
     default: null
@@ -51,15 +47,11 @@ const emit = defineEmits(['update:scannerCommand', 'onDownloadReport'])
         <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
         <p v-else>{{ t('views.qrcodeScan.text') }}</p>
       </div>
-      <div class="flex justify-center items-start bg-zinc-100 w-full h-full">
-        <div v-show="!qrcode" class="flex flex-col items-center w-full h-full">
-          <IconCamera class="h-48" />
-          <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
-        </div>
-        <div v-show="qrcode" class="flex flex-col items-center w-full h-full">
-          <IconQRCode class="h-48" />
-          <span class="text-sm">{{ t('views.qrcodeScan.scanner.done') }}</span>
-        </div>
+      <div class="flex flex-col items-center justify-start bg-zinc-100 w-full h-full">
+          <IconCamera v-if="!renderedReport" class="h-48" />
+          <IconQRCode v-else class="h-48" />
+          <span v-if="!renderedReport" class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
+          <span v-else class="text-sm">{{ t('views.qrcodeScan.scanner.done') }}</span>
       </div>
     </template>
     <template #footer>
