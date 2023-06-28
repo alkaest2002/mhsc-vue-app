@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { useChecklistStore } from '@/stores/checklist.store'
 import { useVuelidate } from '@vuelidate/core'
-import { required, extendedAlpha } from '@/utils/i18n-validators'
+import { required, extendedAlpha, maxLength, isDate } from '@/utils/i18n-validators'
 import FormInput from '@/components/form/FormInput.vue'
 
 // get router
@@ -21,9 +21,9 @@ const isLoading = ref(false)
 const formData = reactive(bio)
 // set validations rules
 const rules = {
-  name: { required, extendedAlpha },
-  surname: { required, extendedAlpha },
-  birthWhen: { required }
+  name: { required, extendedAlpha, maxLength: maxLength(30) },
+  surname: { required, extendedAlpha, maxLength: maxLength(30) },
+  birthWhen: { required, isDate }
 }
 
 // init validator
