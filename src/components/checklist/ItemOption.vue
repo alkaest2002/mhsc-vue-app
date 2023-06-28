@@ -32,7 +32,7 @@ const css = computed(() =>
     </span>
     <IconCheckmark
       v-show="option.value == currentAnswer"
-      class="stroke-sky-800 fill-none stroke-[30] h-4 ml-1"
+      class="stroke-sky-800 stroke-2 h-6"
     />
   </div>
 </template>

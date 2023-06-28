@@ -6,8 +6,8 @@ import { useRouter } from 'vue-router'
 import { useAppStore } from '@/stores/app.store'
 import { getSupportedLocales } from '@/i18n'
 import FormSelect from '@/components/form/FormSelect.vue'
-import IconAirport from '@/components/icons/IconAirport.vue'
-import IconDoctor from '@/components/icons/IconDoctor.vue'
+import IconChecklistWorker from '@/components/icons/IconChecklistWorker.vue'
+import IconChecklistAme from '@/components/icons/IconChecklistAme.vue'
 
 // get router
 const router = useRouter()
@@ -32,8 +32,8 @@ const to = computed(() => {
   <AppContainer>
     <template #content>
       <div class="flex flex-col justify-center items-center h-full">
-        <IconDoctor v-if="userIsAME" class="max-w-[250px]" />
-        <IconAirport v-else class="max-w-[30vw] sm:max-w-[150px]" />
+        <IconChecklistAme v-if="userIsAME" class="w-36" />
+        <IconChecklistWorker v-else class="w-36" />
         <h1 class="text-2xl font-bold text-center mt-2" v-html="t('views.start.title')" />
         <h2 v-if="userIsAME" class="text-bold">{{ t('views.start.userIsAME') }}</h2>
       </div>
