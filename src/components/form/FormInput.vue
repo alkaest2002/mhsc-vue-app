@@ -41,7 +41,7 @@ onMounted(() => {
     <label v-if="label" class="block mb-2 text-sm font-medium text-sky-900">{{ label }}</label>
     <input
       ref="inputRef"
-      class="bg-sky-50 border-2 border-sky-800 text-sky-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2"
+      class="bg-sky-50 border-2 border-sky-800 text-sky-900 text-sm rounded-lg focus:border-sky-500 focus:ring-0 w-full p-2"
       :value="modelValue"
       v-bind="$attrs"
       @input="modelValue = $event.target.value"

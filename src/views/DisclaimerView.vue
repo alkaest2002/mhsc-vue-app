@@ -23,7 +23,7 @@ const { disclaimer } = storeToRefs(useChecklistStore())
           name="disclaimer-checkbox"
           v-model="disclaimer"
           @click="onSubmit"
-          class="accent-sky-800 text-sky-800 focus:ring-transparent"
+          class="accent-sky-800 text-sky-800 focus:border-sky-500 focus:ring-0"
         />
         <label class="ml-2 text-sm" for="disclaimer-checkbox">{{
           t('views.disclaimer.agree')
