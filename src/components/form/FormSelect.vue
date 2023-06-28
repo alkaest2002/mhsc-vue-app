@@ -1,5 +1,5 @@
 <script setup>
-/* eslint-disable no-undef */
+/* eslint-disable no-undef, no-unused-vars */
 
 // get modelValue
 const modelValue = defineModel()
@@ -20,7 +20,7 @@ const props = defineProps({
     default: false
   },
 
-  class: {
+  css: {
     type: String,
     default: ''
   }
@@ -29,10 +29,10 @@ const props = defineProps({
 
 <template>
   <div class="field">
-    <div class="select" :class="props.class">
+    <div class="select" :class="css">
       <select
         class="p-2 bg-sky-50 border-2 border-sky-800 text-sky-900 text-sm rounded-lg focus:border-sky-500 focus:ring-0"
-        :class="props.class"
+        :class="css"
         :disabled="disabled"
         @change="modelValue = $event.target.value"
       >
@@ -44,7 +44,7 @@ const props = defineProps({
           :key="value"
           :value="value"
           :class="{ 'is-active': value == modelValue }"
-          :selected="value == modelValue" 
+          :selected="value == modelValue"
         >
           {{ label }}
         </option>

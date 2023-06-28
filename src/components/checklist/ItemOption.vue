@@ -16,9 +16,9 @@ const { option, currentAnswer } = defineProps({
 })
 
 // computed prop
-const css = computed(() => option.value == currentAnswer 
-  ? 'bg-sky-100 border-sky-800'
-  : 'bg-white border-white')
+const css = computed(() =>
+  option.value == currentAnswer ? 'bg-sky-100 border-sky-800' : 'bg-white border-white'
+)
 </script>
 
 <template>

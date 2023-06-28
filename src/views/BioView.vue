@@ -69,7 +69,7 @@ onBeforeUnmount(() => (isLoading.value = false))
       <template v-for="({ field, type }, index) of fieldsToRender" :key="field">
         <FormInput
           v-model="formData[field]"
-          :auto-focus="index == 0"
+          :autofocus="index == 0"
           :label="t(`views.bio.form.input.${field}.label`)"
           :css="'mb-3'"
           :errors="v[field].$errors"

@@ -43,7 +43,7 @@ const to = computed(() => {
         {{ t('views.start.selectLanguage') }}
       </div>
       <div>
-        <FormSelect class="w-full mb-3" :options="supportedLocales" v-model="locale" />
+        <FormSelect :css="'w-full mb-3'" :options="supportedLocales" v-model="locale" />
       </div>
       <div>
         <RouterLinkButton :to="to" class="w-full">

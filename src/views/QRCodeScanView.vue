@@ -34,7 +34,8 @@ const renderedReport = ref(null)
 // watch qrcode
 watch(qrcode, (reportData) => {
   // validation pattern
-  const pat = /([A-Za-z' ]+;){2}(\d{2}){1,2}[-/]\d{2}[-/](\d{2}){1,2};([012];){10}([0123];){5}([01];){5}\d\d?/gm
+  const pat =
+    /([A-Za-z' ]+;){2}(\d{2}){1,2}[-/]\d{2}[-/](\d{2}){1,2};([012];){10}([0123];){5}([01];){5}\d\d?/gm
   // if qrcode was acquired and is valid
   if (reportData !== null && reportData.match(pat)?.length > 0) {
     // render report and store it

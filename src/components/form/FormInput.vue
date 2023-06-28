@@ -1,5 +1,5 @@
 <script setup>
-/* eslint-disable no-undef */
+/* eslint-disable no-undef, vue/no-setup-props-destructure  */
 import { ref, onMounted } from 'vue'
 
 // define options
@@ -7,7 +7,7 @@ defineOptions({ inheritAttrs: false })
 // get modelValue
 const modelValue = defineModel()
 // define props
-const props = defineProps({
+const { autofocus } = defineProps({
   label: {
     type: String,
     default: null
@@ -32,7 +32,7 @@ const inputRef = ref(null)
 // on mounted
 onMounted(() => {
   // autofocus if it's the case
-  if (props.autoFocus) inputRef.value.focus()
+  if (autofocus) inputRef.value.focus()
 })
 </script>
 

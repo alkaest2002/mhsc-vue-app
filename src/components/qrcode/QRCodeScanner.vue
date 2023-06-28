@@ -8,7 +8,7 @@ import QrScanner from 'qr-scanner'
 const { t } = useI18n()
 
 // define props
-const props = defineProps({
+const { scannerCommand } = defineProps({
   isLoading: {
     type: Boolean,
     required: true
@@ -47,7 +47,7 @@ const qrScanner = ref(null)
 
 // watch scanner command
 watch(
-  () => props.scannerCommand,
+  () => scannerCommand,
   (command) => {
     if (command == 'start') onClickStartScanner()
     if (command == 'stop') onClickStopScanner()
