@@ -22,8 +22,8 @@
       "text": "Les données que vous entrez sur le formulaire de ce site statique seront stockées localement sur votre appareil (smartphone, tablette, ordinateur) et ne seront pas communiquées à nos serveurs. Après avoir rempli le questionnaire, votre appareil générera un code QR contenant toutes les informations que vous aurez fournies. Lorsqu'on vous demande, vous afficherez le code QR généré à l'examinateur aéromédical (AME)."
     },
     "disclaimer": {
-      "title": "Consentement à la publication d'informations",
-      "text": "J'autorise par la présente la publication de toutes les informations contenues sous ce formulaire à l'AME et, le cas échéant, à l'évaluateur médical de l'autorité de licence. Je suis conscient que ces informations deviendront et resteront la propriété de l'autorité de licence, à condition que moi ou mon médecin y aient accès conformément aux lois nationales. La confidentialité médicale sera respectée à tout moment.",
+      "title": "Consentement à la communication de renseignements personnels",
+      "text": "J'autorise par la présente la communication de toutes les informations contenues sous ce formulaire à l'AME et, le cas échéant, à l'évaluateur médical de l'autorité de licence. Je suis conscient que ces informations deviendront et resteront la propriété de l'autorité de licence, à condition que moi ou mon médecin y aient accès conformément aux lois nationales.",
       "agree": "Je donne mon consentement"
     },
     "bio": {

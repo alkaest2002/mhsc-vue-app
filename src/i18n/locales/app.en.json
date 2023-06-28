@@ -19,11 +19,11 @@
     },
     "info": {
       "title": "Information on this site",
-      "text": "The data you enter on the forms of this static site will be stored locally on your device (smartphone, tablet, computer) and will not be communicated to our servers. After having completed the questionnaire, your device will generate a QR Code containing all the information you will have provided. When requested to do so, you will show the generated QR Code to the aeromedical examiner (AME)."
+      "text": "The data you enter on the forms of this static site will be stored locally on your device (smartphone, tablet or computer) and will not be communicated to our servers. After having completed the checklist, your device will generate a QR Code containing all the information you will have provided. When requested to do so, you will show the generated QR Code to the aeromedical examiner (AME)."
     },
     "disclaimer": {
       "title": "Consent to the release of information",
-      "text": "I hereby authorize the release of all information contained in this form to the AME and, where necessary, to the medical assessor of the licensing authority. I am aware that such information will become and remain property of the licensing authority, provided that I or my physician will have access to them according to national laws. Medical confidentiality will be respected at all times.",
+      "text": "I hereby authorize the release of all information contained in this form to the AME and, where necessary, to the medical assessor of the licensing authority. I am aware that such information will become and remain property of the licensing authority, provided that I or my physician will have access to them according to national laws.",
       "agree": "I give my consent"
     },
     "bio": {
