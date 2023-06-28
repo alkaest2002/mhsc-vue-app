@@ -27,7 +27,7 @@ const css = computed(() => option.value == currentAnswer
     :class="css"
     class="flex justify-between p-2 shadow-md cursor-pointer border-2 rounded-lg min-w-6 overflow-scroll"
   >
-    <span class="font-semibold text-sky-800 leading-tight">
+    <span class="font-semibold">
       {{ option.label }}
     </span>
     <IconCheckmark

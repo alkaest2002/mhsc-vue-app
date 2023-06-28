@@ -21,7 +21,7 @@ const props = defineProps({
         <ItemOption :option="option" v-bind="$attrs" />
       </div>
     </div>
-    <div class="flex flex-wrap gap-1 mt-8">
+    <div class="flex flex-wrap mt-12">
       <div class="my-2 text-center w-full" v-for="option in options.slice(-1)" :key="option.value">
         <ItemOption :option="option" v-bind="$attrs" />
       </div>

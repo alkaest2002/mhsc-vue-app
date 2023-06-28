@@ -31,7 +31,7 @@ const props = defineProps({
   <div class="field">
     <div class="select" :class="props.class">
       <select
-        class="block p-2 bg-sky-50 border border-sky-800 text-sky-900 text-sm rounded-lg focus:ring-sky-500 focus:border-blindigoue-500"
+        class="block p-2 bg-sky-50 border border-sky-800 text-sky-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600"
         :class="props.class"
         :disabled="disabled"
         @change="modelValue = $event.target.value"
@@ -44,7 +44,7 @@ const props = defineProps({
           :key="value"
           :value="value"
           :class="{ 'is-active': value == modelValue }"
-          :selected="value == modelValue"
+          :selected="value == modelValue" 
         >
           {{ label }}
         </option>
