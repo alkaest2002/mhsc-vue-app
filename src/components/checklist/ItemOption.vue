@@ -1,9 +1,10 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure  */
+import { computed } from 'vue'
 import IconCheckmark from '@/components/icons/IconCheckmark.vue'
 
 // define props
-const { option } = defineProps({
+const { option, currentAnswer } = defineProps({
   option: {
     type: Object,
     required: true
@@ -13,18 +14,18 @@ const { option } = defineProps({
     required: true
   }
 })
+
+// computed prop
+const css = computed(() => option.value == currentAnswer 
+  ? 'bg-sky-100 border-sky-800'
+  : 'bg-white border-white')
 </script>
 
 <template>
   <div
     @click.capture.stop="$attrs.onClick(option.value)"
-    :class="{
-      'bg-white': option.value != currentAnswer,
-      'border-white': option.value != currentAnswer,
-      'bg-sky-100': option.value == currentAnswer,
-      'border-sky-800': option.value == currentAnswer
-    }"
-    class="relative flex justify-between p-2 rounded-lg shadow-md cursor-pointer border-2 min-w-6 overflow-scroll"
+    :class="css"
+    class="flex justify-between p-2 shadow-md cursor-pointer border-2 rounded-lg min-w-6 overflow-scroll"
   >
     <span class="font-semibold text-sky-800 leading-tight">
       {{ option.label }}

@@ -76,7 +76,7 @@ flags[20] = items[20] < 7
       <h2>{{ report.itemsTable.title.toUpperCase() }}</h2>
       <table id="report-items-table">
         <tr v-for="(item, index) of items" :key="index">
-          <td :class="{ emphasis: flags[index] }">{{ flags[index] ? '→' : '' }}</td>
+          <td :class="{ emphasis: flags[index] }">{{ flags[index] ? '▶' : '' }}</td>
           <td :class="{ emphasis: flags[index] }">
             {{ checklist[index].itemOptions[item].label }}
           </td>
