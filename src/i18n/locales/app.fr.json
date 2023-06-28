@@ -1,9 +1,11 @@
 {
   "check": "i18n",
   "validations": {
-    "required": "information requise",
-    "alpha": "lettres seulement",
-    "extendedAlpha": "caractères alphabétiques uniquement"
+    "required": "Information requise",
+    "alpha": "Lettres seulement",
+    "extendedAlpha": "Caractères alphabétiques uniquement",
+    "maxLength": "Le texte saisi est trop long. Max {max} caractères acceptés",
+    "isDate": "Date invalide"
   },
   "errors": {
     "i18n": {

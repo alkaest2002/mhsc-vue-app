@@ -2,8 +2,10 @@
   "check": "i18n",
   "validations": {
     "required": "Se requiere información",
-    "alpha": "solo cartas",
-    "extendedAlpha": "Solo caracteres alfabéticos"
+    "alpha": "Solo letras",
+    "extendedAlpha": "Solo caracteres alfabéticos",
+    "maxLength": "El texto introducido es demasiado largo. Max {max} caracteres aceptados",
+    "isDate": "Fecha invalida"
   },
   "errors": {
     "i18n": {

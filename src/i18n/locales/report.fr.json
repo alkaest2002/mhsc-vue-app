@@ -4,7 +4,7 @@
     "title": "Donnée biographique",
     "surname": "Nom de famille",
     "name": "Nom",
-    "dob": "date de naissance"
+    "dob": "Date de naissance"
   },
   "itemsTable": {
     "title": "Réponses au formulaire"
