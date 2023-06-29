@@ -68,7 +68,7 @@ onBeforeUnmount(() => (isLoading.value = false))
     </template>
     <template #content>
       <transition
-        enter-active-class="duration-300 ease-in"
+        enter-active-class="duration-200 ease-in"
         enter-from-class="transform opacity-0"
         enter-to-class="opacity-100"
         leave-active-class="duration-200 ease-ut"
