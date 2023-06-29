@@ -21,7 +21,7 @@ const router = createRouter({
 
 // router 'before each' middleware
 router.beforeEach(async (to, from, next) => {
-  // get pinia appStore prop
+  // get pinia appStore props
   const { locale, userIsAME } = storeToRefs(useAppStore())
   // get pinia checkList store prop
   const { qrcodeIsPresent } = storeToRefs(useChecklistStore())
