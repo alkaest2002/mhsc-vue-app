@@ -32,7 +32,7 @@ const props = defineProps({
 })
 
 // define emits
-const emit = defineEmits(['update:scannerCommand', 'onDownloadReport'])
+const emit = defineEmits(['update:scannerCommand', 'onGetReport'])
 </script>
 
 <template>
@@ -70,7 +70,7 @@ const emit = defineEmits(['update:scannerCommand', 'onDownloadReport'])
           v-show="renderedReport !== null"
           :class="'w-full'"
           :is-loading="isLoading"
-          @click.prevent="$emit('onDownloadReport')"
+          @click.prevent="$emit('onGetReport')"
         >
           {{ t('ui.button.printQRCode') }}
         </LoadingButton>

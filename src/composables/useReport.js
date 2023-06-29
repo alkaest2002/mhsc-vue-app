@@ -17,7 +17,7 @@ export const renderReport = (checklist, report, reportData) => {
   return ReportBase.replace('#fragment#', reportHtmlFragment)
 }
 
-export const downloadReport = (report, isLoading) => {
+export const getReport = (report, isLoading) => {
   // start spinner
   isLoading.value = true
   // create new blob

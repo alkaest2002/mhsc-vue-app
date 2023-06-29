@@ -4,7 +4,7 @@ import { ref, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { i18n } from '@/i18n'
 import QrScanner from 'qr-scanner'
-import { renderReport, downloadReport } from '@/composables/useRenderReport'
+import { renderReport, getReport } from '@/composables/useReport'
 import QRCodeScanner from '@/components/qrcode/QRCodeScanner.vue'
 import QRCodePlaceholder from '@/components/qrcode/QRCodePlaceholder.vue'
 
@@ -46,11 +46,11 @@ watch(qrcode, (reportData) => {
 })
 
 // on download report
-const onDownloadReport = () => {
+const onGetReport = () => {
   // start spinner
   isLoading.value = true
   // download report
-  downloadReport(renderedReport.value, isLoading)
+  getReport(renderedReport.value, isLoading)
   // delete qrcode
   qrcode.value = null
   // delete rendered report
@@ -74,7 +74,7 @@ onMounted(async () => {
       v-model:scanner-command="scannerCommand"
       :device-has-camera="deviceHasCamera"
       :rendered-report="renderedReport"
-      @on-download-report="onDownloadReport"
+      @on-get-report="onGetReport"
     />
     <QRCodeScanner
       v-show="scannerCommand === 'start'"
