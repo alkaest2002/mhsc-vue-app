@@ -12,5 +12,5 @@ export const extendedAlpha = withI18nMessage(
   withMessage('validations.extendedAlpha', regex(/^[a-zA-Z'()\- ]*$/))
 )
 export const isDate = withI18nMessage(
-  withMessage('validations.isDate', regex(/^(\d{2}){1,2}[-/]\d{2}[-/](\d{2}){1,2}$/gm))
+  withMessage('validations.isDate', regex(/^(\d{2}){2}-\d{2}-(\d{2})$/gm))
 )

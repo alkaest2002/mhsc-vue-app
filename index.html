@@ -36,7 +36,7 @@
       try {
         const response = await fetch('/settings.json');
         if (response.ok) {
-          const json = response.json()
+          const json = await response.json()
           window.appSettings = json
         }
       } catch (error) {

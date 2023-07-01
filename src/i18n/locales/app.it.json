@@ -35,7 +35,11 @@
         "input": {
           "name": { "label": "Nome", "placeholder": "Mario" },
           "surname": { "label": "Cognome", "placeholder": "Rossi" },
-          "birthWhen": { "label": "Data di nascita", "placeholder": "gg/mm/aaaaa" }
+          "birthWhen": { 
+            "label": "Data di nascita", 
+            "placeholder": "gg/mm/aaaaa",
+            "formatExplain": "Per favore, Specifica la data di nascita rispettando questo formato: aaaa-mm-gg (es., 1971-11-15)." 
+          }
         }
       }
     },

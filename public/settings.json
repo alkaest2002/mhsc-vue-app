@@ -1,6 +1,6 @@
 {
   "report": {
-    "showReportBeforePrint": false,
+    "showReportBeforePrint": true,
     "highlightPositiveItems" : true
   }
 }

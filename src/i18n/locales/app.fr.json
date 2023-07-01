@@ -43,7 +43,8 @@
           },
           "birthWhen": {
             "label": "Date de naissance",
-            "placeholder": "dd/mm/yyyy"
+            "placeholder": "aaaa-mm-jj",
+            "formatExplain": "Veuillez préciser la date de naissance en respectant ce format : aaaa-mm-jj (ex. 1971-11-15)." 
           }
         }
       }

@@ -4,7 +4,7 @@ import ReportTemplate from '@/components/report/ReportTemplate.vue'
 import ReportBase from '@/components/report/ReportBase.html?raw'
 
 const appSettings =  window.appSettings
-const showReport = appSettings?.showReportBeforePrint
+const showReport = appSettings?.report?.showReportBeforePrint
 
 export const renderReport = (checklist, report, reportData) => {
   // create temporary div

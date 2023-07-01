@@ -33,7 +33,7 @@ const v = useVuelidate(rules, formData, { $lazy: true })
 const fieldsToRender = [
   { field: 'name', type: 'text' },
   { field: 'surname', type: 'text' },
-  { field: 'birthWhen', type: 'date' }
+  { field: 'birthWhen', type: 'text' }
 ]
 
 // on click button function
@@ -66,12 +66,23 @@ onBeforeUnmount(() => (isLoading.value = false))
     </template>
     <template #content>
       <p class="block mb-6">{{ t('views.bio.form.info') }}</p>
-      <template v-for="({ field, type }, index) of fieldsToRender" :key="field">
+      <template v-for="({ field, type }, index) of fieldsToRender.slice(0,-1)" :key="field">
         <FormInput
           v-model="formData[field]"
           :autofocus="index == 0"
           :label="t(`views.bio.form.input.${field}.label`)"
           :css="'mb-3'"
+          :errors="v[field].$errors"
+          :type="type"
+        />
+      </template>
+      <template v-for="({ field, type }, index) of fieldsToRender.slice(-1)" :key="field">
+        <p class="block mt-5 text-sm">{{ t('views.bio.form.input.birthWhen.formatExplain') }}</p>
+        <FormInput
+          v-model="formData[field]"
+          :autofocus="index == 0"
+          :label="t(`views.bio.form.input.${field}.label`)"
+          :css="'mt-3'"
           :errors="v[field].$errors"
           :type="type"
         />

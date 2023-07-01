@@ -35,7 +35,11 @@
         "input": {
           "name": { "label": "Name", "placeholder": "John" },
           "surname": { "label": "Surname", "placeholder": "Doe" },
-          "birthWhen": { "label": "Date of birth", "placeholder": "yyyy//mm/dd" }
+          "birthWhen": { 
+            "label": "Date of birth", 
+            "placeholder": "yyyy/mm/dd", 
+            "formatExplain": "Please, specify the date of birth respecting this format: yyyy-mm-dd (e.g., 1971-11-15)." 
+          }
         }
       }
     },
