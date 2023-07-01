@@ -30,9 +30,6 @@ const css = computed(() =>
     <span class="font-semibold">
       {{ option.label }}
     </span>
-    <IconCheckmark
-      v-show="option.value == currentAnswer"
-      class="stroke-sky-800 stroke-2 h-6"
-    />
+    <IconCheckmark v-show="option.value == currentAnswer" class="stroke-sky-800 stroke-2 h-6" />
   </div>
 </template>

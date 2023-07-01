@@ -3,7 +3,9 @@ import { createApp, h } from 'vue'
 import ReportTemplate from '@/components/report/ReportTemplate.vue'
 import ReportBase from '@/components/report/ReportBase.html?raw'
 
-const { report: { showReport } } = window.appSettings
+const {
+  report: { showReportBeforePrint: showReport = true }
+} = window.appSettings
 
 export const renderReport = (checklist, report, reportData) => {
   // create temporary div
@@ -20,26 +22,58 @@ export const renderReport = (checklist, report, reportData) => {
 }
 
 const showReportOnScreen = (report) => {
-   // create new blob
-   const blob = new Blob([report], { type: 'text/html' })
-   // create fake link
-   const link = document.createElement('a')
-   // add href attribute to fake link
-   link.href = URL.createObjectURL(blob)
-   // add attribute
-   link.target = '_blank'
-   // click fake link
-   link.click()
-   // revoke object url
-   URL.revokeObjectURL(link.href)
-   // remove fake link
-   link.remove()
+  // create new blob
+  const blob = new Blob([report], { type: 'text/html' })
+  // create fake link
+  const link = document.createElement('a')
+  // add href attribute to fake link
+  link.href = URL.createObjectURL(blob)
+  // add attribute
+  link.target = '_blank'
+  // click fake link
+  link.click()
+  // revoke object url
+  URL.revokeObjectURL(link.href)
+  // remove fake link
+  link.remove()
+}
+
+function closePrint() {
+  document.body.removeChild(this.__container__)
+}
+
+function setPrint() {
+  this.contentWindow.__container__ = this
+  this.contentWindow.onbeforeunload = closePrint
+  this.contentWindow.onafterprint = closePrint
+  this.contentWindow.focus() // Required for IE
+  this.contentWindow.print()
+}
+
+function printReport(report) {
+  const hideFrame = document.createElement('iframe')
+  hideFrame.onload = setPrint
+  hideFrame.style.position = 'fixed'
+  hideFrame.style.right = '0'
+  hideFrame.style.bottom = '0'
+  hideFrame.style.width = '0'
+  hideFrame.style.height = '0'
+  hideFrame.style.border = '0'
+  hideFrame.srcdoc = report
+  document.body.appendChild(hideFrame)
 }
 
 export const getReport = (report, isLoading) => {
   // start spinner
   isLoading.value = true
-  if (showReport) showReportOnScreen(report)
+  // if report should be shown before printing
+  if (showReport) {
+    //show report
+    showReportOnScreen(report)
+  } else {
+    // print report directly
+    printReport(report)
+  }
   // stop spinner
   isLoading.value = false
 }
