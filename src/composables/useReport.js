@@ -3,9 +3,8 @@ import { createApp, h } from 'vue'
 import ReportTemplate from '@/components/report/ReportTemplate.vue'
 import ReportBase from '@/components/report/ReportBase.html?raw'
 
-const {
-  report: { showReportBeforePrint: showReport = true }
-} = window.appSettings
+const appSettings =  window.appSettings
+const showReport = appSettings?.showReportBeforePrint
 
 export const renderReport = (checklist, report, reportData) => {
   // create temporary div
@@ -39,6 +38,7 @@ const showReportOnScreen = (report) => {
 }
 
 function closePrint() {
+  // remove fake iframe
   document.body.removeChild(this.__container__)
 }
 
@@ -46,20 +46,25 @@ function setPrint() {
   this.contentWindow.__container__ = this
   this.contentWindow.onbeforeunload = closePrint
   this.contentWindow.onafterprint = closePrint
-  this.contentWindow.focus() // Required for IE
+  this.contentWindow.focus()
   this.contentWindow.print()
 }
 
 function printReport(report) {
+  // create fake iframe element
   const hideFrame = document.createElement('iframe')
+  // on load content fn
   hideFrame.onload = setPrint
+  // styling fake iframe
   hideFrame.style.position = 'fixed'
   hideFrame.style.right = '0'
   hideFrame.style.bottom = '0'
   hideFrame.style.width = '0'
   hideFrame.style.height = '0'
   hideFrame.style.border = '0'
+  // set content of fake iframe
   hideFrame.srcdoc = report
+  // append fake iframe to body
   document.body.appendChild(hideFrame)
 }
 

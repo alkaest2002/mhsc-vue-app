@@ -1,8 +1,8 @@
 <script setup>
 /* eslint-disable no-unused-vars */
-const {
-  report: { highlightPositiveItems = true }
-} = window.appSettings
+
+const appSettings = window.appSettings
+const highlightPositiveItems = appSettings?.highlightPositiveItems || true
 
 // define props
 const props = defineProps({
