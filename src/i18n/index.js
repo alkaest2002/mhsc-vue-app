@@ -1,8 +1,16 @@
 import { nextTick } from 'vue'
 import { createI18n } from 'vue-i18n'
 import en from '@/i18n/locales/app.en.json'
-import supportedLocales from './supported.locales.json'
 
+// define supported locales
+const supportedLocales = [
+  { value: 'en', label: 'ENG' },
+  { value: 'it', label: 'ITA' },
+  { value: 'fr', label: 'FRA' },
+  { value: 'es', label: 'ESP' }
+]
+
+// create i18n instance
 export const i18n = createI18n({
   locale: 'en',
   fallbackLocale: 'en',
