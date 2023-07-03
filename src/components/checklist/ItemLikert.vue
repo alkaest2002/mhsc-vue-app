@@ -16,7 +16,7 @@ const props = defineProps({
 
 <template>
   <div class="flex flex-col gap-4">
-    <div class="last:mt-12" v-for="option in options" :key="option.value">
+    <div class="last:mt-8" v-for="option in options" :key="option.value">
       <ItemOption :option="option" v-bind="$attrs" />
     </div>
   </div>

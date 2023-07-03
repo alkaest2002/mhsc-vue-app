@@ -31,7 +31,7 @@
     "bio": {
       "title": "Dati anagrafici",
       "form": {
-        "info": "Compila i seguenti campi. Le informazioni rimarranno memorizzate in locale nel tuo dispositivo.",
+        "info": "Compila i seguenti campi.",
         "input": {
           "name": { "label": "Nome", "placeholder": "Mario" },
           "surname": { "label": "Cognome", "placeholder": "Rossi" },

@@ -31,7 +31,7 @@
     "bio": {
       "title": "Donnée biographique",
       "form": {
-        "info": "Remplissez les champs suivants. Les informations seront stockées localement sur votre appareil.",
+        "info": "Remplissez les champs suivants.",
         "input": {
           "name": {
             "label": "Nom",

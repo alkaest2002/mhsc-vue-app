@@ -31,7 +31,7 @@
     "bio": {
       "title": "Biographical data",
       "form": {
-        "info": "Fill in the following fields. Information will be stored locally on your device.",
+        "info": "Fill in the following fields.",
         "input": {
           "name": { "label": "Name", "placeholder": "John" },
           "surname": { "label": "Surname", "placeholder": "Doe" },
