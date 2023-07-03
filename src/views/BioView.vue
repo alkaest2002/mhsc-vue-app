@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { useChecklistStore } from '@/stores/checklist.store'
 import { useVuelidate } from '@vuelidate/core'
-import { required, extendedAlpha, maxLength, isDate } from '@/utils/i18n-validators'
+import { required, extendedAlpha, maxLength, isDate } from '@/utils/i18n.validators'
 import FormInput from '@/components/form/FormInput.vue'
 
 // get router
@@ -66,7 +66,7 @@ onBeforeUnmount(() => (isLoading.value = false))
     </template>
     <template #content>
       <p class="block mb-6">{{ t('views.bio.form.info') }}</p>
-      <template v-for="({ field, type }, index) of fieldsToRender.slice(0,-1)" :key="field">
+      <template v-for="({ field, type }, index) of fieldsToRender.slice(0, -1)" :key="field">
         <FormInput
           v-model="formData[field]"
           :autofocus="index == 0"

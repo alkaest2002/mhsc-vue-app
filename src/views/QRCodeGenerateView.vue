@@ -1,11 +1,12 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
-import { ref, onBeforeUnmount, onUnmounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { useChecklistStore } from '@/stores/checklist.store'
 import { storeToRefs } from 'pinia'
 import QrcodeVue from 'qrcode.vue'
+import { throttle } from '@/utils/generic.functions'
+import { useChecklistStore } from '@/stores/checklist.store'
 
 // get router
 const router = useRouter()
@@ -19,7 +20,8 @@ const { getChecklistData, qrcodeIsPresent } = storeToRefs(checklistStore)
 qrcodeIsPresent.value = true
 // init isLoading state
 const isLoading = ref(false)
-
+// init windowsize prop
+const qrcodeSize = ref(Math.min(window.innerWidth * 0.6, 250))
 // on click button function
 const onClickResetQRCode = () => {
   // reset pinia checklistStore prop
@@ -28,12 +30,23 @@ const onClickResetQRCode = () => {
   router.push({ name: 'start' })
 }
 
+// re-compute window size
+const onResizeWindow = throttle(
+  () => (qrcodeSize.value = Math.max(150, Math.min(window.innerWidth * 0.6, 250)))
+)
+
+// add resize event listener
+onMounted(() => window.addEventListener('resize', onResizeWindow))
+
 // stop spinner before unmount
 onBeforeUnmount(() => (isLoading.value = false))
 
-// on unmounted reset pinia checklist store
+// on unmounted
 onUnmounted(() => {
+  // reset pinia checklist store
   if (!qrcodeIsPresent.value) checklistStore.$reset()
+  // remove resize event listener
+  window.removeEventListener('resize', onResizeWindow)
 })
 </script>
 
@@ -50,7 +63,7 @@ onUnmounted(() => {
         <Suspense>
           <qrcode-vue
             :value="window.btoa(getChecklistData)"
-            :size="250"
+            :size="qrcodeSize"
             level="H"
             :render-as="'svg'"
             :foreground="'#075985'"

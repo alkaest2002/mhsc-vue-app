@@ -3,7 +3,7 @@ import { createApp, h } from 'vue'
 import ReportTemplate from '@/components/report/ReportTemplate.vue'
 import ReportBase from '@/components/report/ReportBase.html?raw'
 
-const appSettings =  window.appSettings
+const appSettings = window.appSettings
 const showReport = appSettings?.report?.showReportBeforePrint
 
 export const renderReport = (checklist, report, reportData) => {
