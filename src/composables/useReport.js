@@ -1,10 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { createApp, h } from 'vue'
+import { storeToRefs } from 'pinia'
 import ReportTemplate from '@/components/report/ReportTemplate.vue'
 import ReportBase from '@/components/report/ReportBase.html?raw'
-
-const appSettings = window.appSettings
-const showReport = appSettings?.report?.showReportBeforePrint
+import { useReportStore } from '@/stores/report.store'
 
 export const renderReport = (checklist, report, reportData) => {
   // create temporary div
@@ -20,7 +19,7 @@ export const renderReport = (checklist, report, reportData) => {
   return ReportBase.replace('#fragment#', reportHtmlFragment)
 }
 
-const showReportOnScreen = (report) => {
+const showReport = (report, directDownload) => {
   // create new blob
   const blob = new Blob([report], { type: 'text/html' })
   // create fake link
@@ -29,6 +28,11 @@ const showReportOnScreen = (report) => {
   link.href = URL.createObjectURL(blob)
   // add attribute
   link.target = '_blank'
+  // if direct download
+  if (directDownload) {
+    // add download attribute
+    link.download = "report.html"
+  }
   // click fake link
   link.click()
   // revoke object url
@@ -68,17 +72,17 @@ function printReport(report) {
   document.body.appendChild(hideFrame)
 }
 
-export const getReport = (report, isLoading) => {
+export const getReport = (reportDoc, isLoading) => {
+  // access pinia appStore props
+  const { typeOfReport } = storeToRefs(useReportStore())
   // start spinner
   isLoading.value = true
-  // if report should be shown before printing
-  if (showReport) {
-    //show report
-    showReportOnScreen(report)
-  } else {
-    // print report directly
-    printReport(report)
-  }
+  // report type is screen
+  if (typeOfReport.value === 'screen') showReport(reportDoc, false)
+   // report type is download
+  if (typeOfReport.value === 'download') showReport(reportDoc, true)
+   // report type is print
+  if (typeOfReport.value === 'print') printReport(reportDoc)
   // stop spinner
   isLoading.value = false
 }

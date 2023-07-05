@@ -1,8 +1,9 @@
 <script setup>
 /* eslint-disable no-unused-vars */
+import { storeToRefs } from 'pinia'
+import { useReportStore } from '@/stores/report.store'
 
-const appSettings = window.appSettings
-const highlightPositiveItems = appSettings?.highlightPositiveItems || true
+const { highlightPositiveItems } = storeToRefs(useReportStore())
 
 // define props
 const props = defineProps({
@@ -80,7 +81,7 @@ flags[20] = items[20] < 7 || items[20] == -1
       <table id="report-items-table">
         <tr v-for="(item, index) of items" :key="index">
           <td :class="{ emphasis: flags[index] && highlightPositiveItems }">
-            {{ flags[index] && highlightPositiveItems ? '▶' : '' }}
+            {{ flags[index] ? '▶' : '' }}
           </td>
           <td :class="{ emphasis: flags[index] && highlightPositiveItems }">
             {{ checklist[index].itemOptions[item].label }}

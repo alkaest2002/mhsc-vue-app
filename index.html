@@ -29,19 +29,19 @@
         </span>
       </div>
     </div>
+    <script>
+      (async () =>{
+        try {
+          const response = await fetch('/report.settings.json');
+          if (response.ok) {
+            const json = await response.json()
+            window.reportSettings = json
+          }
+        } catch (error) {
+          console.log('There was an error', error);
+        }
+      })()
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
-  <script>
-    (async () =>{
-      try {
-        const response = await fetch('/settings.json');
-        if (response.ok) {
-          const json = await response.json()
-          window.appSettings = json
-        }
-      } catch (error) {
-        console.log('There was an error', error);
-      }
-    })()
-  </script>
 </html>
