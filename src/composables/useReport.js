@@ -31,7 +31,7 @@ const showReport = (report, directDownload) => {
   // if direct download
   if (directDownload) {
     // add download attribute
-    link.download = "report.html"
+    link.download = 'report.html'
   }
   // click fake link
   link.click()
@@ -79,9 +79,9 @@ export const getReport = (reportDoc, isLoading) => {
   isLoading.value = true
   // report type is screen
   if (typeOfReport.value === 'screen') showReport(reportDoc, false)
-   // report type is download
+  // report type is download
   if (typeOfReport.value === 'download') showReport(reportDoc, true)
-   // report type is print
+  // report type is print
   if (typeOfReport.value === 'print') printReport(reportDoc)
   // stop spinner
   isLoading.value = false
