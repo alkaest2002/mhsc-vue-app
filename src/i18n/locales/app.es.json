@@ -67,6 +67,9 @@
         "done": "¡Excelente! Se adquirió el código QR."
       }
     },
+    "reviewReport" : {
+      "title": "Review positive items"
+    },
     "pageNotFound": {
       "title": "página no encontrada",
       "text": "Por favor, escanee el código QR proporcionado por el examinado."
@@ -84,7 +87,8 @@
       "reset": "reiniciar datos",
       "scannerStart": "activar cámara",
       "scannerStop": "desactivar cámara",
-      "printQRCode": "generar informe"
+      "reviewReport": "review report",
+      "getReport": "get report"
     }
   }
 }

@@ -32,7 +32,7 @@ const props = defineProps({
 })
 
 // define emits
-const emit = defineEmits(['update:scannerCommand', 'onGetReport'])
+const emit = defineEmits(['update:scannerCommand', 'onAfterReport'])
 </script>
 
 <template>
@@ -59,7 +59,7 @@ const emit = defineEmits(['update:scannerCommand', 'onGetReport'])
     <template #footer>
       <div v-if="deviceHasCamera">
         <LoadingButton
-          v-show="scannerStatus == 'idle' && renderedReport === null"
+          v-show="scannerStatus == 'idle' && renderedReport === ''"
           :css="'w-full'"
           :is-loading="isLoading"
           @click="$emit('update:scannerCommand', 'start')"
@@ -67,12 +67,12 @@ const emit = defineEmits(['update:scannerCommand', 'onGetReport'])
           {{ t('ui.button.scannerStart') }}
         </LoadingButton>
         <LoadingButton
-          v-show="renderedReport !== null"
+          v-show="renderedReport !== ''"
           :class="'w-full'"
           :is-loading="isLoading"
-          @click.prevent="$emit('onGetReport')"
+          @click.prevent="$emit('onAfterReport')"
         >
-          {{ t('ui.button.printQRCode') }}
+          {{ t('ui.button.continue') }}
         </LoadingButton>
       </div>
       <div v-else>

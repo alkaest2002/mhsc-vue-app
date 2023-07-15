@@ -61,6 +61,9 @@
         "done": "Great! QR Code was acquired."
       }
     },
+    "reviewReport" : {
+      "title": "Review positive items"
+    },
     "pageNotFound": {
       "title": "page not found"
     }
@@ -77,7 +80,8 @@
       "reset": "reset data",
       "scannerStart": "start camera",
       "scannerStop": "stop camera",
-      "printQRCode": "generate report"
+      "reviewReport": "review report",
+      "getReport": "get report"
     }
   }
 }

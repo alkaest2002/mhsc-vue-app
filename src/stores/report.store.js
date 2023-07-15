@@ -6,6 +6,7 @@ import { isBoolean, enumeration, required } from '@/utils/i18n.validators'
 // base degault settings
 const defaultSettings = () => ({
   typeOfReport: 'screen',
+  reviewReport: true,
   highlightPositiveItems: true
 })
 
@@ -13,6 +14,7 @@ const getReportSettings = (settings) => {
   // define validation rules
   const rules = {
     typeOfReport: { required, enumeration: enumeration(['screen', 'download', 'print']) },
+    reviewReport: { isBoolean },
     highlightPositiveItems: { isBoolean }
   }
   // init vuelidate instance
@@ -27,6 +29,10 @@ const getReportSettings = (settings) => {
 
 export const useReportStore = defineStore('reportStore', {
   state: () => {
-    return getReportSettings(window.reportSettings)
+    return {
+      ...getReportSettings(window.reportSettings),
+      reportData: null,
+      renderedReport: ''
+    }
   }
 })
