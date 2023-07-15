@@ -69,7 +69,6 @@ export const routes = [
     beforeEnter: () => {
       const { reportData } = storeToRefs(useReportStore())
       if (reportData.value === null) return { name: 'qrcode-scan'}
-      console.log('here')
       return true
     }
   }

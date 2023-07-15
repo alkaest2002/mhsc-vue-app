@@ -19,9 +19,10 @@ const { items, flags } = checkReport(props.reportData)
 </script>
 
 <template>
-  <div id="report-items-review">
+  <div id="report-items-review" class="flex flex-col gap-3">
     <div v-for="(item, index) of items" :key="index">
-      <div v-show="flags[index]" class="mb-2 p-1 border-b border-sky-900">
+      <div v-show="flags[index]"
+        class="bg-white border-white p-3 shadow-md cursor-pointer border-2 rounded-lg min-w-6">
         <p>
           {{ checklist[index].itemText }}
         </p>

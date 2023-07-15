@@ -8,13 +8,14 @@ import { storeToRefs } from 'pinia'
 import { getReport } from '@/composables/useReport'
 import ReportReviewTemplate from '@/components/report/ReportReviewTemplate.vue'
 
+// get i18n t
+const { t } = useI18n()
+
 // import locale-aware checklist
 const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
 const checklist = checklistModule.default
-
 // get reportStore prop
 const { reportData, renderedReport } = storeToRefs(useReportStore())
-
 // define isLoading state
 const isLoading = ref(false)
 
@@ -22,9 +23,6 @@ const isLoading = ref(false)
 const onGetReport = () => {
   getReport(reportData, renderedReport, isLoading)
 }
-
-// get i18n t
-const { t } = useI18n()
 </script>
 
 <template>
@@ -33,14 +31,10 @@ const { t } = useI18n()
       {{ t('views.reviewReport.title') }}
     </template>
     <template #content>
-      <ReportReviewTemplate :checklist="checklist" :reportData="reportData"  />
+      <ReportReviewTemplate :checklist="checklist" :reportData="reportData" />
     </template>
     <template #footer>
-      <LoadingButton
-        @click="onGetReport"
-        :is-loading="isLoading"
-        :css="'w-full'"
-      >
+      <LoadingButton @click="onGetReport" :is-loading="isLoading" :css="'w-full'">
         {{ t('ui.button.getReport') }}
       </LoadingButton>
     </template>
