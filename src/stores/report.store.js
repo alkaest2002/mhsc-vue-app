@@ -1,4 +1,4 @@
-import { getCurrentInstance, } from 'vue'
+import { getCurrentInstance } from 'vue'
 import { defineStore } from 'pinia'
 import { useVuelidate } from '@vuelidate/core'
 import { isBoolean, enumeration, required } from '@/utils/i18n.validators'
@@ -13,7 +13,7 @@ const getReportSettings = (settings) => {
   // define validation rules
   const rules = {
     typeOfReport: { required, enumeration: enumeration(['screen', 'download', 'print']) },
-    highlightPositiveItems: { isBoolean },
+    highlightPositiveItems: { isBoolean }
   }
   // init vuelidate instance
   const v = useVuelidate(rules, settings, { getCurrentInstance: getCurrentInstance() })

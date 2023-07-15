@@ -23,7 +23,6 @@ const props = defineProps({
 })
 
 const { surname, name, dob, items, date, flags } = checkReport(props.reportData)
-
 </script>
 
 <template>

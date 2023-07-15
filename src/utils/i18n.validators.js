@@ -11,4 +11,6 @@ export const maxLength = withI18nMessage(validators.maxLength, { withArguments: 
 export const extendedAlpha = withI18nMessage(regex(/^[a-zA-Z'()\- ]*$/))
 export const isDate = withI18nMessage(regex(/^(\d{2}){2}-\d{2}-(\d{2})$/gm))
 export const isBoolean = withI18nMessage((value) => value === true || value === false)
-export const enumeration = withI18nMessage((list) => (value) => list.includes(value) , { withArguments: true })
+export const enumeration = withI18nMessage((list) => (value) => list.includes(value), {
+  withArguments: true
+})
