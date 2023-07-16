@@ -7,10 +7,10 @@ import { useVuelidate } from '@vuelidate/core'
 import { required, extendedAlpha, maxLength, isDate } from '@/utils/i18n.validators'
 import FormInput from '@/components/form/FormInput.vue'
 
-// get router
-const router = useRouter()
 // get i18n t
 const { t } = useI18n()
+// get router
+const router = useRouter()
 // get pinia checklistStore
 const checklistStore = useChecklistStore()
 // pick pinia checklistStore prop

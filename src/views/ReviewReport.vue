@@ -31,6 +31,7 @@ const onGetReport = () => {
       {{ t('views.reviewReport.title') }}
     </template>
     <template #content>
+      <p class="mb-6">{{ t('views.reviewReport.text') }}</p>
       <ReportReviewTemplate :checklist="checklist" :reportData="reportData" />
     </template>
     <template #footer>

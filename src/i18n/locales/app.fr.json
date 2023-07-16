@@ -68,7 +68,8 @@
       }
     },
     "reviewReport" : {
-      "title": "Review positive items"
+      "title": "Review positive items",
+      "text":"The following items needs further inquiry"
     },
     "pageNotFound": {
       "title": "Page non trouvée"

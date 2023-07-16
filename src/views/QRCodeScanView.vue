@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 import { i18n } from '@/i18n'
 import { useReportStore } from '../stores/report.store'
 import { storeToRefs } from 'pinia'
-import { renderReport, getReport } from '@/composables/useReport'
+import { checkQRCode, renderReport, getReport } from '@/composables/useReport'
 import QrScanner from 'qr-scanner'
 import QRCodeScanner from '@/components/qrcode/QRCodeScanner.vue'
 import QRCodePlaceholder from '@/components/qrcode/QRCodePlaceholder.vue'
@@ -35,11 +35,8 @@ const qrcode = ref(null)
 
 // watch qrcode
 watch(qrcode, (data) => {
-  // validation pattern
-  const pat =
-    /([A-Za-z' ]+;){2}(\d{2}){1,2}[-/]\d{2}[-/](\d{2}){1,2};([012];){10}([0123];){5}([01];){5}\d\d?/gm
-  // if qrcode was acquired and is valid
-  if (data !== null && data.match(pat)?.length > 0) {
+  // if qrcode is valid
+  if (checkQRCode(data)) {
     // store report data
     reportData.value = data
     // render report and store it

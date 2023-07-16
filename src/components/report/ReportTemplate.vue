@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { storeToRefs } from 'pinia'
 import { useReportStore } from '@/stores/report.store'
-import { checkReport } from '@/composables/useReport'
+import { processAndFlagReport } from '@/composables/useReport'
 
 const { highlightPositiveItems } = storeToRefs(useReportStore())
 
@@ -23,7 +23,7 @@ const props = defineProps({
 })
 
 // check report
-const { surname, name, dob, items, date, flags } = checkReport(props.reportData)
+const { surname, name, dob, items, date, flags } = processAndFlagReport(props.reportData)
 </script>
 
 <template>

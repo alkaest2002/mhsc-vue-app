@@ -5,7 +5,14 @@ import ReportTemplate from '@/components/report/ReportTemplate.vue'
 import ReportBase from '@/components/report/ReportBase.html?raw'
 import { useReportStore } from '@/stores/report.store'
 
-export const checkReport = (reportData) => {
+export const checkQRCode = (qrcodeData) => {
+  // validation pattern
+  const pat = /([A-Za-z' ]+;){2}(\d{2}){1,2}[-/]\d{2}[-/](\d{2}){1,2};([012];){10}([0123];){5}([01];){5}\d\d?/gm
+  // return outcome
+  return (qrcodeData !== null && qrcodeData.match(pat)?.length > 0)
+}
+
+export const processAndFlagReport = (reportData) => {
   // convert string to array
   const data = reportData.split(';')
   // init variables
@@ -15,29 +22,29 @@ export const checkReport = (reportData) => {
   const items = data.slice(3)
   const date = new Date().toISOString().slice(0, 10)
   // init flags
-  const flags = Array.from({ length: items.length }, () => false)
+  const flags = Array.from({ length: 21 }, () => false)
   // check flags
-  flags[0] = items[0] > 0 || items[0] == -1 || true
-  flags[1] = items[1] > 0 || items[1] == -1 || true
-  flags[2] = items[2] > 0 || items[2] == -1 || true
-  flags[3] = items[3] > 0 || items[3] == -1 || true
-  flags[4] = items[4] > 0 || items[4] == -1 || true
-  flags[5] = items[5] > 0 || items[5] == -1 || true
-  flags[6] = items[6] > 0 || items[6] == -1 || true
-  flags[7] = items[7] > 0 || items[7] == -1 || true
-  flags[8] = items[8] > 0 || items[8] == -1 || true
-  flags[9] = items[9] > 0 || items[9] == -1 || true
-  flags[10] = items[10] > 3 || items[10] == -1 || true
-  flags[11] = items[11] > 2 || items[11] == -1 || true
-  flags[12] = items[12] > 3 || items[12] == -1 || true
-  flags[13] = items[13] > 0 || items[13] == -1 || true
-  flags[14] = items[14] > 0 || items[14] == -1 || true
-  flags[15] = items[15] > 0 || items[15] == -1 || true
-  flags[16] = items[16] > 0 || items[16] == -1 || true
-  flags[17] = items[17] > 0 || items[17] == -1 || true
-  flags[18] = items[18] > 0 || items[18] == -1 || true
-  flags[19] = items[19] > 0 || items[19] == -1 || true
-  flags[20] = items[20] < 7 || items[20] == -1 || true
+  flags[0] = items[0] > 0 || items[0] == -1
+  flags[1] = items[1] > 0 || items[1] == -1
+  flags[2] = items[2] > 0 || items[2] == -1
+  flags[3] = items[3] > 0 || items[3] == -1
+  flags[4] = items[4] > 0 || items[4] == -1
+  flags[5] = items[5] > 0 || items[5] == -1
+  flags[6] = items[6] > 0 || items[6] == -1
+  flags[7] = items[7] > 0 || items[7] == -1
+  flags[8] = items[8] > 0 || items[8] == -1
+  flags[9] = items[9] > 0 || items[9] == -1
+  flags[10] = items[10] > 3 || items[10] == -1
+  flags[11] = items[11] > 2 || items[11] == -1
+  flags[12] = items[12] > 3 || items[12] == -1
+  flags[13] = items[13] > 0 || items[13] == -1
+  flags[14] = items[14] > 0 || items[14] == -1
+  flags[15] = items[15] > 0 || items[15] == -1
+  flags[16] = items[16] > 0 || items[16] == -1
+  flags[17] = items[17] > 0 || items[17] == -1
+  flags[18] = items[18] > 0 || items[18] == -1
+  flags[19] = items[19] > 0 || items[19] == -1
+  flags[20] = items[20] < 7 || items[20] == -1
   // return data
   return { surname, name, dob, items, date, flags }
 }
