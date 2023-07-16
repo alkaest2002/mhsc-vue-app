@@ -69,7 +69,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="h-full">
+  <div class="h-full relative">
     <QRCodePlaceholder
       v-show="scannerCommand !== 'start'"
       v-model:is-loading="isLoading"

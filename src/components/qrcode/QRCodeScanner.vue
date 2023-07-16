@@ -1,6 +1,6 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
-import { ref, watch, onMounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import QrScanner from 'qr-scanner'
 
@@ -80,14 +80,23 @@ const onClickStopScanner = async () => {
 
 // init scanner on mount
 onMounted(() => {
-  // create scanner instance
-  qrScanner.value = new QrScanner(
-    scannerElement.value,
-    async (result) => {
-      emit('update:qrcode', window.atob(result?.data))
-    },
-    { onDecodeError: () => {}, highlightScanRegion: true }
-  )
+  // wait a bit
+  setTimeout(() => {
+    // create scanner instance
+    qrScanner.value = new QrScanner(
+      scannerElement.value,
+      async (result) => {
+        emit('update:qrcode', window.atob(result?.data))
+      },
+      { onDecodeError: () => {}, highlightScanRegion: true }
+    )
+  }, 500)
+})
+
+// on unmounted, destroy scanner
+onUnmounted(async () => {
+  await qrScanner.value.stop()
+  await qrScanner.value.destroy()
 })
 </script>
 

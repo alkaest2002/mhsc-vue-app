@@ -131,7 +131,7 @@ export const getReport = (reportData, renderedReport, isLoading) => {
   // report type is print
   if (typeOfReport.value === 'print') printReport(renderedReport.value)
   // delete report data
-  reportData.value = null
+  reportData.value = ''
   // delete rendered report
   renderedReport.value = ''
   // stop spinner

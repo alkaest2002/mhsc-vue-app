@@ -23,6 +23,7 @@ const isLoading = ref(false)
 
 // on after report was generated
 const onGetReport = () => {
+  // get report
   getReport(reportData, renderedReport, isLoading)
   // go to qrcode scan
   router.push({ name: 'qrcode-scan' })
