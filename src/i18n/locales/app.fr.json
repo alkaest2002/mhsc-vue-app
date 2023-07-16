@@ -68,8 +68,9 @@
       }
     },
     "reviewReport" : {
-      "title": "Review positive items",
-      "text":"The following items needs further inquiry"
+      "title": "Réponses signalées",
+      "text":"Remarque: les réponses suivantes nécessitent une enquête plus approfondie.",
+      "noFlaggedItems": "Aucune réponse signalée."
     },
     "pageNotFound": {
       "title": "Page non trouvée"
@@ -87,8 +88,8 @@
       "reset": "Réinitialiser les données",
       "scannerStart": "activer la caméra",
       "scannerStop": "désactiver la caméra",
-      "reviewReport": "review report",
-      "getReport": "get report"
+      "reviewReport": "revoir le rapport",
+      "getReport": "obtenir le rapport"
     }
   }
 }

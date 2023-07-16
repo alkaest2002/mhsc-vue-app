@@ -68,12 +68,13 @@
       }
     },
     "reviewReport" : {
-      "title": "Review positive items",
-      "text":"The following items needs further inquiry"
+      "title": "Respuestas marcadas",
+      "text":"Nota: las siguientes respuestas necesitan más investigación."
     },
     "pageNotFound": {
       "title": "página no encontrada",
-      "text": "Por favor, escanee el código QR proporcionado por el examinado."
+      "text": "Por favor, escanee el código QR proporcionado por el examinado.",
+      "noFlaggedItems": "No hay respuestas marcadas."
     }
   },
   "ui": {
@@ -88,8 +89,8 @@
       "reset": "reiniciar datos",
       "scannerStart": "activar cámara",
       "scannerStop": "desactivar cámara",
-      "reviewReport": "review report",
-      "getReport": "get report"
+      "reviewReport": "revisar el informe",
+      "getReport": "obtener el informe"
     }
   }
 }

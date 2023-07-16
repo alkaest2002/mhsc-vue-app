@@ -62,8 +62,9 @@
       }
     },
     "reviewReport" : {
-      "title": "Review positive items",
-      "text":"The following items needs further inquiry"
+      "title": "Flagged answers",
+      "text":"Note: the following answers needs further inquiry.",
+      "noFlaggedItems": "No flagged answers."
     },
     "pageNotFound": {
       "title": "page not found"

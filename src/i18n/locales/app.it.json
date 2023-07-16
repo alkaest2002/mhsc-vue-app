@@ -62,8 +62,9 @@
       }
     },
     "reviewReport" : {
-      "title": "Review positive items",
-      "text":"The following items needs further inquiry"
+      "title": "Risposte contrassegnate",
+      "text":"Nota: le seguenti risposte richiedono approfondimenti.",
+      "noFlaggedItems": "Nessuna risposta contrassegnata."
     },
     "pageNotFound": {
       "title": "pagina non trovata"
@@ -81,7 +82,7 @@
       "reset": "cancella tutti i dati",
       "scannerStart": "attiva fotocamera",
       "scannerStop": "disattiva fotocamera",
-      "reviewReport": "review report",
+      "reviewReport": "rivedere il rapporto",
       "getReport": "get report"
     }
   }
