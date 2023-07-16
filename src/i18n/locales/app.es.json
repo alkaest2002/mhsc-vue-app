@@ -67,9 +67,9 @@
         "done": "¡Excelente! Se adquirió el código QR."
       }
     },
-    "reviewReport" : {
+    "reviewReport": {
       "title": "Respuestas marcadas",
-      "text":"Nota: las siguientes respuestas necesitan más investigación."
+      "text": "Nota: las siguientes respuestas necesitan más investigación."
     },
     "pageNotFound": {
       "title": "página no encontrada",

@@ -51,8 +51,8 @@ const onAfterReport = () => {
   // if report should be reviwed
   if (reviewReport.value) {
     // go to review page
-    router.push({ name: 'review-report'})
-  // otherwise
+    router.push({ name: 'review-report' })
+    // otherwise
   } else {
     // render report
     getReport(reportData, renderedReport, isLoading)

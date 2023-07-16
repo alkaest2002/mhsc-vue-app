@@ -7,9 +7,10 @@ import { useReportStore } from '@/stores/report.store'
 
 export const checkQRCode = (qrcodeData) => {
   // validation pattern
-  const pat = /([A-Za-z' ]+;){2}(\d{2}){1,2}[-/]\d{2}[-/](\d{2}){1,2};([012];){10}([0123];){5}([01];){5}\d\d?/gm
+  const pat =
+    /([A-Za-z' ]+;){2}(\d{2}){1,2}[-/]\d{2}[-/](\d{2}){1,2};([012];){10}([0123];){5}([01];){5}\d\d?/gm
   // return outcome
-  return (qrcodeData !== null && qrcodeData.match(pat)?.length > 0)
+  return qrcodeData !== null && qrcodeData.match(pat)?.length > 0
 }
 
 export const processAndFlagReport = (reportData) => {
@@ -134,5 +135,5 @@ export const getReport = (reportData, renderedReport, isLoading) => {
   // delete rendered report
   renderedReport.value = ''
   // stop spinner
-  isLoading.value = false 
+  isLoading.value = false
 }

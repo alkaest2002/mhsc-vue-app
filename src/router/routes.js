@@ -68,7 +68,7 @@ export const routes = [
     component: () => import('@/views/ReviewReport.vue'),
     beforeEnter: () => {
       const { reportData } = storeToRefs(useReportStore())
-      if (reportData.value === null) return { name: 'qrcode-scan'}
+      if (reportData.value === null) return { name: 'qrcode-scan' }
       return true
     }
   }

@@ -61,9 +61,9 @@
         "done": "Great! QR Code was acquired."
       }
     },
-    "reviewReport" : {
+    "reviewReport": {
       "title": "Flagged answers",
-      "text":"Note: the following answers needs further inquiry.",
+      "text": "Note: the following answers needs further inquiry.",
       "noFlaggedItems": "No flagged answers."
     },
     "pageNotFound": {

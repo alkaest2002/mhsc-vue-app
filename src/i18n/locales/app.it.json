@@ -61,9 +61,9 @@
         "done": "Fantastico! Il QR Code è stato acquisito."
       }
     },
-    "reviewReport" : {
+    "reviewReport": {
       "title": "Risposte contrassegnate",
-      "text":"Nota: le seguenti risposte richiedono approfondimenti.",
+      "text": "Nota: le seguenti risposte richiedono approfondimenti.",
       "noFlaggedItems": "Nessuna risposta contrassegnata."
     },
     "pageNotFound": {
