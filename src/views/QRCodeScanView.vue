@@ -56,6 +56,8 @@ const onAfterReport = () => {
   } else {
     // render report
     getReport(reportData, renderedReport, isLoading)
+    // go to qrcode scan
+    router.push({ name: 'qrcode-scan' })
   }
 }
 
