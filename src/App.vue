@@ -23,13 +23,13 @@ const { t } = useI18n()
               <component :is="Component" :key="$route.path" />
             </template>
             <template #fallback>
-              <div class="h-full m-auto flex">
-                <div class="w-full flex flex-col rounded-lg overflow-auto p-4">
-                  <div class="grow">
+              <AppContainer>
+                <template #content>
+                  <div class="h-full flex justify-center items-center text-center">
                     {{ t('ui.label.loading') }}
                   </div>
-                </div>
-              </div>
+                </template>
+              </AppContainer>
             </template>
           </Suspense>
         </transition>

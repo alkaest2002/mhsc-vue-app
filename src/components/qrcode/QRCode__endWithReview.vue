@@ -15,7 +15,7 @@ const props = defineProps({
 })
 
 // define emits
-const emit = defineEmits(['onAfterReport'])
+const emit = defineEmits(['onRequestReport'])
 
 // get i18n t
 const { t } = useI18n()
@@ -32,7 +32,7 @@ const { t } = useI18n()
     </template>
     <template #footer>
       <LoadingButton
-        @click.prevent="$emit('onAfterReport')"
+        @click.prevent="$emit('onRequestReport')"
         :is-loading="isLoading"
         :css="'w-full'"
       >

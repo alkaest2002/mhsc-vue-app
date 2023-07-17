@@ -15,7 +15,7 @@ const props = defineProps({
 })
 
 // define emits
-const emit = defineEmits(['onAfterReport'])
+const emit = defineEmits(['onRequestReport'])
 </script>
 
 <template>
@@ -38,7 +38,7 @@ const emit = defineEmits(['onAfterReport'])
       <LoadingButton
         :class="'w-full'"
         :is-loading="isLoading"
-        @click.prevent="$emit('onAfterReport')"
+        @click.prevent="$emit('onRequestReport')"
       >
         {{ t('ui.button.continue') }}
       </LoadingButton>

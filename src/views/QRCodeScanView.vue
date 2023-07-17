@@ -6,10 +6,10 @@ import { useReportStore } from '../stores/report.store'
 import { storeToRefs } from 'pinia'
 import { checkQRCode, renderReport, getReport } from '@/composables/useReport'
 import QrScanner from 'qr-scanner'
-import QRCodeStart from '@/components/qrcode/QRCode__start.vue'
-import QRCodeScanner from '@/components/qrcode/QRCode__scan.vue'
+import QRCode__start from '@/components/qrcode/QRCode__start.vue'
 import QRCode__endWithoutReview from '@/components/qrcode/QRCode__endWithoutReview.vue'
 import QRCode__endWithReview from '@/components/qrcode/QRCode__endWithReview.vue'
+import QRCodeScanner from '@/components/qrcode/QRCode__scan.vue'
 
 // import locale-aware checklist
 const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
@@ -30,12 +30,12 @@ const scannerCommand = ref(null)
 // define qrcode
 const qrcode = ref(null)
 
-// compute component
+// compute which component to show
 const qrcodeComponent = computed(() => {
   if (scannerCommand.value === 'stop' && qrcode.value && !reviewReport)
     return QRCode__endWithoutReview
   if (scannerCommand.value === 'stop' && qrcode.value && reviewReport) return QRCode__endWithReview
-  return QRCodeStart
+  return QRCode__start
 })
 
 // watch qrcode
@@ -51,8 +51,8 @@ watch(qrcode, (data) => {
   }
 })
 
-// on after report was generated
-const onAfterReport = () => {
+// on request report
+const onRequestReport = () => {
   // get report
   getReport(reportData, renderedReport, isLoading)
   // reset scanner command
@@ -79,7 +79,7 @@ onMounted(async () => {
       :report-data="reportData"
       :rendered-report="renderedReport"
       :checklist="checklist"
-      @on-after-report="onAfterReport"
+      @on-request-report="onRequestReport"
     />
     <QRCodeScanner
       v-show="scannerCommand === 'start'"
