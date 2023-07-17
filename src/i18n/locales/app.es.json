@@ -74,7 +74,7 @@
     "pageNotFound": {
       "title": "página no encontrada",
       "text": "Por favor, escanee el código QR proporcionado por el examinado.",
-      "noFlaggedItems": "No hay respuestas marcadas."
+      "userAnswered": "Usuario respondió: {answer}"
     }
   },
   "ui": {

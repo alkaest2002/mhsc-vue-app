@@ -64,7 +64,7 @@
     "reviewReport": {
       "title": "Risposte contrassegnate",
       "text": "Nota: le seguenti risposte richiedono approfondimenti.",
-      "noFlaggedItems": "Nessuna risposta contrassegnata."
+      "userAnswered": "L'utente ha risposto: {answer}"
     },
     "pageNotFound": {
       "title": "pagina non trovata"

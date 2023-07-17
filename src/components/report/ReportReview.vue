@@ -12,31 +12,27 @@ const props = defineProps({
     type: Object,
     required: true
   },
-  reportData: {
-    type: String,
+  items: {
+    type: Array,
+    required: true
+  },
+  flags: {
+    type: Array,
     required: true
   }
 })
-
-// check report
-const { items, flags } = processAndFlagReport(props.reportData)
-
-const noFlaggedItems = flags.filter(Boolean).length === 0
 </script>
 
 <template>
   <div id="report-items-review" class="flex flex-col justify-items-start gap-3">
-    <template v-if="noFlaggedItems">
-      <p>{{ t('views.reviewReport.noFlaggedItems') }}</p>
-    </template>
-    <template v-else v-for="(item, index) of items" :key="index">
+    <template v-for="(item, index) of items" :key="index">
       <template v-if="flags[index]">
         <div class="bg-white border-white p-3 shadow-md cursor-pointer border-2 rounded-lg min-w-6">
           <p>
             {{ checklist[index].itemText }}
           </p>
           <p class="text-sm font-semibold">
-            {{ checklist[index].itemOptions[item].label }}
+            {{ t('views.reviewReport.userAnswered', { answer:  checklist[index].itemOptions[item].label}) }} 
           </p>
         </div>
       </template>

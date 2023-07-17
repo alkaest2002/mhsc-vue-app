@@ -4,7 +4,7 @@ import { ref, watch, computed, onMounted } from 'vue'
 import { i18n } from '@/i18n'
 import { useReportStore } from '../stores/report.store'
 import { storeToRefs } from 'pinia'
-import { checkQRCode, renderReport, getReport } from '@/composables/useReport'
+import { checkQRCode, renderReport, getReport, processAndFlagReport } from '@/composables/useReport'
 import QrScanner from 'qr-scanner'
 import QRCode__start from '@/components/qrcode/QRCode__start.vue'
 import QRCode__endWithoutReview from '@/components/qrcode/QRCode__endWithoutReview.vue'
@@ -29,13 +29,19 @@ const isLoading = ref(false)
 const scannerCommand = ref(null)
 // define qrcode
 const qrcode = ref(null)
+// define items prop
+const items = ref([])
+// defing flags prop
+const flags = ref([])
 
 // compute which component to show
 const qrcodeComponent = computed(() => {
-  console.log(reviewReport)
-  if (scannerCommand.value === 'stop' && qrcode.value !== null && !reviewReport.value)
-    return QRCode__endWithoutReview
-  if (scannerCommand.value === 'stop' && qrcode.value !== null && reviewReport.value) return QRCode__endWithReview
+  if (qrcode.value !== null) {
+    if (!reviewReport.value) return QRCode__endWithoutReview
+    if (reviewReport.value && flags.value.filter(Boolean).length == 0) return QRCode__endWithoutReview
+    if (reviewReport.value && flags.value.filter(Boolean).length > 0) return QRCode__endWithReview
+  }
+  // default component
   return QRCode__start
 })
 
@@ -45,8 +51,14 @@ watch(qrcode, (data) => {
   if (checkQRCode(data)) {
     // store report data
     reportData.value = data
-    // render report and store it
+    // store rendered report
     renderedReport.value = renderReport(checklist, report, data)
+    // process and flag report
+    const { items: reportItems, flags: reportFlags } = processAndFlagReport(data)
+    // set items
+    items.value = reportItems
+    // set flags
+    flags.value = reportFlags
     // stop the camera
     scannerCommand.value = 'stop'
   }
@@ -74,12 +86,13 @@ onMounted(async () => {
     <component
       v-show="scannerCommand !== 'start'"
       :is="qrcodeComponent"
-      v-model:is-loading="isLoading"
-      v-model:scanner-command="scannerCommand"
       :device-has-camera="deviceHasCamera"
-      :report-data="reportData"
+      :items="items"
+      :flags="flags"
       :rendered-report="renderedReport"
       :checklist="checklist"
+      v-model:is-loading="isLoading"
+      v-model:scanner-command="scannerCommand"
       @on-request-report="onRequestReport"
     />
     <QRCodeScanner

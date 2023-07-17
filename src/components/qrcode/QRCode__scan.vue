@@ -85,10 +85,12 @@ onMounted(() => {
       </div>
     </template>
     <template #content>
-      <div class="text-center mb-6">
-        <p>{{ t('views.qrcodeScan.text') }}</p>
+      <div class="relative">
+        <div class="text-center mb-6">
+          <p>{{ t('views.qrcodeScan.text') }}</p>
+        </div>
+        <video id="video" ref="scannerElement" class="rounded-md relative" />
       </div>
-      <video id="video" ref="scannerElement" class="rounded-md relative" />
     </template>
     <template #footer>
       <LoadingButton

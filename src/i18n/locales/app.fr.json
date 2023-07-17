@@ -70,7 +70,7 @@
     "reviewReport": {
       "title": "Réponses signalées",
       "text": "Remarque: les réponses suivantes nécessitent une enquête plus approfondie.",
-      "noFlaggedItems": "Aucune réponse signalée."
+      "noFlaggedItems": "L'utilisateur a répondu: {answer}"
     },
     "pageNotFound": {
       "title": "Page non trouvée"

@@ -64,7 +64,7 @@
     "reviewReport": {
       "title": "Flagged answers",
       "text": "Note: the following answers needs further inquiry.",
-      "noFlaggedItems": "No flagged answers."
+      "userAnswered": "User answered: {answer}"
     },
     "pageNotFound": {
       "title": "page not found"
