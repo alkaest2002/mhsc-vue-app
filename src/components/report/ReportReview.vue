@@ -21,7 +21,7 @@ const props = defineProps({
 // check report
 const { items, flags } = processAndFlagReport(props.reportData)
 
-const noFlaggedItems = items.length === flags.filter(Boolean).length
+const noFlaggedItems = flags.filter(Boolean).length === 0
 </script>
 
 <template>

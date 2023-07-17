@@ -1,7 +1,7 @@
 <script setup>
 /* eslint-disable no-unused-vars */
 import { useI18n } from 'vue-i18n'
-import ReportReviewTemplate from '@/components/report/ReportReviewTemplate.vue'
+import ReportReview from '@/components/report/ReportReview.vue'
 
 // define options
 defineOptions({ inheritAttrs: false })
@@ -28,7 +28,7 @@ const { t } = useI18n()
     </template>
     <template #content>
       <p class="mb-6">{{ t('views.reviewReport.text') }}</p>
-      <ReportReviewTemplate v-bind="$attrs" />
+      <ReportReview v-bind="$attrs" />
     </template>
     <template #footer>
       <LoadingButton
