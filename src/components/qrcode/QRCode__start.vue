@@ -34,14 +34,20 @@ const emit = defineEmits(['update:scannerCommand'])
       </div>
     </template>
     <template #content>
-      <div class="text-center mb-6">
-        <p v-if="!deviceHasCamera">{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
-        <p v-else>{{ t('views.qrcodeScan.text') }}</p>
-      </div>
-      <div class="flex flex-col items-center justify-start bg-zinc-100 w-full h-full">
-        <IconCamera class="w-36" />
-        <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
-      </div>
+      <template v-if="!deviceHasCamera">
+        <div class="text-center mb-6">
+          <p>{{ t('views.qrcodeScan.scanner.noCamera') }}</p>
+        </div>
+      </template>
+      <template v-else>
+        <div class="text-center mb-6">
+          <p>{{ t('views.qrcodeScan.text') }}</p>
+        </div>
+        <div class="flex flex-col items-center justify-start bg-zinc-100 w-full h-full">
+          <IconCamera class="w-36" />
+          <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
+        </div>
+      </template>
     </template>
     <template #footer>
       <div v-if="deviceHasCamera">

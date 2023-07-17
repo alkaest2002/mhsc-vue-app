@@ -32,7 +32,11 @@ const props = defineProps({
             {{ checklist[index].itemText }}
           </p>
           <p class="text-sm font-semibold">
-            {{ t('views.reviewReport.userAnswered', { answer:  checklist[index].itemOptions[item].label}) }} 
+            {{
+              t('views.reviewReport.userAnswered', {
+                answer: checklist[index].itemOptions[item].label
+              })
+            }}
           </p>
         </div>
       </template>

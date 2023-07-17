@@ -38,7 +38,8 @@ const flags = ref([])
 const qrcodeComponent = computed(() => {
   if (qrcode.value !== null) {
     if (!reviewReport.value) return QRCode__endWithoutReview
-    if (reviewReport.value && flags.value.filter(Boolean).length == 0) return QRCode__endWithoutReview
+    if (reviewReport.value && flags.value.filter(Boolean).length == 0)
+      return QRCode__endWithoutReview
     if (reviewReport.value && flags.value.filter(Boolean).length > 0) return QRCode__endWithReview
   }
   // default component
