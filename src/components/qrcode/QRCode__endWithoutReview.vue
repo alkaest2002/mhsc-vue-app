@@ -40,7 +40,7 @@ const emit = defineEmits(['onRequestReport'])
         :is-loading="isLoading"
         @click.prevent="$emit('onRequestReport')"
       >
-        {{ t('ui.button.continue') }}
+        {{ t('ui.button.getReport') }}
       </LoadingButton>
     </template>
   </AppContainer>

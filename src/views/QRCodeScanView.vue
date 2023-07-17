@@ -32,9 +32,10 @@ const qrcode = ref(null)
 
 // compute which component to show
 const qrcodeComponent = computed(() => {
-  if (scannerCommand.value === 'stop' && qrcode.value && !reviewReport)
+  console.log(reviewReport)
+  if (scannerCommand.value === 'stop' && qrcode.value !== null && !reviewReport.value)
     return QRCode__endWithoutReview
-  if (scannerCommand.value === 'stop' && qrcode.value && reviewReport) return QRCode__endWithReview
+  if (scannerCommand.value === 'stop' && qrcode.value !== null && reviewReport.value) return QRCode__endWithReview
   return QRCode__start
 })
 
