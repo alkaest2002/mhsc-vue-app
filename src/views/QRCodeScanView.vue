@@ -1,14 +1,15 @@
 <script setup>
 /* eslint-disable no-unused-vars */
-import { ref, watch, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, watch, computed, onMounted } from 'vue'
 import { i18n } from '@/i18n'
 import { useReportStore } from '../stores/report.store'
 import { storeToRefs } from 'pinia'
 import { checkQRCode, renderReport, getReport } from '@/composables/useReport'
 import QrScanner from 'qr-scanner'
-import QRCodeScanner from '@/components/qrcode/QRCodeScanner.vue'
-import QRCodePlaceholder from '@/components/qrcode/QRCodePlaceholder.vue'
+import QRCodeStart from '@/components/qrcode/QRCode__start.vue'
+import QRCodeScanner from '@/components/qrcode/QRCode__scan.vue'
+import QRCode__endWithoutReview from '@/components/qrcode/QRCode__endWithoutReview.vue'
+import QRCode__endWithReview from '@/components/qrcode/QRCode__endWithReview.vue'
 
 // import locale-aware checklist
 const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
@@ -18,8 +19,6 @@ const checklist = checklistModule.default
 const reportModule = await import(`@/i18n/locales/report.${i18n.global.locale.value}.json`)
 const report = reportModule.default
 
-// get router
-const router = useRouter()
 // get reportStore prop
 const { reportData, renderedReport, reviewReport } = storeToRefs(useReportStore())
 // define device has camera
@@ -28,10 +27,16 @@ const deviceHasCamera = ref(true)
 const isLoading = ref(false)
 // define command prop
 const scannerCommand = ref(null)
-// define scanned status
-const scannerStatus = ref('idle')
 // define qrcode
 const qrcode = ref(null)
+
+// compute component
+const qrcodeComponent = computed(() => {
+  if (scannerCommand.value === 'stop' && qrcode.value && !reviewReport)
+    return QRCode__endWithoutReview
+  if (scannerCommand.value === 'stop' && qrcode.value && reviewReport) return QRCode__endWithReview
+  return QRCodeStart
+})
 
 // watch qrcode
 watch(qrcode, (data) => {
@@ -48,17 +53,12 @@ watch(qrcode, (data) => {
 
 // on after report was generated
 const onAfterReport = () => {
-  // if report should be reviwed
-  if (reviewReport.value) {
-    // go to review page
-    router.push({ name: 'review-report' })
-    // otherwise
-  } else {
-    // render report
-    getReport(reportData, renderedReport, isLoading)
-    // go to qrcode scan
-    router.push({ name: 'qrcode-scan' })
-  }
+  // get report
+  getReport(reportData, renderedReport, isLoading)
+  // reset scanner command
+  scannerCommand.value = null
+  // reset qrcode
+  qrcode.value = null
 }
 
 // on mounted
@@ -69,20 +69,22 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="h-full relative">
-    <QRCodePlaceholder
+  <div class="h-full">
+    <component
       v-show="scannerCommand !== 'start'"
+      :is="qrcodeComponent"
       v-model:is-loading="isLoading"
       v-model:scanner-command="scannerCommand"
       :device-has-camera="deviceHasCamera"
+      :report-data="reportData"
       :rendered-report="renderedReport"
+      :checklist="checklist"
       @on-after-report="onAfterReport"
     />
     <QRCodeScanner
       v-show="scannerCommand === 'start'"
       v-model:is-loading="isLoading"
       v-model:scanner-command="scannerCommand"
-      v-model:scanner-status="scannerStatus"
       v-model:qrcode="qrcode"
       :rendered-report="renderedReport"
     />

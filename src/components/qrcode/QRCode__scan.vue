@@ -1,6 +1,6 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import QrScanner from 'qr-scanner'
 
@@ -15,15 +15,7 @@ const { scannerCommand } = defineProps({
   },
   scannerCommand: {
     type: [null, String],
-    default: null
-  },
-  scannerStatus: {
-    type: String,
     required: true
-  },
-  renderedReport: {
-    type: String,
-    default: ''
   },
   qrcode: {
     type: String,
@@ -32,12 +24,7 @@ const { scannerCommand } = defineProps({
 })
 
 // define emits
-const emit = defineEmits([
-  'update:scannerCommand',
-  'update:scannerStatus',
-  'update:qrcode',
-  'update:isLoading'
-])
+const emit = defineEmits(['update:scannerCommand', 'update:qrcode', 'update:isLoading'])
 
 // define video element ref
 const scannerElement = ref(null)
@@ -60,8 +47,6 @@ const onClickStartScanner = async () => {
   emit('update:isLoading', true)
   // start scanner
   await qrScanner.value.start()
-  // update scanner status
-  emit('update:scannerStatus', 'active')
   // stop spinner
   emit('update:isLoading', false)
 }
@@ -72,8 +57,6 @@ const onClickStopScanner = async () => {
   emit('update:isLoading', true)
   // stop scanner
   await qrScanner.value.stop()
-  // update scanner status
-  emit('update:scannerStatus', 'idle')
   // stop spinner
   emit('update:isLoading', false)
 }
@@ -91,12 +74,6 @@ onMounted(() => {
       { onDecodeError: () => {}, highlightScanRegion: true }
     )
   }, 500)
-})
-
-// on unmounted, destroy scanner
-onUnmounted(async () => {
-  await qrScanner.value.stop()
-  await qrScanner.value.destroy()
 })
 </script>
 

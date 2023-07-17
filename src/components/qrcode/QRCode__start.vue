@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import { useI18n } from 'vue-i18n'
 import IconCamera from '@/components/icons/IconCamera.vue'
-import IconQRCode from '@/components/icons/IconQRCode.vue'
 
 // get i18n t
 const { t } = useI18n()
@@ -18,21 +17,13 @@ const props = defineProps({
     required: true
   },
   scannerCommand: {
-    type: String,
-    default: ''
-  },
-  scannerStatus: {
-    type: String,
-    default: 'idle'
-  },
-  renderedReport: {
     type: [null, String],
-    default: null
+    required: true
   }
 })
 
-// define emits
-const emit = defineEmits(['update:scannerCommand', 'onAfterReport'])
+// define emitted events
+const emit = defineEmits(['update:scannerCommand'])
 </script>
 
 <template>
@@ -48,31 +39,18 @@ const emit = defineEmits(['update:scannerCommand', 'onAfterReport'])
         <p v-else>{{ t('views.qrcodeScan.text') }}</p>
       </div>
       <div class="flex flex-col items-center justify-start bg-zinc-100 w-full h-full">
-        <IconCamera v-if="!renderedReport" class="w-36" />
-        <IconQRCode v-else class="w-36" />
-        <span v-if="!renderedReport" class="text-sm">{{
-          t('views.qrcodeScan.scanner.start')
-        }}</span>
-        <span v-else class="text-sm">{{ t('views.qrcodeScan.scanner.done') }}</span>
+        <IconCamera class="w-36" />
+        <span class="text-sm">{{ t('views.qrcodeScan.scanner.start') }}</span>
       </div>
     </template>
     <template #footer>
       <div v-if="deviceHasCamera">
         <LoadingButton
-          v-show="scannerStatus == 'idle' && renderedReport === ''"
           :css="'w-full'"
           :is-loading="isLoading"
           @click="$emit('update:scannerCommand', 'start')"
         >
           {{ t('ui.button.scannerStart') }}
-        </LoadingButton>
-        <LoadingButton
-          v-show="renderedReport !== ''"
-          :class="'w-full'"
-          :is-loading="isLoading"
-          @click.prevent="$emit('onAfterReport')"
-        >
-          {{ t('ui.button.continue') }}
         </LoadingButton>
       </div>
       <div v-else>

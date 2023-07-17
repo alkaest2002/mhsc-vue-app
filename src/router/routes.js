@@ -1,7 +1,6 @@
 import { storeToRefs } from 'pinia'
 import { useAppStore } from '@/stores/app.store'
 import { useChecklistStore } from '@/stores/checklist.store'
-import { useReportStore } from '@/stores/report.store'
 import StartView from '@/views/StartView.vue'
 
 // disclaimer guard
@@ -61,15 +60,5 @@ export const routes = [
     path: '/scan-qrcode',
     name: 'qrcode-scan',
     component: () => import('@/views/QRCodeScanView.vue')
-  },
-  {
-    path: '/review-report',
-    name: 'review-report',
-    component: () => import('@/views/ReviewReport.vue'),
-    beforeEnter: () => {
-      const { reportData } = storeToRefs(useReportStore())
-      if (reportData.value === '') return { name: 'qrcode-scan' }
-      return true
-    }
   }
 ]
