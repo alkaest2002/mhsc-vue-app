@@ -89,7 +89,6 @@ onMounted(async () => {
       :device-has-camera="deviceHasCamera"
       :items="items"
       :flags="flags"
-      :rendered-report="renderedReport"
       :checklist="checklist"
       v-model:is-loading="isLoading"
       v-model:scanner-command="scannerCommand"
@@ -100,7 +99,6 @@ onMounted(async () => {
       v-model:is-loading="isLoading"
       v-model:scanner-command="scannerCommand"
       v-model:qrcode="qrcode"
-      :rendered-report="renderedReport"
     />
   </div>
 </template>
