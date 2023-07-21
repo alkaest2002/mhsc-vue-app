@@ -1,21 +1,28 @@
 <script setup>
 /* eslint-disable no-unused-vars */
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { storeToRefs } from 'pinia'
+import { useReportStore } from '@/stores/report.store'
+import { getReport } from '@/composables/useReport'
 import IconQRCode from '@/components/icons/IconQRCode.vue'
 
+// get router
+const router = useRouter()
 // get i18n t
 const { t } = useI18n()
+// define isLoa
+const isLoading = ref(false)
+const { reportData, renderedReport } = storeToRefs(useReportStore())
 
-// define props
-const props = defineProps({
-  isLoading: {
-    type: Boolean,
-    required: true
-  }
-})
-
-// define emits
-const emit = defineEmits(['onRequestReport'])
+// on report
+const onRequestReport = () => {
+  // get report
+  getReport(reportData, renderedReport, isLoading)
+  // go to scan start
+  router.push({ name: 'qrcode-scan-start' })
+}
 </script>
 
 <template>
@@ -35,11 +42,7 @@ const emit = defineEmits(['onRequestReport'])
       </div>
     </template>
     <template #footer>
-      <LoadingButton
-        :class="'w-full'"
-        :is-loading="isLoading"
-        @click.prevent="$emit('onRequestReport')"
-      >
+      <LoadingButton @click.prevent="onRequestReport" :is-loading="isLoading" :css="'w-full'">
         {{ t('ui.button.getReport') }}
       </LoadingButton>
     </template>

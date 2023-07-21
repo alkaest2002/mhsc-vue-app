@@ -1,29 +1,21 @@
 <script setup>
 /* eslint-disable no-unused-vars */
+import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import QrScanner from 'qr-scanner'
 import IconCamera from '@/components/icons/IconCamera.vue'
 
 // get i18n t
 const { t } = useI18n()
 
-// define props
-const props = defineProps({
-  isLoading: {
-    type: Boolean,
-    required: true
-  },
-  deviceHasCamera: {
-    type: Boolean,
-    required: true
-  },
-  scannerCommand: {
-    type: [null, String],
-    required: true
-  }
-})
+// define device has camera
+const deviceHasCamera = ref(false)
 
-// define emitted events
-const emit = defineEmits(['update:scannerCommand'])
+// on mounted
+onMounted(async () => {
+  // flag whether device has camera or not
+  deviceHasCamera.value = await QrScanner.hasCamera()
+})
 </script>
 
 <template>
@@ -51,16 +43,12 @@ const emit = defineEmits(['update:scannerCommand'])
     </template>
     <template #footer>
       <div v-if="deviceHasCamera">
-        <LoadingButton
-          :css="'w-full'"
-          :is-loading="isLoading"
-          @click="$emit('update:scannerCommand', 'start')"
-        >
+        <RouterLinkButton :to="{ name: 'qrcode-scan-scan' }" :class="'w-full'">
           {{ t('ui.button.scannerStart') }}
-        </LoadingButton>
+        </RouterLinkButton>
       </div>
       <div v-else>
-        <RouterLinkButton :to="{ name: 'start' }" :class="'w-full mt-2'">
+        <RouterLinkButton :to="{ name: 'start' }" :class="'w-full'">
           {{ t('ui.button.back') }}
         </RouterLinkButton>
       </div>

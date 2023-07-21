@@ -9,11 +9,11 @@ const { t } = useI18n()
     <router-view v-slot="{ Component }">
       <template v-if="Component">
         <transition
-          enter-active-class="duration-300 ease-out"
+          enter-active-class="duration-500 ease-in"
           enter-from-class="transform opacity-0"
           enter-to-class="opacity-100"
-          leave-active-class="duration-200 ease-in"
-          leave-from-class="opacity-100"
+          leave-active-class="duration-0 ease-out"
+          leave-from-class="opacity-0"
           leave-to-class="transform opacity-0"
           mode="out-in"
           appear
