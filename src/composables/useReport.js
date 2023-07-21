@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createApp, h } from 'vue'
-import { storeToRefs } from 'pinia'
 import ReportTemplate from '@/components/report/ReportTemplate.vue'
 import ReportBase from '@/components/report/ReportBase.html?raw'
-import { useReportStore } from '@/stores/report.store'
 
 export const checkQRCode = (qrcodeData) => {
   // validation pattern
@@ -19,44 +17,44 @@ export const processAndFlagReport = (reportData) => {
   // init variables
   const surname = data[0]
   const name = data[1]
-  const dob = data[2]
-  const items = data.slice(3)
+  const birthWhen = data[2]
+  const answers = data.slice(3)
   const date = new Date().toISOString().slice(0, 10)
   // init flags
   const flags = Array.from({ length: 21 }, () => false)
   // check flags
-  flags[0] = items[0] > 0 || items[0] == -1
-  flags[1] = items[1] > 0 || items[1] == -1
-  flags[2] = items[2] > 0 || items[2] == -1
-  flags[3] = items[3] > 0 || items[3] == -1
-  flags[4] = items[4] > 0 || items[4] == -1
-  flags[5] = items[5] > 0 || items[5] == -1
-  flags[6] = items[6] > 0 || items[6] == -1
-  flags[7] = items[7] > 0 || items[7] == -1
-  flags[8] = items[8] > 0 || items[8] == -1
-  flags[9] = items[9] > 0 || items[9] == -1
-  flags[10] = items[10] > 3 || items[10] == -1
-  flags[11] = items[11] > 2 || items[11] == -1
-  flags[12] = items[12] > 3 || items[12] == -1
-  flags[13] = items[13] > 0 || items[13] == -1
-  flags[14] = items[14] > 0 || items[14] == -1
-  flags[15] = items[15] > 0 || items[15] == -1
-  flags[16] = items[16] > 0 || items[16] == -1
-  flags[17] = items[17] > 0 || items[17] == -1
-  flags[18] = items[18] > 0 || items[18] == -1
-  flags[19] = items[19] > 0 || items[19] == -1
-  flags[20] = items[20] < 7 || items[20] == -1
+  flags[0] = answers[0] > 0 || answers[0] == -1
+  flags[1] = answers[1] > 0 || answers[1] == -1
+  flags[2] = answers[2] > 0 || answers[2] == -1
+  flags[3] = answers[3] > 0 || answers[3] == -1
+  flags[4] = answers[4] > 0 || answers[4] == -1
+  flags[5] = answers[5] > 0 || answers[5] == -1
+  flags[6] = answers[6] > 0 || answers[6] == -1
+  flags[7] = answers[7] > 0 || answers[7] == -1
+  flags[8] = answers[8] > 0 || answers[8] == -1
+  flags[9] = answers[9] > 0 || answers[9] == -1
+  flags[10] = answers[10] > 3 || answers[10] == -1
+  flags[11] = answers[11] > 2 || answers[11] == -1
+  flags[12] = answers[12] > 3 || answers[12] == -1
+  flags[13] = answers[13] > 0 || answers[13] == -1
+  flags[14] = answers[14] > 0 || answers[14] == -1
+  flags[15] = answers[15] > 0 || answers[15] == -1
+  flags[16] = answers[16] > 0 || answers[16] == -1
+  flags[17] = answers[17] > 0 || answers[17] == -1
+  flags[18] = answers[18] > 0 || answers[18] == -1
+  flags[19] = answers[19] > 0 || answers[19] == -1
+  flags[20] = answers[20] < 7 || answers[20] == -1
   // return data
-  return { surname, name, dob, items, date, flags }
+  return { surname, name, birthWhen, answers, date, flags }
 }
 
-export const renderReport = (checklist, report, reportData) => {
+export const renderReport = (checklist, report, reportData, highlightPositiveItems) => {
   // create temporary div
   const el = document.createElement('div')
   // create report on the fly
   const reportApp = createApp({
     name: 'ReportFragment',
-    render: () => h(ReportTemplate, { checklist, report, reportData })
+    render: () => h(ReportTemplate, { checklist, report, highlightPositiveItems, ...processAndFlagReport(reportData) })
   })
   // create report fragment
   const reportHtmlFragment = reportApp.mount(el).$el.outerHTML
@@ -117,11 +115,7 @@ function printReport(report) {
   document.body.appendChild(hideFrame)
 }
 
-export const getReport = (reportData, renderedReport, isLoading) => {
-  // start spinner
-  isLoading.value = true
-  // access pinia appStore props
-  const { typeOfReport } = storeToRefs(useReportStore())
+export const getReport = (typeOfReport, renderedReport, isLoading) => {
   // start spinner
   isLoading.value = true
   // report type is screen
@@ -130,10 +124,6 @@ export const getReport = (reportData, renderedReport, isLoading) => {
   if (typeOfReport.value === 'download') showReport(renderedReport.value, true)
   // report type is print
   if (typeOfReport.value === 'print') printReport(renderedReport.value)
-  // delete report data
-  reportData.value = ''
-  // delete rendered report
-  renderedReport.value = ''
   // stop spinner
   isLoading.value = false
 }

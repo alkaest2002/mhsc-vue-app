@@ -1,18 +1,21 @@
 <script setup>
-/* eslint-disable no-unused-vars */
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useReportStore } from '@/stores/report.store'
 import QrScanner from 'qr-scanner'
 import IconCamera from '@/components/icons/IconCamera.vue'
 
 // get i18n t
 const { t } = useI18n()
-
+// get reportStore
+const reportStore = useReportStore()
 // define device has camera
 const deviceHasCamera = ref(false)
 
 // on mounted
 onMounted(async () => {
+  // reset reportStpre
+  reportStore.$reset()
   // flag whether device has camera or not
   deviceHasCamera.value = await QrScanner.hasCamera()
 })

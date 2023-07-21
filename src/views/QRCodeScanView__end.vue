@@ -12,14 +12,15 @@ import IconQRCode from '@/components/icons/IconQRCode.vue'
 const router = useRouter()
 // get i18n t
 const { t } = useI18n()
-// define isLoa
+// define isLoading
 const isLoading = ref(false)
-const { reportData, renderedReport } = storeToRefs(useReportStore())
+// get reportStore props
+const { renderedReport, typeOfReport } = storeToRefs(useReportStore())
 
-// on report
+// on request report
 const onRequestReport = () => {
   // get report
-  getReport(reportData, renderedReport, isLoading)
+  getReport(typeOfReport, renderedReport, isLoading)
   // go to scan start
   router.push({ name: 'qrcode-scan-start' })
 }

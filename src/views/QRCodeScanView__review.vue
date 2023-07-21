@@ -1,18 +1,11 @@
 <script setup>
-/* eslint-disable no-unused-vars */
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { i18n } from '@/i18n'
 import { storeToRefs } from 'pinia'
 import { useReportStore } from '@/stores/report.store'
-import ReportReview from '@/components/report/ReportReview.vue'
 import { getReport } from '@/composables/useReport'
-import { processAndFlagReport } from '@/composables/useReport'
-
-// import locale-aware checklist
-const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
-const checklist = checklistModule.default
+import ReportReview from '@/components/report/ReportReview.vue'
 
 // get router
 const router = useRouter()
@@ -20,14 +13,13 @@ const router = useRouter()
 const { t } = useI18n()
 // define isLoading
 const isLoading = ref(false)
-// get reportStore prop
-const { reportData, renderedReport } = storeToRefs(useReportStore())
-const { items, flags } = processAndFlagReport(reportData.value)
+// get reportStore props
+const { checklist, answers, flags, typeOfReport, renderedReport } = storeToRefs(useReportStore())
 
-// on report
+// on request report
 const onRequestReport = () => {
   // get report
-  getReport(reportData, renderedReport, isLoading)
+  getReport(typeOfReport, renderedReport, isLoading)
   // go to scan start
   router.push({ name: 'qrcode-scan-start' })
 }
@@ -40,7 +32,7 @@ const onRequestReport = () => {
     </template>
     <template #content>
       <p class="mb-6">{{ t('views.reviewReport.text') }}</p>
-      <ReportReview :checklist="checklist" :items="items" :flags="flags" />
+      <ReportReview :checklist="checklist" :answers="answers" :flags="flags" />
     </template>
     <template #footer>
       <LoadingButton @click.prevent="onRequestReport" :is-loading="isLoading" :css="'w-full'">

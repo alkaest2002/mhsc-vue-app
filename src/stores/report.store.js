@@ -32,6 +32,13 @@ export const useReportStore = defineStore('reportStore', {
   state: () => {
     return {
       ...getReportSettings(window.reportSettings),
+      name: '',
+      surname: '',
+      birthWhen: '',
+      answers: [],
+      flags: [],
+      checklist: [],
+      report: {},
       reportData: '',
       renderedReport: ''
     }

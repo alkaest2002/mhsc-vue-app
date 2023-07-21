@@ -12,11 +12,9 @@ const { t } = useI18n()
           enter-active-class="duration-500 ease-in"
           enter-from-class="transform opacity-0"
           enter-to-class="opacity-100"
-          leave-active-class="duration-0 ease-out"
+          leave-active-class="duration-0"
           leave-from-class="opacity-0"
           leave-to-class="transform opacity-0"
-          mode="out-in"
-          appear
         >
           <Suspense>
             <template #default>

@@ -9,25 +9,18 @@ import { storeToRefs } from 'pinia'
 import QrScanner from 'qr-scanner'
 import { checkQRCode, renderReport, processAndFlagReport } from '@/composables/useReport'
 
-// import locale-aware checklist
-const checklistModule = await import(`@/i18n/locales/checklist.${i18n.global.locale.value}.json`)
-const checklist = checklistModule.default
-
-// import locale-aware report template
-const reportModule = await import(`@/i18n/locales/report.${i18n.global.locale.value}.json`)
-const report = reportModule.default
-
 // get router
 const router = useRouter()
 // get i18n t
 const { t } = useI18n()
-// get reportStore prop
-const { reportData, renderedReport, reviewReport } = storeToRefs(useReportStore())
+// get pinia reportStore
+const reportStore = useReportStore()
+// get reportStore props
+const { checklist, report, reviewReport, highlightPositiveItems } = storeToRefs(reportStore)
 // define qrcode
 const qrcode = ref(null)
 // define video element ref
-const scannerElement = ref(null)
-
+const videoElement = ref(null)
 // define scanner
 const qrScanner = ref(null)
 
@@ -35,36 +28,44 @@ const qrScanner = ref(null)
 watch(qrcode, (data) => {
   // if qrcode is valid
   if (checkQRCode(data)) {
-    // store report data
-    reportData.value = data
-    // store rendered report
-    renderedReport.value = renderReport(checklist, report, data)
-    // process and flag report
-    const { flags } = processAndFlagReport(data)
+    // process and flag data
+    const { name, surname, birthWhen, answers, flags } = processAndFlagReport(data)
+    // init data object to store
+    const obj = {
+      name,
+      surname,
+      birthWhen,
+      answers,
+      flags,
+      reportData: data,
+      renderedReport: renderReport(checklist.value, report.value, data, highlightPositiveItems)
+    }
+    // patch repostStore with qrcode data
+    reportStore.$patch(obj)
     // go to relevant view
-    if (reviewReport.value && flags.length === 0) return router.push({ name: 'qrcocde-scan-end' })
-    if (reviewReport.value) return router.push({ name: 'qrcode-scan-review' })
-    router.push({ name: 'qrcode-scan-end' })
+    if (!reviewReport.value || (reviewReport.value && flags.length === 0))
+      return router.push({ name: 'qrcocde-scan-end' })
+    return router.push({ name: 'qrcode-scan-review' })
   }
 })
 
-// init scanner on mount
+// on mount
 onMounted(() => {
-  // wait a bit
   setTimeout(() => {
+    // init qrcode scanner
     qrScanner.value = new QrScanner(
-      scannerElement.value,
-      async (result) => {
-        qrcode.value = window.atob(result?.data)
-      },
-      { onDecodeError: () => { }, highlightScanRegion: true }
+      videoElement.value,
+      async (result) => qrcode.value = window.atob(result?.data),
+      { onDecodeError: () => {}, highlightScanRegion: true }
     )
-    // start scanner
+    // start qrcode scanner
     qrScanner.value.start()
-  }, 500)
+  }, 10)
 })
 
+// on unomount
 onUnmounted(() => {
+  // destroy qrcode scanner
   qrScanner.value?.destroy()
 })
 </script>
@@ -81,7 +82,7 @@ onUnmounted(() => {
         <div class="text-center mb-6">
           <p>{{ t('views.qrcodeScan.text') }}</p>
         </div>
-        <video id="video" ref="scannerElement" class="rounded-md relative" />
+        <video id="video" ref="videoElement" class="rounded-md relative" />
       </div>
     </template>
     <template #footer>

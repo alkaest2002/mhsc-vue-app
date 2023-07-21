@@ -1,29 +1,45 @@
 <script setup>
 /* eslint-disable no-unused-vars */
-import { storeToRefs } from 'pinia'
-import { useReportStore } from '@/stores/report.store'
-import { processAndFlagReport } from '@/composables/useReport'
-
-const { highlightPositiveItems } = storeToRefs(useReportStore())
 
 // define props
 const props = defineProps({
   checklist: {
-    type: Object,
+    type: Array,
     required: true
   },
   report: {
     type: Object,
     required: true
   },
-  reportData: {
+  surname: {
     type: String,
     required: true
-  }
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  birthWhen: {
+    type: String,
+    required: true
+  },
+  answers: {
+    type: Array,
+    required: true
+  },
+  flags: {
+    type: Array,
+    required: true
+  },
+  highlightPositiveItems: {
+    type: Boolean,
+    required: true
+  },
+  date: {
+    type: String,
+    required: true
+  },
 })
-
-// check report
-const { surname, name, dob, items, date, flags } = processAndFlagReport(props.reportData)
 </script>
 
 <template>
@@ -44,19 +60,19 @@ const { surname, name, dob, items, date, flags } = processAndFlagReport(props.re
         </tr>
         <tr>
           <td>{{ report.bioTable.dob }}</td>
-          <td>{{ dob }}</td>
+          <td>{{ birthWhen }}</td>
         </tr>
       </table>
     </section>
     <section>
       <h2>{{ report.itemsTable.title.toUpperCase() }}</h2>
       <table id="report-items-table">
-        <tr v-for="(item, index) of items" :key="index">
+        <tr v-for="(answer, index) of answers" :key="index">
           <td :class="{ emphasis: flags[index] && highlightPositiveItems }">
             {{ flags[index] ? '▶' : '' }}
           </td>
           <td :class="{ emphasis: flags[index] && highlightPositiveItems }">
-            {{ checklist[index].itemOptions[item].label }}
+            {{ checklist[index].itemOptions[answer].label }}
           </td>
           <td :class="{ emphasis: flags[index] && highlightPositiveItems }">
             {{ checklist[index].itemText }}

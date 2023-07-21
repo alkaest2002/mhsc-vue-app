@@ -1,7 +1,6 @@
 <script setup>
 /* eslint-disable no-unused-vars */
 import { useI18n } from 'vue-i18n'
-import { processAndFlagReport } from '@/composables/useReport'
 
 // get i18n t
 const { t } = useI18n()
@@ -12,7 +11,7 @@ const props = defineProps({
     type: Object,
     required: true
   },
-  items: {
+  answers: {
     type: Array,
     required: true
   },
@@ -25,7 +24,7 @@ const props = defineProps({
 
 <template>
   <div id="report-items-review" class="flex flex-col justify-items-start gap-3">
-    <template v-for="(item, index) of items" :key="index">
+    <template v-for="(answer, index) of answers" :key="index">
       <template v-if="flags[index]">
         <div class="bg-white border-white p-3 shadow-md cursor-pointer border-2 rounded-lg min-w-6">
           <p>
@@ -34,7 +33,7 @@ const props = defineProps({
           <p class="text-sm font-semibold">
             {{
               t('views.reviewReport.userAnswered', {
-                answer: checklist[index].itemOptions[item].label
+                answer: checklist[index].itemOptions[answer].label
               })
             }}
           </p>
