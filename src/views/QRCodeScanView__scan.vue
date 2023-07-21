@@ -3,7 +3,6 @@
 import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { i18n } from '@/i18n'
 import { useReportStore } from '@/stores/report.store'
 import { storeToRefs } from 'pinia'
 import QrScanner from 'qr-scanner'
@@ -25,9 +24,13 @@ const videoElement = ref(null)
 const qrScanner = ref(null)
 
 // watch qrcode
-watch(qrcode, (data) => {
+watch(qrcode, async (data) => {
   // if qrcode is valid
   if (checkQRCode(data)) {
+    // stop qrcode scanner
+    await qrScanner.value.stop()
+    qrScanner.value.destroy()
+    qrScanner.value = null;
     // process and flag data
     const { name, surname, birthWhen, answers, flags } = processAndFlagReport(data)
     // init data object to store
@@ -38,7 +41,7 @@ watch(qrcode, (data) => {
       answers,
       flags,
       reportData: data,
-      renderedReport: renderReport(checklist.value, report.value, data, highlightPositiveItems)
+      renderedReport: renderReport(checklist.value, report.value, data, highlightPositiveItems.value)
     }
     // patch repostStore with qrcode data
     reportStore.$patch(obj)
@@ -60,13 +63,14 @@ onMounted(() => {
     )
     // start qrcode scanner
     qrScanner.value.start()
-  }, 10)
+  }, 500)
 })
 
 // on unomount
 onUnmounted(() => {
   // destroy qrcode scanner
   qrScanner.value?.destroy()
+  qrScanner.value = null;
 })
 </script>
 
