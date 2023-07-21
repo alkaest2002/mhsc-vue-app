@@ -71,7 +71,7 @@ onBeforeUnmount(() => (isLoading.value = false))
         enter-active-class="duration-200 ease-in"
         enter-from-class="transform opacity-0"
         enter-to-class="opacity-100"
-        leave-active-class="duration-200 ease-ut"
+        leave-active-class="duration-200 ease-out"
         leave-from-class="opacity-100"
         leave-to-class="transform opacity-0"
         mode="out-in"
