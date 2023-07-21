@@ -27,10 +27,10 @@ const props = defineProps({
     <template v-for="(answer, index) of answers" :key="index">
       <template v-if="flags[index]">
         <div class="bg-white border-white p-3 shadow-md cursor-pointer border-2 rounded-lg min-w-6">
-          <p>
+          <p class="font-medium">
             {{ checklist[index].itemText }}
           </p>
-          <p class="text-sm font-semibold">
+          <p class="text-sm text-sky-900/75">
             {{
               t('views.reviewReport.userAnswered', {
                 answer: checklist[index].itemOptions[answer].label

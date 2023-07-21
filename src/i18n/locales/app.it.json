@@ -64,7 +64,7 @@
     "reviewReport": {
       "title": "Risposte contrassegnate",
       "text": "Nota: le seguenti risposte richiedono approfondimenti.",
-      "userAnswered": "L'utente ha risposto: {answer}"
+      "userAnswered": "{answer}"
     },
     "pageNotFound": {
       "title": "pagina non trovata"

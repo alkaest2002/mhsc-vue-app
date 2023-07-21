@@ -67,16 +67,7 @@ onBeforeUnmount(() => (isLoading.value = false))
       </div>
     </template>
     <template #content>
-      <transition
-        enter-active-class="duration-200 ease-in"
-        enter-from-class="transform opacity-0"
-        enter-to-class="opacity-100"
-        leave-active-class="duration-200 ease-out"
-        leave-from-class="opacity-100"
-        leave-to-class="transform opacity-0"
-        mode="out-in"
-        appear
-      >
+      <transition name="fade" mode="out-in">
         <ItemContainer
           :key="index"
           :item="checklist[index]"
@@ -97,3 +88,15 @@ onBeforeUnmount(() => (isLoading.value = false))
     </template>
   </AppContainer>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

@@ -8,17 +8,11 @@ const { t } = useI18n()
   <div id="app-container" class="h-full w-full font-nunito font-light text-sky-800 p-2 md:p-12">
     <router-view v-slot="{ Component }">
       <template v-if="Component">
-        <transition
-          enter-active-class="duration-500 ease-in"
-          enter-from-class="transform opacity-0"
-          enter-to-class="opacity-100"
-          leave-active-class="duration-0"
-          leave-from-class="opacity-0"
-          leave-to-class="transform opacity-0"
-        >
           <Suspense>
             <template #default>
-              <component :is="Component" :key="$route.path" />
+              <transition name="fade" mode="out-in">
+                <component :is="Component" :key="$route.path" />
+              </transition>
             </template>
             <template #fallback>
               <AppContainer>
@@ -30,8 +24,19 @@ const { t } = useI18n()
               </AppContainer>
             </template>
           </Suspense>
-        </transition>
       </template>
     </router-view>
   </div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

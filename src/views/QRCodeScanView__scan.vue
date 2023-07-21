@@ -1,6 +1,6 @@
 <script setup>
 /* eslint-disable no-unused-vars, vue/no-setup-props-destructure */
-import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { ref, watch, watchEffect, onUnmounted  } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useReportStore } from '@/stores/report.store'
@@ -56,15 +56,17 @@ watch(qrcode, async (data) => {
 })
 
 // on mount
-onMounted(() => {
-  // init qrcode scanner
-  qrScanner.value = new QrScanner(
-    videoElement.value,
-    async (result) => (qrcode.value = window.atob(result?.data)),
-    { onDecodeError: () => {}, highlightScanRegion: true }
-  )
-  // start qrcode scanner after a bit
-  setTimeout(() => qrScanner.value.start(), 500)
+watchEffect(() => {
+  if (videoElement.value) {
+     // init qrcode scanner
+    qrScanner.value = new QrScanner(
+      videoElement.value,
+      async (result) => (qrcode.value = window.atob(result?.data)),
+      { onDecodeError: () => {}, highlightScanRegion: true }
+    )
+    // start qrcode scanner after a bit
+    setTimeout(() => qrScanner.value.start(), 500)
+  }
 })
 
 // on unomount
