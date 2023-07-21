@@ -38,7 +38,7 @@ const props = defineProps({
   date: {
     type: String,
     required: true
-  },
+  }
 })
 </script>
 

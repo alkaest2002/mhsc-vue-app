@@ -39,7 +39,12 @@ watch(qrcode, async (data) => {
       answers,
       flags,
       reportData: data,
-      renderedReport: renderReport(checklist.value, report.value, data, highlightPositiveItems.value)
+      renderedReport: renderReport(
+        checklist.value,
+        report.value,
+        data,
+        highlightPositiveItems.value
+      )
     }
     // patch repostStore with qrcode data
     reportStore.$patch(obj)
@@ -55,18 +60,18 @@ onMounted(() => {
   // init qrcode scanner
   qrScanner.value = new QrScanner(
     videoElement.value,
-    async (result) => qrcode.value = window.atob(result?.data),
+    async (result) => (qrcode.value = window.atob(result?.data)),
     { onDecodeError: () => {}, highlightScanRegion: true }
   )
-  // start qrcode scanner
-  qrScanner.value.start()
+  // start qrcode scanner after a bit
+  setTimeout(() => qrScanner.value.start(), 500)
 })
 
 // on unomount
 onUnmounted(() => {
   // destroy qrcode scanner
   qrScanner.value?.destroy()
-  qrScanner.value = null;
+  qrScanner.value = null
 })
 </script>
 

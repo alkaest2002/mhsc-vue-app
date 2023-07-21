@@ -54,7 +54,13 @@ export const renderReport = (checklist, report, reportData, highlightPositiveIte
   // create report on the fly
   const reportApp = createApp({
     name: 'ReportFragment',
-    render: () => h(ReportTemplate, { checklist, report, highlightPositiveItems, ...processAndFlagReport(reportData) })
+    render: () =>
+      h(ReportTemplate, {
+        checklist,
+        report,
+        highlightPositiveItems,
+        ...processAndFlagReport(reportData)
+      })
   })
   // create report fragment
   const reportHtmlFragment = reportApp.mount(el).$el.outerHTML

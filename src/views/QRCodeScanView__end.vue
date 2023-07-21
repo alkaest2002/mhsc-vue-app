@@ -21,8 +21,8 @@ const { renderedReport, typeOfReport } = storeToRefs(useReportStore())
 const onRequestReport = () => {
   // get report
   getReport(typeOfReport, renderedReport, isLoading)
-  // go to scan start
-  router.push({ name: 'qrcode-scan-start' })
+  // go to scan start after a bit
+  setTimeout(() => router.push({ name: 'qrcode-scan-start' }), 0)
 }
 </script>
 

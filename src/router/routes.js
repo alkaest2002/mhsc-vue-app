@@ -79,7 +79,9 @@ export const routes = [
         path: 'scan',
         name: 'qrcode-scan-scan',
         component: () => import('@/views/QRCodeScanView__scan.vue'),
-        beforeEnter: (_, { name }) => {if (!name) return { name: 'qrcode-scan-start' }}
+        beforeEnter: (_, { name }) => {
+          if (!name) return { name: 'qrcode-scan-start' }
+        }
       },
       {
         path: 'review',

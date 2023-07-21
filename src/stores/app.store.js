@@ -7,7 +7,8 @@ export const useAppStore = defineStore('appStore', {
   state: () => {
     return {
       locale: 'en',
-      userIsAME: false
+      userIsAME: false,
+      deviceHasCamera: false
     }
   }
 })
