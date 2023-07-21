@@ -28,9 +28,7 @@ watch(qrcode, async (data) => {
   // if qrcode is valid
   if (checkQRCode(data)) {
     // stop qrcode scanner
-    await qrScanner.value.stop()
-    qrScanner.value.destroy()
-    qrScanner.value = null;
+    qrScanner.value.stop()
     // process and flag data
     const { name, surname, birthWhen, answers, flags } = processAndFlagReport(data)
     // init data object to store
@@ -54,16 +52,14 @@ watch(qrcode, async (data) => {
 
 // on mount
 onMounted(() => {
-  setTimeout(() => {
-    // init qrcode scanner
-    qrScanner.value = new QrScanner(
-      videoElement.value,
-      async (result) => qrcode.value = window.atob(result?.data),
-      { onDecodeError: () => {}, highlightScanRegion: true }
-    )
-    // start qrcode scanner
-    qrScanner.value.start()
-  }, 500)
+  // init qrcode scanner
+  qrScanner.value = new QrScanner(
+    videoElement.value,
+    async (result) => qrcode.value = window.atob(result?.data),
+    { onDecodeError: () => {}, highlightScanRegion: true }
+  )
+  // start qrcode scanner
+  qrScanner.value.start()
 })
 
 // on unomount
