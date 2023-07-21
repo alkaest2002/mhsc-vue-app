@@ -37,6 +37,7 @@ export const useReportStore = defineStore('reportStore', {
       birthWhen: '',
       answers: [],
       flags: [],
+      date: '',
       checklist: [],
       report: {},
       reportData: '',

@@ -45,7 +45,7 @@ export const processAndFlagReport = (reportData) => {
   flags[19] = answers[19] > 0 || answers[19] == -1
   flags[20] = answers[20] < 7 || answers[20] == -1
   // return data
-  return { surname, name, birthWhen, answers, date, flags }
+  return { surname, name, birthWhen, answers, flags, date }
 }
 
 export const renderReport = (checklist, report, reportData, highlightPositiveItems) => {

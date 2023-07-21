@@ -26,7 +26,7 @@ const props = defineProps({
   <div id="report-items-review" class="flex flex-col justify-items-start gap-3">
     <template v-for="(answer, index) of answers" :key="index">
       <template v-if="flags[index]">
-        <div class="bg-white border-white p-3 shadow-md cursor-pointer border-2 rounded-lg min-w-6">
+        <div class="bg-white border-white p-3 shadow-md border-2 rounded-lg min-w-6">
           <p class="font-medium">
             {{ checklist[index].itemText }}
           </p>

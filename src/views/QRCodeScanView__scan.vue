@@ -29,15 +29,9 @@ watch(qrcode, async (data) => {
   if (checkQRCode(data)) {
     // stop qrcode scanner
     qrScanner.value.stop()
-    // process and flag data
-    const { name, surname, birthWhen, answers, flags } = processAndFlagReport(data)
     // init data object to store
     const obj = {
-      name,
-      surname,
-      birthWhen,
-      answers,
-      flags,
+      ...processAndFlagReport(data),
       reportData: data,
       renderedReport: renderReport(
         checklist.value,
@@ -49,7 +43,7 @@ watch(qrcode, async (data) => {
     // patch repostStore with qrcode data
     reportStore.$patch(obj)
     // go to relevant view
-    if (!reviewReport.value || (reviewReport.value && flags.length === 0))
+    if (!reviewReport.value || (reviewReport.value && obj.flags.length === 0))
       return router.push({ name: 'qrcocde-scan-end' })
     return router.push({ name: 'qrcode-scan-review' })
   }
